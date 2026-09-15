@@ -1204,7 +1204,7 @@ effective-bits accounting, together with an independent re-measurement of the fl
 open model's headline claims and, where open matched checkpoints exist, a controlled test
 of the accuracy claim. In a matched comparison, a native ternary model against its FP16
 counterpart at the same parameter count, tokenizer, and training data, the two land
-within 0.6 points on a seven-task zero-shot suite at the two-billion-parameter scale,
+within 0.6 points on a seven-task zero-shot suite at the 2.4-billion-parameter scale,
 with the ternary model's perplexity about 14\% higher: downstream parity, worse
 language-modeling loss. Post-hoc 4-bit quantization of a full-precision model loses more
 of the suite than that, and a 1.58-bit model at the one-billion-parameter scale loses

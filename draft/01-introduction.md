@@ -86,7 +86,7 @@ centrally, an independent re-measurement.
 
 On accuracy, we run a controlled test the vendor comparisons lack: a native ternary model
 against its FP16 counterpart at matched parameter count, tokenizer, and training data,
-from open artifacts. At the two-billion-parameter scale the two land within 0.6 points on
+from open artifacts. At the 2.4-billion-parameter scale the two land within 0.6 points on
 a seven-task zero-shot suite, with the ternary model's perplexity about 14% higher,
 downstream parity with a worse language-modeling loss. A post-hoc 4-bit quantization
 loses more of the suite than that, and a 1.58-bit model at the one-billion-parameter
