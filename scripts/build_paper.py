@@ -1219,6 +1219,21 @@ for name in ORDER:
     body.append('\n%% ===== ' + name + '\n' + convert_file(os.path.join('draft', name + '.md'), tag))
     if name in AFTER:
         body.append(AFTER[name])
+CODE_AVAILABILITY = (r"""
+
+\section*{Code and Data Availability}
+
+The independent reproduction pipeline of Section~\ref{sec:repro}, including every run
+script, the pinned environment files (harness and repository commits, Hugging Face
+checkpoint revisions, and the one-line runtime fix of Section~10.3), and the raw
+per-configuration logs behind every number reported in Section~10, is publicly available
+at \href{https://github.com/habibullahmanzoor/1-Bit-Survey}{https://github.com/habibullahmanzoor/1-Bit-Survey}.
+The same repository holds the 140-work taxonomy classification behind Table~1, the
+headline-results data behind Table~2, and the scripts that assemble this manuscript from
+its source. The 140 works classified in Table~1 are open-access (Section~3.1) but are
+indexed there by title and source URL rather than redistributed, since open-access status
+does not confer redistribution rights.
+""")
 DECLARATION = (r"""
 
 \section*{Declaration of Generative AI and AI-Assisted Technologies in the Writing Process}
@@ -1231,7 +1246,7 @@ third-party software and released model checkpoints directly, not by the AI assi
 All AI-assisted output was reviewed and verified by the authors, who take full
 responsibility for the content and conclusions of this manuscript.
 """)
-TAIL = (DECLARATION +
+TAIL = (CODE_AVAILABILITY + DECLARATION +
         '\n\n\\bibliographystyle{unsrtnat}  %% numbered in ascending order of first citation\n'
         '\\bibliography{references}\n\\end{document}\n')
 doc = PREAMBLE + '\n'.join(body) + TAIL
