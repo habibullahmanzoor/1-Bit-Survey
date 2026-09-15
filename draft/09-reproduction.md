@@ -460,7 +460,4 @@ checkpoint by Hugging Face revision and SHA-256 (Section 10.3). The Qwen GGUF bu
 produced with `llama-quantize` from one pinned FP16 GGUF, and the nf4 quantization with
 bitsandbytes 0.50.2. Every accuracy and efficiency number reported in this section is the
 direct output of that pinned pipeline on the machine described in Section 10.2, run once
-per configuration except where a repeat count is stated. The pipeline itself, every run
-script, the raw per-configuration logs behind every number in this section, and the
-pinned environment files above, is at
-[https://github.com/habibullahmanzoor/1-Bit-Survey](https://github.com/habibullahmanzoor/1-Bit-Survey).
+per configuration except where a repeat count is stated.
