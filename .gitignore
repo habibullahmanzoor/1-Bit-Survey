@@ -1,6 +1,8 @@
 # === Compiled/assembled manuscript (kept locally with full authorship; not pushed pre-publication) ===
 1bit-llm-survey.tex
 1bit-llm-survey.pdf
+# full author list override, read by scripts/build_paper.py; never pushed pre-publication
+local/
 
 # === LaTeX build intermediates (regenerated) ===
 *.aux

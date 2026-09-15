@@ -1146,6 +1146,23 @@ AFTER = {
  '07b-benchmarking': '\n\n' + T5 + '\n' + FIGBITS + '\n',
  '09-reproduction': '\n' + FIGDUMBBELL + '\n' + FIG5 + '\n',
 }
+# Full authorship lives only in a local, gitignored override file (local/authors_full.tex)
+# so the tracked script and the public repo never carry the co-author's name pre-publication;
+# absent that file (e.g. on a fresh clone from GitHub) the build falls back to a single-name
+# attribution. The override file's first line is "% PDF_AUTHOR: <name>", the rest is the
+# \author/\affil LaTeX block.
+_authors_override = 'local/authors_full.tex'
+if os.path.exists(_authors_override):
+    _marker, _rest = open(_authors_override, encoding='utf-8').read().split('\n', 1)
+    PDF_AUTHOR = _marker.split(':', 1)[1].strip()
+    AUTHOR_BLOCK = _rest.strip()
+else:
+    AUTHOR_BLOCK = (
+        r"\author{Habib Ullah Manzoor et al.\thanks{Corresponding author. Email: \texttt{habib.manzoor@uws.ac.uk}}}"
+        "\n" r"\affil{School of Computing, Engineering and Physical Sciences, University of the West of Scotland, UK}"
+    )
+    PDF_AUTHOR = 'Habib Ullah Manzoor et al.'
+
 PREAMBLE = r"""\documentclass[11pt]{article}
 \usepackage[a4paper,margin=0.85in]{geometry}
 \usepackage[T1]{fontenc}
@@ -1160,7 +1177,7 @@ PREAMBLE = r"""\documentclass[11pt]{article}
 \hypersetup{
   colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue,
   pdftitle={Native 1-Bit and 1.58-Bit Large Language Models: A Survey and an Independent Re-Evaluation},
-  pdfauthor={Habib Ullah Manzoor and Basim Alhumaily},
+  pdfauthor={@@PDF_AUTHOR@@},
   pdfsubject={Survey and independent re-evaluation of native 1-bit and 1.58-bit large language models},
   pdfkeywords={1-bit language models, 1.58-bit language models, BitNet, quantization-aware training, efficient inference, hardware co-design}
 }
@@ -1172,10 +1189,7 @@ PREAMBLE = r"""\documentclass[11pt]{article}
 \setcounter{secnumdepth}{3}
 \title{Native 1-Bit and 1.58-Bit Large Language Models:\\[2pt]
        A Survey and an Independent Re-Evaluation}
-\author[1]{Habib Ullah Manzoor\thanks{Corresponding author. Email: \texttt{habib.manzoor@uws.ac.uk}}}
-\author[2]{Basim Alhumaily\thanks{Email: \texttt{b.alhumaily@qu.edu.sa}}}
-\affil[1]{School of Computing, Engineering and Physical Sciences, University of the West of Scotland, UK}
-\affil[2]{Department of Electrical Engineering, College of Engineering, Qassim University, Buraydah 52571, Saudi Arabia}
+@@AUTHOR_BLOCK@@
 \date{}
 \begin{document}
 \maketitle
@@ -1213,6 +1227,7 @@ open problems.
 quantization-aware training, efficient inference, hardware co-design.
 \medskip
 """
+PREAMBLE = PREAMBLE.replace('@@PDF_AUTHOR@@', PDF_AUTHOR).replace('@@AUTHOR_BLOCK@@', AUTHOR_BLOCK)
 body = []
 for name in ORDER:
     tag = '07b' if name.startswith('07b') else name.split('-')[0]

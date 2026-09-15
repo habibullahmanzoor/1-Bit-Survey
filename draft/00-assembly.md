@@ -7,8 +7,10 @@ not sourced from a `.md` file), then `python ../scripts/build_paper.py` to regen
 `pdflatex` / `bibtex` / `pdflatex` / `pdflatex` to rebuild `1bit-llm-survey.pdf`.
 
 Title: **"Native 1-Bit and 1.58-Bit Large Language Models: A Survey and an Independent
-Re-Evaluation."** Authors: Habib Ullah Manzoor (University of the West of Scotland) and Basim
-Alhumaily (Qassim University). Current build: 58 pages, 0 compile errors, 0 undefined references.
+Re-Evaluation."** Authors: Habib Ullah Manzoor (University of the West of Scotland) et al.
+(the full author list is kept in the local build only pre-publication; see
+`scripts/build_paper.py`'s `AUTHOR_BLOCK` note). Current build: 58 pages, 0 compile errors,
+0 undefined references.
 
 Section files in reading order. Compiled section numbers run 1 (Introduction) to 12 (Conclusion) in
 this same order; the leading number in each filename is only a sort key, not the section number.
