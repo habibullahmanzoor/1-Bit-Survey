@@ -426,6 +426,21 @@ def convert_inline(s):
                lambda m: codes.append(m.group(1)) or '\x00C%d\x00' % (len(codes) - 1), s)
     maths = []
     s = re.sub(r'\$[^$\n]+\$', lambda m: maths.append(m.group(0)) or '\x00M%d\x00' % (len(maths) - 1), s)
+    # markdown links [text](https://...) -> \href{url}{text}; protected as an opaque
+    # token BEFORE the citation-bracket regex below (which would otherwise try to read
+    # "[text]" as a citation key) and before the character-escaping loop (which would
+    # otherwise mangle the backslash/braces of \href itself).
+    links = []
+    def _link(m):
+        text, url = m.group(1), m.group(2)
+        for a, b in [('\\', '\\textbackslash{}'), ('&', '\\&'), ('%', '\\%'), ('#', '\\#'),
+                     ('_', '\\_'), ('{', '\\{'), ('}', '\\}'), ('$', '\\$'),
+                     ('~', '\\textasciitilde{}'), ('^', '\\textasciicircum{}')]:
+            text = text.replace(a, b)
+        url_safe = url.replace('%', '\\%').replace('#', '\\#').replace('_', '\\_').replace('&', '\\&')
+        links.append('\\href{%s}{%s}' % (url_safe, text))
+        return '\x00U%d\x00' % (len(links) - 1)
+    s = re.sub(r'\[([^\]\n]+)\]\((https?://[^\s)]+)\)', _link, s)
     cites = []
     def _cite(m):
         keys = re.findall(r'\[([A-Za-z0-9_.:/\-]+)\]', m.group(0))
@@ -471,6 +486,8 @@ def convert_inline(s):
         s = s.replace('\x00M%d\x00' % i, c)
     for i, c in enumerate(cites):
         s = s.replace('\x00K%d\x00' % i, c)
+    for i, c in enumerate(links):
+        s = s.replace('\x00U%d\x00' % i, c)
     return s
 
 def convert_file(path, tag):
