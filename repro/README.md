@@ -54,5 +54,4 @@ perplexity to 12.99 and HellaSwag to 62.4%. The released weights are sound; the 
 ## Reporting
 `analysis.py` emits our numbers beside published ones (from `../data/inventory.csv` +
 `../papers/_web/*`), with signed deltas, and the reproducibility-audit table. Commit
-`logs/` and `tables/`. The artifact repository is to be deposited with a DOI on
-acceptance and cited in Section 10.
+`logs/` and `tables/`.
