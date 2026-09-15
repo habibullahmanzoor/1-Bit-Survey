@@ -1,4 +1,8 @@
-# === LaTeX build intermediates (the .tex and .pdf are tracked; these are regenerated) ===
+# === Compiled/assembled manuscript (kept locally with full authorship; not pushed pre-publication) ===
+1bit-llm-survey.tex
+1bit-llm-survey.pdf
+
+# === LaTeX build intermediates (regenerated) ===
 *.aux
 *.bbl
 *.blg
