@@ -1,0 +1,27 @@
+
+=== run1 (Sep 6, idle 29W, no Q4) ===
+idle: 29.12 W (leading only)
+model              t/s   mean W  J/tok sys
+BitNet I2_S      22.65    43.18      1.906
+Qwen Q4_K_M         --
+Qwen Q8_0        13.46    37.43      2.781
+Qwen FP16         7.80    37.35      4.788
+  BitNet : Q4_K_M --   : Q8_0 0.69x   : FP16 0.40x
+
+=== run2 (today, idle contaminated) ===
+idle: 44.72 W (leading only)
+model              t/s   mean W  J/tok sys
+BitNet I2_S      22.57    54.25      2.404
+Qwen Q4_K_M      21.56    51.98      2.411
+Qwen Q8_0        12.20    46.94      3.847
+Qwen FP16         8.64    45.49      5.263
+  BitNet : Q4_K_M 1.00x   : Q8_0 0.62x   : FP16 0.46x
+
+=== run3 (today, REP=3, battery draining) ===
+idle: leading 48.88 W, trailing 46.39 W
+model              t/s   mean W  J/tok sys
+BitNet I2_S      17.76    50.08      2.819
+Qwen Q4_K_M      14.27    45.57      3.192
+Qwen Q8_0         9.37    44.75      4.777
+Qwen FP16         7.41    48.74      6.580
+  BitNet : Q4_K_M 0.88x   : Q8_0 0.59x   : FP16 0.43x

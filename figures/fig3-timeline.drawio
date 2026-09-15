@@ -1,0 +1,168 @@
+<mxfile host="app.diagrams.net" agent="claude" version="24.7.0" type="device">
+  <diagram id="fig3-timeline" name="Figure 3 - Timeline">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1324" pageHeight="665" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="corner" value="theme  \  year" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f2937;fontColor=#ffffff;strokeColor=#111827;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="170" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="col0" value="2023" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2563eb;fontColor=#ffffff;strokeColor=#1d4ed8;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="230" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="col1" value="2024" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2563eb;fontColor=#ffffff;strokeColor=#1d4ed8;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="436" y="20" width="230" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="col2" value="2025" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2563eb;fontColor=#ffffff;strokeColor=#1d4ed8;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="672" y="20" width="230" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="col3" value="2026 H1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2563eb;fontColor=#ffffff;strokeColor=#1d4ed8;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="908" y="20" width="230" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="colcut" value="cutoff" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dc2626;fontColor=#ffffff;strokeColor=#991b1b;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1144" y="20" width="140" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="row0" value="Foundations &amp;
+native training" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f2937;fontColor=#ffffff;strokeColor=#111827;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="20" y="72" width="170" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="c0_0" value="• BitNet - BitLinear, 1-bit from scratch
+• TSLD - first ternary QAT of a large generative LM" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="200" y="72" width="230" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="c0_1" value="• BitNet b1.58 - ternary, FP16 parity from ~3B
+• Spectra / TriLM - open ternary suite 99M-3.9B
+• MatMul-free LM - removes the attention matmul
+• BitNet a4.8 - 4-bit activations" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="436" y="72" width="230" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="c0_2" value="• BitNet b1.58 2B4T - first open native 2B model, 4T tok
+• BitNet v2 - Hadamard rotation, native A4
+• LittleBit - 0.1 bits/weight" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="672" y="72" width="230" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="c0_3" value="• Sparse-BitNet - N:M sparsity + ternary
+• Sherry - 1.25-bit packing
+• NanoQuant - sub-1-bit" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="908" y="72" width="230" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="row1" value="Post-training routes
+toward one bit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f2937;fontColor=#ffffff;strokeColor=#111827;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="20" y="160" width="170" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_0" value="• PB-LLM - first LLM binarization for compression" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="200" y="160" width="230" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_1" value="• BiLLM (1.08-bit)
+• BinaryMoS
+• DB-LLM
+• OneBit
+• ARB-LLM
+• FBI-LLM" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="436" y="160" width="230" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_2" value="• PTQTP
+• PT2-LLM
+• Tequila
+• PTQ1.61
+• ICQuant" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="672" y="160" width="230" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_3" value="• HARP
+• TWLA
+• BWLA - first W1A6
+• influence-weighted Walsh rotations" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="908" y="160" width="230" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="row2" value="Systems &amp;
+inference kernels" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f2937;fontColor=#ffffff;strokeColor=#111827;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="20" y="278" width="170" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="c2_0" value="–" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e5e7eb;fontColor=#d1d5db;fontSize=9;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="200" y="278" width="230" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="c2_1" value="• bitnet.cpp / 1-bit AI Infra 1.1 - CPU ternary kernels" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="436" y="278" width="230" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="c2_2" value="• Spectra 1.1 TriRun - GPU ternary kernel" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="672" y="278" width="230" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="c2_3" value="–" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e5e7eb;fontColor=#d1d5db;fontSize=9;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="908" y="278" width="230" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="row3" value="Hardware
+accelerators" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f2937;fontColor=#ffffff;strokeColor=#111827;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="20" y="321" width="170" height="127" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_0" value="–" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e5e7eb;fontColor=#d1d5db;fontSize=9;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="200" y="321" width="230" height="127" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_1" value="–" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e5e7eb;fontColor=#d1d5db;fontSize=9;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="436" y="321" width="230" height="127" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_2" value="• PIM-LLM
+• BitROM
+• TeLLMe
+• TerEffic
+• Platinum - LUT-ASIC
+• T-SAR - SIMD-ISA
+• Vec-LUT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="672" y="321" width="230" height="127" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_3" value="• TOM - compute-in-ROM" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="908" y="321" width="230" height="127" as="geometry" />
+        </mxCell>
+        <mxCell id="row4" value="Applications &amp;
+extensions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f2937;fontColor=#ffffff;strokeColor=#111827;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="20" y="454" width="170" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c4_0" value="–" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e5e7eb;fontColor=#d1d5db;fontSize=9;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="200" y="454" width="230" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c4_1" value="–" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e5e7eb;fontColor=#d1d5db;fontSize=9;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="436" y="454" width="230" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c4_2" value="• BitVLA (robotics)
+• BitTTS
+• one-bit ASR
+• BitNet Distillation
+• MoTE (ternary MoE)
+• Fairy2i (real -&gt; complex 2-bit)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="672" y="454" width="230" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c4_3" value="• Ternary Mamba
+• BitNet Text Embeddings" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="908" y="454" width="230" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="row5" value="Theory &amp;
+scaling analysis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f2937;fontColor=#ffffff;strokeColor=#111827;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="20" y="572" width="170" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="c5_0" value="–" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e5e7eb;fontColor=#d1d5db;fontSize=9;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="200" y="572" width="230" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="c5_1" value="• Scaling Laws for Precision
+• QiD (undertrained-LLM favoring)
+• theory of 1-bit NNs" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="436" y="572" width="230" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="c5_2" value="• QuEST (stable W1A1)
+• CAGE (curvature-aware STE)
+• ParetoQ (unified 1-4 bit)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="672" y="572" width="230" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="c5_3" value="• “Fitting is not enough” (smoothness)
+• extreme-low-bit reasoning failure modes" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;fontColor=#374151;fontSize=9;align=left;verticalAlign=top;spacingLeft=6;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="908" y="572" width="230" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="cutoff" value="Literature cutoff
+30 June 2026
+
+Later work tracked in
+the online living appendix" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontColor=#7f1d1d;fontSize=9;align=center;verticalAlign=middle;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1144" y="72" width="140" height="567" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

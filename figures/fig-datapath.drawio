@@ -1,0 +1,229 @@
+<mxGraphModel dx="1771" dy="1047" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;strokeWidth=3;" value="Evolutions of BitLinear: From INT8 to INT4 Native to Hybrid Quantization/Sparsification&#xa;(All Variants Use Ternary Weights and Add/Sub MatMul)" vertex="1">
+      <mxGeometry height="50" width="1400" x="100" y="20" as="geometry" />
+    </mxCell>
+    <mxCell id="footnote" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=2;strokeWidth=3;" value="Note: Across all variants, the Ternary Matrix Multiplication is identical (add/sub only), while activation preparation evolves to handle quantization with increasing efficiency and sparsification." vertex="1">
+      <mxGeometry height="30" width="1400" x="144" y="750" as="geometry" />
+    </mxCell>
+    <mxCell id="panel_a" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#b8b8b8;strokeWidth=3;arcSize=4;fontSize=13;" value="" vertex="1">
+      <mxGeometry height="660" width="440" x="144" y="80" as="geometry" />
+    </mxCell>
+    <mxCell id="title_a" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontStyle=1;strokeWidth=3;" value="(a) BitLinear — BitNet b1.58 (W1.58, A8)" vertex="1">
+      <mxGeometry height="30" width="420" x="154" y="90" as="geometry" />
+    </mxCell>
+    <mxCell id="a_in" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;fontStyle=1;fontSize=13;strokeWidth=3;" value="Input X (FP32/BF16)" vertex="1">
+      <mxGeometry height="35" width="200" x="264" y="130" as="geometry" />
+    </mxCell>
+    <mxCell id="a_norm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;strokeWidth=3;" value="SubLN / RMSNorm" vertex="1">
+      <mxGeometry height="35" width="200" x="264" y="195" as="geometry" />
+    </mxCell>
+    <mxCell id="a_act_lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=2;fontColor=#555555;strokeWidth=3;" value="Activation Path" vertex="1">
+      <mxGeometry height="20" width="100" x="184" y="235" as="geometry" />
+    </mxCell>
+    <mxCell id="a_wt_lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=2;fontColor=#555555;strokeWidth=3;" value="Weight Path" vertex="1">
+      <mxGeometry height="20" width="100" x="454" y="230" as="geometry" />
+    </mxCell>
+    <mxCell id="a_quant_act" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;strokeWidth=3;" value="Per-Token Abs-Max&#xa;Quantizer (INT8)" vertex="1">
+      <mxGeometry height="60" width="180" x="164" y="360" as="geometry" />
+    </mxCell>
+    <mxCell id="a_latent_wt" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=13;strokeWidth=3;" value="Latent Weight (FP32)&#xa;&lt;font&gt;(Straight-Through Estimator Backward Pass)&lt;/font&gt;" vertex="1">
+      <mxGeometry height="50" width="180" x="384" y="280" as="geometry" />
+    </mxCell>
+    <mxCell id="a_quant_wt" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=13;strokeWidth=3;" value="Per-Tensor Abs-Mean Quantizer&#xa;(W1.58 Ternary: {-1, 0, +1})" vertex="1">
+      <mxGeometry height="60" width="180" x="384" y="360" as="geometry" />
+    </mxCell>
+    <mxCell id="a_matmul" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;strokeWidth=3;" value="Ternary Matrix Multiplication&#xa;(Addition/Subtraction Only)" vertex="1">
+      <mxGeometry height="60" width="340" x="194" y="470" as="geometry" />
+    </mxCell>
+    <mxCell id="a_dequant" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=13;strokeWidth=3;" value="Dequantization&#xa;(Apply Activation and Weight Scales)" vertex="1">
+      <mxGeometry height="50" width="340" x="194" y="560" as="geometry" />
+    </mxCell>
+    <mxCell id="a_out" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontStyle=1;fontSize=13;strokeWidth=3;" value="Output Y (FP32/BF16)" vertex="1">
+      <mxGeometry height="35" width="200" x="264" y="673" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_a1" edge="1" parent="1" source="a_in" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="a_norm">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_a2" edge="1" parent="1" source="a_norm" style="endArrow=classic;html=1;strokeWidth=3;entryX=0.5;entryY=0;exitX=0.25;exitY=1;edgeStyle=orthogonalEdgeStyle;fontSize=13;" target="a_quant_act">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="314.03" y="295.03" />
+          <mxPoint x="254.03" y="295.03" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge_a3" edge="1" parent="1" source="a_norm" style="endArrow=classic;html=1;strokeWidth=3;entryX=0.5;entryY=0;exitX=0.75;exitY=1;edgeStyle=orthogonalEdgeStyle;fontSize=13;" target="a_latent_wt">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_a4" edge="1" parent="1" source="a_latent_wt" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="a_quant_wt">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_a5" edge="1" parent="1" source="a_quant_act" style="endArrow=classic;html=1;strokeWidth=3;entryX=0.25;entryY=0;edgeStyle=orthogonalEdgeStyle;fontSize=13;" target="a_matmul">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_a6" edge="1" parent="1" source="a_quant_wt" style="endArrow=classic;html=1;strokeWidth=3;entryX=0.75;entryY=0;edgeStyle=orthogonalEdgeStyle;fontSize=13;" target="a_matmul">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_a7" edge="1" parent="1" source="a_matmul" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="a_dequant">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_a8" edge="1" parent="1" source="a_dequant" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="a_out">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="panel_b" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#b8b8b8;strokeWidth=3;arcSize=4;fontSize=13;" value="" vertex="1">
+      <mxGeometry height="660" width="440" x="597" y="80" as="geometry" />
+    </mxCell>
+    <mxCell id="title_b" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontStyle=1;strokeWidth=3;" value="(b) H-BitLinear — BitNet v2 (W1.58, A4 Native)" vertex="1">
+      <mxGeometry height="30" width="420" x="607" y="90" as="geometry" />
+    </mxCell>
+    <mxCell id="b_in" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;fontStyle=1;fontSize=13;strokeWidth=3;" value="Input X (FP32/BF16)" vertex="1">
+      <mxGeometry height="35" width="200" x="717" y="130" as="geometry" />
+    </mxCell>
+    <mxCell id="b_norm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;strokeWidth=3;" value="SubLN / RMSNorm" vertex="1">
+      <mxGeometry height="35" width="200" x="717" y="195" as="geometry" />
+    </mxCell>
+    <mxCell id="b_hadamard" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;strokeWidth=3;" value="Online Hadamard Rotation&#xa;&lt;font color=&quot;#d00000&quot;&gt;(Spreads Outlier Energy)&lt;/font&gt;" vertex="1">
+      <mxGeometry height="50" width="180" x="617" y="275" as="geometry" />
+    </mxCell>
+    <mxCell id="b_quant_act" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;strokeWidth=3;" value="Per-Token Abs-Max&#xa;Quantizer (INT4)" vertex="1">
+      <mxGeometry height="60" width="180" x="617" y="360" as="geometry" />
+    </mxCell>
+    <mxCell id="b_latent_wt" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=13;strokeWidth=3;" value="Latent Weight (FP32)&#xa;&lt;font&gt;(Straight-Through Estimator Backward Pass)&lt;/font&gt;" vertex="1">
+      <mxGeometry height="50" width="180" x="837" y="275" as="geometry" />
+    </mxCell>
+    <mxCell id="b_quant_wt" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=13;strokeWidth=3;" value="Per-Tensor Abs-Mean Quantizer&#xa;(W1.58 Ternary: {-1, 0, +1})" vertex="1">
+      <mxGeometry height="60" width="180" x="837" y="360" as="geometry" />
+    </mxCell>
+    <mxCell id="b_matmul" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;strokeWidth=3;" value="Ternary Matrix Multiplication&#xa;(Addition/Subtraction Only)" vertex="1">
+      <mxGeometry height="60" width="340" x="647" y="470" as="geometry" />
+    </mxCell>
+    <mxCell id="b_dequant" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=13;strokeWidth=3;" value="Dequantization&#xa;(Apply Activation and Weight Scales)" vertex="1">
+      <mxGeometry height="50" width="340" x="647" y="570" as="geometry" />
+    </mxCell>
+    <mxCell id="b_out" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontStyle=1;fontSize=13;strokeWidth=3;" value="Output Y (FP32/BF16)" vertex="1">
+      <mxGeometry height="35" width="200" x="717" y="673" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_b1" edge="1" parent="1" source="b_in" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="b_norm">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_b2" edge="1" parent="1" source="b_norm" style="endArrow=classic;html=1;strokeWidth=3;entryX=0.5;entryY=0;exitX=0.25;exitY=1;edgeStyle=orthogonalEdgeStyle;fontSize=13;" target="b_hadamard">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_b3" edge="1" parent="1" source="b_hadamard" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="b_quant_act">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_b4" edge="1" parent="1" source="b_norm" style="endArrow=classic;html=1;strokeWidth=3;entryX=0.5;entryY=0;exitX=0.75;exitY=1;edgeStyle=orthogonalEdgeStyle;fontSize=13;" target="b_latent_wt">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_b5" edge="1" parent="1" source="b_latent_wt" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="b_quant_wt">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_b6" edge="1" parent="1" source="b_quant_act" style="endArrow=classic;html=1;strokeWidth=3;entryX=0.25;entryY=0;edgeStyle=orthogonalEdgeStyle;fontSize=13;" target="b_matmul">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_b7" edge="1" parent="1" source="b_quant_wt" style="endArrow=classic;html=1;strokeWidth=3;entryX=0.75;entryY=0;edgeStyle=orthogonalEdgeStyle;fontSize=13;" target="b_matmul">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_b8" edge="1" parent="1" source="b_matmul" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="b_dequant">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_b9" edge="1" parent="1" source="b_dequant" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="b_out">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="panel_c" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#b8b8b8;strokeWidth=3;arcSize=5;fontSize=13;" value="" vertex="1">
+      <mxGeometry height="650" width="450" x="1050" y="80" as="geometry" />
+    </mxCell>
+    <mxCell id="title_c" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontStyle=1;strokeWidth=3;" value="(c) BitNet a4.8 — Hybrid Quantization + Sparsify (Effective W1.58, A4)" vertex="1">
+      <mxGeometry height="40" width="430" x="1060" y="90" as="geometry" />
+    </mxCell>
+    <mxCell id="lane1_lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;strokeWidth=3;" value="Lane 1: Well-Behaved Inputs&#xa;&lt;font&gt;(e.g., Attention Q/K/V, FF Gate/Up)&lt;/font&gt;" vertex="1">
+      <mxGeometry height="30" width="190" x="1075" y="130" as="geometry" />
+    </mxCell>
+    <mxCell id="c_in1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;fontStyle=1;fontSize=13;strokeWidth=3;" value="Input X1" vertex="1">
+      <mxGeometry height="30" width="140" x="1100" y="170" as="geometry" />
+    </mxCell>
+    <mxCell id="c_norm1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;strokeWidth=3;" value="SubLN / RMSNorm" vertex="1">
+      <mxGeometry height="30" width="140" x="1100" y="230" as="geometry" />
+    </mxCell>
+    <mxCell id="c_quant1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;strokeWidth=3;" value="Per-Token Abs-Mean&#xa;Quantizer (INT4)" vertex="1">
+      <mxGeometry height="50" width="180" x="1080" y="360" as="geometry" />
+    </mxCell>
+    <mxCell id="c_matmul1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;strokeWidth=3;" value="Ternary MatMul&#xa;(W1 Ternary)" vertex="1">
+      <mxGeometry height="50" width="180" x="1080" y="450" as="geometry" />
+    </mxCell>
+    <mxCell id="c_dequant1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=13;strokeWidth=3;" value="Dequantization" vertex="1">
+      <mxGeometry height="40" width="180" x="1080" y="540" as="geometry" />
+    </mxCell>
+    <mxCell id="c_out1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontStyle=1;fontSize=13;strokeWidth=3;" value="Output Y1" vertex="1">
+      <mxGeometry height="35" width="140" x="1075" y="673" as="geometry" />
+    </mxCell>
+    <mxCell id="lane2_lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;strokeWidth=3;" value="Lane 2: Outlier-Heavy Inputs&#xa;&lt;font&gt;(e.g., Attention Output, FF Down)&lt;/font&gt;" vertex="1">
+      <mxGeometry height="30" width="190" x="1295" y="130" as="geometry" />
+    </mxCell>
+    <mxCell id="c_in2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;fontStyle=1;fontSize=13;strokeWidth=3;" value="Input X2" vertex="1">
+      <mxGeometry height="30" width="140" x="1320" y="170" as="geometry" />
+    </mxCell>
+    <mxCell id="c_norm2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;strokeWidth=3;" value="SubLN / RMSNorm" vertex="1">
+      <mxGeometry height="30" width="140" x="1320" y="230" as="geometry" />
+    </mxCell>
+    <mxCell id="c_sparsify" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=13;strokeWidth=3;" value="Top-K Sparsification&#xa;&lt;font color=&quot;#555555&quot;&gt;(Keep ~50% Active)&lt;/font&gt;" vertex="1">
+      <mxGeometry height="45" width="180" x="1300" y="287" as="geometry" />
+    </mxCell>
+    <mxCell id="c_quant2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;strokeWidth=3;" value="Per-Token Abs-Max&#xa;Quantizer (INT8)" vertex="1">
+      <mxGeometry height="50" width="180" x="1300" y="360" as="geometry" />
+    </mxCell>
+    <mxCell id="c_matmul2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;strokeWidth=3;" value="Ternary MatMul&#xa;(W2 Ternary)" vertex="1">
+      <mxGeometry height="50" width="180" x="1300" y="450" as="geometry" />
+    </mxCell>
+    <mxCell id="c_dequant2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=13;strokeWidth=3;" value="Dequantization" vertex="1">
+      <mxGeometry height="40" width="180" x="1300" y="540" as="geometry" />
+    </mxCell>
+    <mxCell id="c_out2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontStyle=1;fontSize=13;strokeWidth=3;" value="Output Y2" vertex="1">
+      <mxGeometry height="35" width="140" x="1345" y="673" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_c1" edge="1" parent="1" source="c_in1" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="c_norm1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_c2" edge="1" parent="1" source="c_norm1" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="c_quant1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="c_notes" parent="1" style="text;html=1;strokeColor=#b8b8b8;fillColor=#ffffff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=13;spacingLeft=5;strokeWidth=3;dashed=1;dashPattern=1 1;" value="&lt;b&gt;Additional BitNet a4.8 Features:&lt;/b&gt;&#xa;(1) FF Gate with Squared-ReLU (Produces ~80% Activation Sparsity),&#xa;(2) 3-Bit KV Cache Quantization" vertex="1">
+      <mxGeometry height="73" width="230" x="1160" y="590" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_c3" edge="1" parent="1" source="c_quant1" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="c_matmul1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_c4" edge="1" parent="1" source="c_matmul1" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="c_dequant1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_c5" edge="1" parent="1" source="c_dequant1" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;edgeStyle=orthogonalEdgeStyle;exitX=0.403;exitY=1.006;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.284;entryY=-0.093;entryDx=0;entryDy=0;entryPerimeter=0;" target="c_out1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1152.49" y="600.03" />
+          <mxPoint x="1114.83" y="600.03" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge_c6" edge="1" parent="1" source="c_in2" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="c_norm2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_c7" edge="1" parent="1" source="c_norm2" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="c_sparsify">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_c11" edge="1" parent="1" source="c_dequant2" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;edgeStyle=orthogonalEdgeStyle;entryX=0.72;entryY=-0.016;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.635;exitY=1.054;exitDx=0;exitDy=0;exitPerimeter=0;" target="c_out2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_c8" edge="1" parent="1" source="c_sparsify" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="c_quant2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_c9" edge="1" parent="1" source="c_quant2" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="c_matmul2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge_c10" edge="1" parent="1" source="c_matmul2" style="endArrow=classic;html=1;strokeWidth=3;fontSize=13;" target="c_dequant2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>

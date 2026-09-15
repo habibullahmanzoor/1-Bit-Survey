@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/FNcioY1oB2+Ga+5wz2CXxuD13p0</id>
+  <title>arXiv Query: search_query=abs:"FBI-LLM" AND (cat:cs.CL OR cat:cs.LG OR cat:cs.AI OR cat:cs.AR) AND submittedDate:"202301010000 TO 202606302359"&amp;id_list=&amp;start=0&amp;max_results=200</title>
+  <updated>2026-09-05T10:56:06Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22FBI-LLM%22+AND+((cat:cs.CL+OR+(cat:cs.LG+OR+(cat:cs.AI+OR+cat:cs.AR)))+AND+submittedDate:%22202301010000+TO+202606302359%22)&amp;start=0&amp;max_results=200&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>200</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2407.07093v1</id>
+    <title>FBI-LLM: Scaling Up Fully Binarized LLMs from Scratch via Autoregressive Distillation</title>
+    <updated>2024-07-09T17:59:48Z</updated>
+    <link href="https://arxiv.org/abs/2407.07093v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.07093v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work presents a Fully BInarized Large Language Model (FBI-LLM), demonstrating for the first time how to train a large-scale binary language model from scratch (not the partial binary or ternary LLM like BitNet b1.58) to match the performance of its full-precision counterparts (e.g., FP16 or BF16) in transformer-based LLMs. It achieves this by employing an autoregressive distillation (AD) loss with maintaining equivalent model dimensions (130M, 1.3B, 7B) and training data volume as regular LLM pretraining, while delivering competitive results in terms of perplexity and task-specific effectiveness. Intriguingly, by analyzing the training trajectory, we find that the pretrained weight is not necessary for training binarized LLMs from scratch. This research encourages a new computational framework and may facilitate the future design of specialized hardware tailored for fully 1-bit LLMs. We make all models, code, and training dataset fully accessible and transparent to support further research (Code: https://github.com/LiqunMa/FBI-LLM. Model: https://huggingface.co/LiqunMa/).</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-09T17:59:48Z</published>
+    <arxiv:comment>Github at https://github.com/LiqunMa/FBI-LLM</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Liqun Ma</name>
+    </author>
+    <author>
+      <name>Mingjie Sun</name>
+    </author>
+    <author>
+      <name>Zhiqiang Shen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.12040v2</id>
+    <title>BTC-LLM: Efficient Sub-1-Bit LLM Quantization via Learnable Transformation and Binary Codebook</title>
+    <updated>2026-04-09T06:22:06Z</updated>
+    <link href="https://arxiv.org/abs/2506.12040v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.12040v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Binary quantization represents the most extreme form of compression, reducing weights to +/-1 for maximal memory and computational efficiency. While recent sparsity-aware binarization achieves sub-1-bit compression via weight pruning, it faces critical challenges: performance degradation, mask-management overhead, and limited hardware compatibility. In this paper, we present BTC-LLM, a novel sub-1-bit LLM quantization framework that leverages binary pattern clustering and weight transformation to overcome these limitations. Our approach incorporates two key innovations: (1) a Binary Codebook that clusters recurring vectors into compact indices using custom distance metrics and sign-based updates; (2) a Learnable Transformation that reduces outliers and promotes shared sign patterns among binary weights. This eliminates sparse masks, enabling efficient inference on standard hardware. Extensive evaluations across LLaMA, Qwen, and FBI-LLM families demonstrate that BTC-LLM achieves state-of-the-art results in extreme compression (1.11-0.7 bits). Notably, BTC-LLM compressed to 0.8 bits on LLaMA-2-13B maintains high performance, with only a 3.1 percent accuracy drop in zero-shot benchmarks, while delivering a 1.6x speedup over FP16.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-24T03:57:19Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hao Gu</name>
+    </author>
+    <author>
+      <name>Lujun Li</name>
+    </author>
+    <author>
+      <name>Hao Wang</name>
+    </author>
+    <author>
+      <name>Lei Wang</name>
+    </author>
+    <author>
+      <name>Zheyu Wang</name>
+    </author>
+    <author>
+      <name>Bei Liu</name>
+    </author>
+    <author>
+      <name>Jiacheng Liu</name>
+    </author>
+    <author>
+      <name>Qiyuan Zhu</name>
+    </author>
+    <author>
+      <name>Sirui Han</name>
+    </author>
+    <author>
+      <name>Yike Guo</name>
+    </author>
+  </entry>
+</feed>

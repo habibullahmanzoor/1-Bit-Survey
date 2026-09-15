@@ -1,0 +1,109 @@
+2302.14458	Ultra-low Precision Multiplication-free Training for Deep Neural Networks
+2306.01841	Binary and Ternary Natural Language Generation
+2308.06744	Token-Scaled Logit Distillation for Ternary Weight Generative Language Models
+2308.07641	Ternary Singular Value Decomposition as a Better Parameterized Form in Linear Mapping
+2310.00034	PB-LLM: Partially Binarized Large Language Models
+2310.11453	BitNet: Scaling 1-bit Transformers for Large Language Models
+2402.04291	BiLLM: Pushing the Limit of Post-Training Quantization for LLMs
+2402.11295	OneBit: Towards Extremely Low-bit Large Language Models
+2402.17764	The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits
+2405.15025	OAC: Output-adaptive Calibration for Accurate Post-training Quantization
+2407.00088	T-MAC: CPU Renaissance via Table Lookup for Low-Bit LLM Deployment on Edge
+2407.04752	SpikeLLM: Scaling up Spiking Neural Network to Large Language Models via Saliency-based Spiking
+2407.07093	FBI-LLM: Scaling Up Fully Binarized LLMs from Scratch via Autoregressive Distillation
+2407.09527	BitNet b1.58 Reloaded: State-of-the-art Performance Also on Smaller Networks
+2407.10969	Q-Sparse: All Large Language Models can be Fully Sparsely-Activated
+2407.12070	Co-Designing Binarized Transformer and Hardware Accelerator for Efficient End-to-End Edge Deployment
+2407.12327	Spectra: Surprising Effectiveness of Pretraining Ternary Language Models at Scale
+2408.11939	Matmul or No Matmul in the Era of 1-bit LLMs
+2409.09245	Robust Training of Neural Networks at Arbitrary Precision and Sparsity
+2410.03129	ARB-LLM: Alternating Refined Binarizations for Large Language Models
+2410.05911	Accelerating Error Correction Code Transformers
+2410.16144	1-bit AI Infra: Part 1.1, Fast and Lossless BitNet b1.58 Inference on CPUs
+2411.01663	Unlocking the Theory Behind Scaling 1-Bit Neural Networks
+2411.04965	BitNet a4.8: 4-bit Activations for 1-bit LLMs
+2411.05882	When are 1.58 bits enough? A Bottom-up Exploration of BitNet Quantization
+2411.06360	An Efficient Matrix Multiplication Algorithm for Accelerating Inference in Binary and Ternary Neural Networks
+2411.16205	MH-MoE: Multi-Head Mixture-of-Experts
+2412.04787	Direct Quantized Training of Language Models with Stochastic Rounding
+2412.09282	CRVQ: Channel-Relaxed Vector Quantization for Extreme Compression of LLMs
+2412.20215	IMSSA: Deploying modern state-space models on memristive in-memory compute hardware
+2502.05003	QuEST: Stable Training of LLMs with 1-Bit Weights and Activations
+2502.11880	Bitnet.cpp: Efficient Edge Inference for Ternary LLMs
+2502.11895	Continual Quantization-Aware Pre-Training: When to transition from 16-bit to 1.58-bit pre-training for BitNet language models?
+2502.13179	PTQ1.61: Push the Real Limit of Extremely Low-Bit Post-Training Quantization Methods for Large Language Models
+2502.19008	Binary Neural Networks for Large Language Model: A Survey
+2504.01994	PIM-LLM: A High-Throughput Hybrid PIM Architecture for 1-bit LLMs
+2504.02118	LLMPi: Optimizing LLMs for High-Throughput on Raspberry Pi
+2504.03387	BitHEP -- The Limits of Low-Precision ML in HEP
+2504.05352	Achieving binary weight and activation for LLMs using Post-Training Quantization
+2504.12285	BitNet b1.58 2B4T Technical Report
+2504.16266	TeLLMe: An Energy-Efficient Ternary LLM Accelerator for Prefilling and Decoding on Edge FPGAs
+2504.18415	BitNet v2: Native 4-bit Activations with Hadamard Transformation for 1-bit LLMs
+2505.00850	ICQuant: Index Coding enables Low-bit LLM Quantization
+2505.03254	PROM: Prioritize Reduction of Multiplications Over Lower Bit-Widths for Efficient CNNs
+2505.08823	An Extra RMSNorm is All You Need for Fine Tuning to 1.58 Bits
+2505.18724	LoTA-QAF: Lossless Ternary Adaptation for Quantization-Aware Fine-Tuning
+2506.01140	ReTern: Exploiting Natural Redundancy and Sign Transformations for Enhanced Fault Tolerance in Compute-in-Memory based Ternary LLMs
+2506.12040	BTC-LLM: Efficient Sub-1-Bit LLM Quantization via Learnable Transformation and Binary Codebook
+2506.13771	LittleBit: Ultra Low-Bit Quantization via Latent Factorization
+2506.23025	Spectra 1.1: Scaling Laws and Efficient Inference for Ternary Language Models
+2507.01027	DBellQuant: Breaking the Bell with Double-Bell Transformation for LLMs Post Training Binarization
+2507.18073	Squeeze10-LLM: Squeezing LLMs' Weights by 10 Times via a Staged Mixed-Precision Quantization Method
+2507.19608	DeltaLLM: A Training-Free Framework Exploiting Temporal Sparsity for Efficient Edge LLM Inference
+2508.03332	Exploring Layer-wise Information Effectiveness for Post-Training Quantization in Small Language Models
+2508.06753	Pushing the Envelope of LLM Inference with Ultra-Low-Bit Quantized Models
+2508.06974	Rethinking 1-bit Optimization Leveraging Pre-trained Large Language Models
+2509.07361	Word2Spike: Poisson Rate Coding for Associative Memories and Neuromorphic Algorithms
+2509.08542	BitROM: Weight Reload-Free CiROM Architecture Towards Billion-Parameter 1.58-bit LLM Inference
+2509.09424	ENSI: Efficient Non-Interactive Secure Inference for Large Language Models
+2509.13765	TENET: An Efficient Sparsity-Aware LUT-Centric Architecture for Ternary LLM Inference On Edge
+2509.16989	PTQTP: Post-Training Quantization to Trit-Planes for Large Language Models
+2509.23729	LUQ: Layerwise Ultra-Low Bit Quantization for Multimodal Large Language Models
+2509.23809	Tequila: Trapping-free Ternary Quantization for Large Language Models
+2510.03267	PT$^2$-LLM: Post-Training Ternarization for Large Language Models
+2510.03275	SDQ-LLM: Sigma-Delta Quantization for 1-bit LLMs of any size
+2510.05288	DP-Adam-AC: Privacy-preserving Fine-Tuning of Localizable Language Models Using Adam Optimization with Adaptive Clipping
+2510.10560	BitMar: Low-Bit Multimodal Fusion with Episodic Memory for Edge Devices
+2510.10623	ADiP: Adaptive-Precision Systolic Array for Matrix Multiplication Acceleration
+2510.13998	BitNet Distillation
+2510.15926	TeLLMe v2: An Efficient End-to-End Ternary LLM Prefill and Decode Accelerator with Table-Lookup Matmul on Edge FPGAs
+2511.11743	Uncertainty Makes It Stable: Curiosity-Driven Quantized Mixture-of-Experts
+2511.12471	Diffusion Model Based Signal Recovery Under 1-Bit Quantization
+2511.13676	T-SAR: A Full-Stack Co-design for CPU-Only Ternary LLM Inference via In-Place SIMD ALU Reorganization
+2511.21736	R2Q: Towards Robust 2-Bit Large Language Models via Residual Refinement Quantization
+2511.21910	Platinum: Path-Adaptable LUT-Based Accelerator Tailored for Low-Bit Weight Matrix Multiplication
+2512.00862	HBLLM: Wavelet-Enhanced High-Fidelity 1-Bit Quantization for LLMs
+2512.02901	Fairy2i: Training Complex LLMs from Real LLMs with All Parameters in $\{\pm 1, \pm i\}$
+2512.11550	PD-Swap: Prefill-Decode Logic Swapping for End-to-End LLM Inference on Edge FPGAs via Dynamic Partial Reconfiguration
+2512.21651	Rethinking Output Alignment For 1-bit Post-Training Quantization of Large Language Models
+2601.20745	HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs
+2602.05269	Hybrid Gated Flow (HGF): Stabilizing 1.58-bit LLMs via Selective Low-Rank Correction
+2602.06252	D-Legion: A Scalable Many-Core Architecture for Accelerating Matrix Multiplication in Quantized LLMs
+2602.06694	NanoQuant: Efficient Sub-1-Bit Quantization of Large Language Models
+2602.07374	TernaryLM: Memory-Efficient Language Modeling via Native 1.5-Bit Quantization with Adaptive Layer-wise Scaling
+2602.15563	1-Bit Wonder: Improving QAT Performance in the Low-Bit Regime through K-Means Quantization
+2602.20662	TOM: A Ternary Read-only Memory Accelerator for LLM-powered Edge Intelligence
+2602.22592	pQuant: Towards Effective Low-Bit Language Models via Decoupled Linear Quantization-Aware Training
+2603.05168	Sparse-BitNet: 1.58-bit LLMs are Naturally Friendly to Semi-Structured Sparsity
+2603.05232	SlideSparse: Fast and Flexible (2N-2):2N Structured Sparsity
+2603.10054	Quantization of Ricci Curvature in Information Geometry
+2603.25813	MAGNET: Autonomous Expert Model Generation via Decentralized Autoresearch and BitNet Training
+2603.27462	RSR-core: A High-Performance Engine for Low-Bit Matrix-Vector Multiplication
+2604.03336	NativeTernary: A Self-Delimiting Binary Encoding with Unary Run-Length Hierarchy Markers for Ternary Neural Network Weights, Structured Data, and General Computing Infrastructure
+2604.20913	FairyFuse: Multiplication-Free LLM Inference on CPUs via Fused Ternary Kernels
+2604.24273	BitRL: Reinforcement Learning with 1-bit Quantized Language Models for Resource-Constrained Edge Deployment
+2604.25183	Hardware Generation and Exploration of Lookup Table-Based Accelerators for 1.58-bit LLM Inference
+2604.27396	VitaLLM: A Versatile, Ultra-Compact Ternary LLM Accelerator with Dependency-Aware Scheduling
+2605.00320	VitaLLM: A Versatile and Tiny Accelerator for Mixed-Precision LLM Inference on Edge Devices
+2605.00422	BWLA: Breaking the Barrier of W1AX Post-Training Quantization for LLMs
+2605.04062	EdgeRazor: A Lightweight Framework for Large Language Models via Mixed-Precision Quantization-Aware Distillation
+2605.29705	BitTP: The Lightweight Trajectory Prediction Model with BitLLM for Edge-Devices
+2606.00365	SPARQLe: Sub-Precision Activation Representation for Quantized LLM Inference
+2606.05429	Minimizing the Hidden Cost of Scales: Graph-Guided Ultra-Low-Bit Quantization for Large Language Models
+2606.13054	TWLA: Achieving Ternary Weights and Low-Bit Activations for LLMs via Post-Training Quantization
+2606.18114	Ternary Mamba: Grouped Quantization-Aware Training of W1.58A16 State Space Models
+2606.21257	An Empirical Study of openPangu Quantization on Ascend NPUs
+2606.22621	Multi-Level Resistive Synapses for On-Chip Neural Networks: A Physics-Based Design of a Memristive Crossbar Fabric with Quasi-Continuous Conductance States
+2606.25674	BitNet Text Embeddings
+2606.26650	CAT-Q: Cost-efficient and Accurate Ternary Quantization for LLMs

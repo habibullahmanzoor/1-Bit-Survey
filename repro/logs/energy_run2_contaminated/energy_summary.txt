@@ -1,0 +1,11 @@
+idle baseline:  44.72 W   (n=44)
+
+model        decode t/s   mean W    net W  J/tok (sys)  J/tok (net)
+-------------------------------------------------------------------
+bitnet_i2s        22.57    54.25     9.53        2.404        0.422
+qwen_fp16          8.64    45.49     0.76        5.263        0.088
+qwen_q4_k_m       21.56    51.98     7.26        2.411        0.337
+qwen_q8_0         12.20    46.94     2.22        3.847        0.182
+
+bitnet vs qwen_q8_0: J/tok(sys) 0.62x   J/tok(net) 2.32x
+bitnet vs qwen_fp16: J/tok(sys) 0.46x   J/tok(net) 4.79x

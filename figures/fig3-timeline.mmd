@@ -1,0 +1,30 @@
+%% Figure 3 — Timeline of native 1-bit / 1.58-bit LLM research, 2023-2026.
+%% Source: ../data/inventory.csv (year + id). Grouped by theme; regenerate before camera-ready.
+timeline
+  title From BitLinear to the Edge  (2023 - 2026 H1)
+  section 2023
+    Foundations : BitNet - BitLinear, 1-bit from scratch (2310.11453)
+                : PB-LLM - first LLM binarisation for compression (2310.00034)
+                : TSLD - first ternary QAT of large generative LMs
+  section 2024
+    Native ternary : BitNet b1.58 - ternary, FP16 parity from ~3B (2402.17764)
+                   : Spectra / TriLM - open ternary suite 99M-3.9B
+                   : MatMul-free LM - remove attention matmul (2406.02528)
+    PTQ toward 1-bit : BiLLM (1.08-bit) - BinaryMoS - DB-LLM - OneBit - ARB-LLM - FBI-LLM
+    Systems : bitnet.cpp / 1-bit AI Infra 1.1 - CPU ternary kernels
+    Analysis : Scaling Laws for Precision - QiD (undertrained-LLM favouring) - theory of 1-bit NNs
+  section 2025
+    BitNet line : BitNet b1.58 2B4T - first open native 2B model, 4T tokens (2504.12285)
+                : BitNet a4.8 (4-bit activations) - BitNet v2 (Hadamard, native A4)
+    Training theory : QuEST (stable W1A1) - CAGE (curvature-aware STE) - ParetoQ (unified 1-4 bit)
+    Ternary PTQ : PTQTP - PT2-LLM - Tequila - PTQ1.61 - ICQuant
+    Applications : BitVLA (robotics) - BitTTS - one-bit ASR - BitNet Distillation - MoTE (ternary MoE)
+    Systems / HW : Spectra 1.1 TriRun GPU kernel - PIM-LLM - BitROM - TeLLMe - TerEffic
+  section 2026 H1
+    New bit-widths : Sparse-BitNet (N:M) - Sherry (1.25-bit) - NanoQuant / LittleBit (sub-1-bit)
+    Rotation PTQ : HARP - TWLA - BWLA (first W1A6) - influence-Walsh rotations
+    Ternary Mamba - BitNet Text Embeddings - Fairy2i (pretrained -> complex 2-bit)
+    HW accelerators : TOM (compute-in-ROM) - Platinum (LUT-ASIC) - T-SAR (SIMD-ISA) - Vec-LUT
+    Analysis : "Fitting is not enough" (smoothness) - extreme-low-bit reasoning failure modes
+  section cutoff
+    30 June 2026 : literature cutoff - later work in the living appendix

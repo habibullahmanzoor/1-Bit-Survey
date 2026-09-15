@@ -1,0 +1,150 @@
+\begin{landscape}
+\begingroup\footnotesize\setlength{\tabcolsep}{4pt}\hbadness=10000 \hfuzz=2pt \emergencystretch=3em
+\begin{longtable}{p{3.2cm} p{1cm} p{1.9cm} p{2.2cm} p{2.2cm} p{1.3cm} p{2.2cm} p{2.1cm} p{2.5cm}}
+\caption{Classification of the surveyed corpus on the taxonomy axes. Weight type, training paradigm, and quantized components each partition the corpus; their counts sum to 140. \emph{Evidence basis} gives venue (\emph{preprint} if not peer reviewed) and independent-check status (\emph{ext.\ repro} for an external one); it is not a graded score. In the cells: \emph{n/a} = axis does not apply; \emph{NA} = not applicable (activation-bit/systems-layer); \emph{NR} = not reported; \emph{var} = a range rather than one value.}\label{tab:classification}\\
+\toprule Reference & Year & Weight type & Training paradigm & Components quantized & Act. bits & Systems layer & Modality & Evidence basis \\ \midrule \endfirsthead
+\toprule Reference & Year & Weight type & Training paradigm & Components quantized & Act. bits & Systems layer & Modality & Evidence basis \\ \midrule \endhead
+\bottomrule \endfoot
+\citet{Bengio2013-STE} & 2013 & binary & background & W & NA & algorithm & background & preprint \\
+\citet{Courbariaux2015-BinaryConnect} & 2015 & binary & native-scratch & W & 32 & algorithm & vision & Neur\allowbreak{}IPS \\
+\citet{Rastegari2016-XNORNet} & 2016 & binary & native-scratch & W+\allowbreak{}A & 1 & algo+\allowbreak{}kernel & vision & ECCV \\
+\citet{Bai2021-BinaryBERT} & 2021 & binary & QAT-finetune & W+\allowbreak{}A & 8 & algorithm & text-encoder & ACL \\
+\citet{Qin2022-BiBERT} & 2022 & binary & QAT-finetune & W+\allowbreak{}A+\allowbreak{}emb & 1 & algorithm & text-encoder & ICLR \\
+\citet{Kim2023-TSLD} & 2023 & ternary & QAT-finetune & W & 16 & algorithm & text-decoder & Neur\allowbreak{}IPS \\
+\citet{Wang2023-BitNet} & 2023 & binary & native-scratch & W+\allowbreak{}A & 8 & algo+\allowbreak{}kernel & text-decoder & JMLR \\
+\citet{Shang2023-PBLLM} & 2023 & mixed-partial & PTQ & W & 16 & algorithm & text-decoder & ICLR \\
+\citet{Ansar2024-BEExformer} & 2024 & binary & native-scratch & W & 16 & algorithm & text-encoder & IEEE-TSUSC \\
+\citet{Chen2024-DBLLM} & 2024 & binary & PTQ & W & 16 & algorithm & text-decoder & ICLR \\
+\citet{Chen2024-EfficientQAT} & 2024 & mixed-partial & QAT-finetune & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Daliri2024-Theory1bit} & 2024 & binary & analysis & W & NA & algorithm & theory & preprint \\
+\citet{Dong2024-STBLLM} & 2024 & binary & PTQ & W & 16 & algo+\allowbreak{}kernel & text-decoder & ICLR25 \\
+\citet{Du2024-BitDistiller} & 2024 & mixed-partial & QAT-finetune & W & 16 & algorithm & text-decoder & ACL \\
+\citet{Das2024-GenBFA} & 2024 & n/\allowbreak{}a & analysis & W & 8 & NA & security & preprint \\
+\citet{Gong2024-SurveyLowbit} & 2024 & n/\allowbreak{}a & survey & NA & NA & NA & survey & Neural-Networks \\
+\citet{Huang2024-BiLLM} & 2024 & binary & PTQ & W & 16 & algorithm & text-decoder & ICML \\
+\citet{Jo2024-BinaryMoS} & 2024 & binary & QAT-finetune & W & 16 & algorithm & text-decoder & Neur\allowbreak{}IPS \\
+\citet{Kaushal2024-Spectra} & 2024 & ternary & native-scratch & W & 16 & algorithm & text-decoder & preprint +\allowbreak{} ext. repro \\
+\citet{Zhao2024-DQT} & 2024 & ternary & native-scratch & W & 8 & algorithm & text-decoder & ACML \\
+\citet{Kumar2024-ScalingLawsPrecision} & 2024 & n/\allowbreak{}a & analysis & W+\allowbreak{}A & var & algorithm & theory & ICLR25 \\
+\citet{Li2024-ARBLLM} & 2024 & binary & PTQ & W & 16 & algorithm & text-decoder & ICLR25 \\
+\citet{Ma2024-BitNetB158} & 2024 & ternary & native-scratch & W+\allowbreak{}A & 8 & algo+\allowbreak{}kernel+\allowbreak{}hw & text-decoder & preprint +\allowbreak{} ext. repro \\
+\citet{Ma2024-FBILLM} & 2024 & binary & native-scratch & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Malekar2024-MatmulOrNot} & 2024 & n/\allowbreak{}a & analysis & NA & NA & hardware & analysis & preprint \\
+\citet{Malinovskii2024-PVTuning} & 2024 & mixed-partial & QAT-finetune & W & 16 & algorithm & text-decoder & Neur\allowbreak{}IPS(oral) \\
+\citet{Nielsen2024-Reloaded} & 2024 & ternary & native-scratch & W+\allowbreak{}A & 8 & algorithm & small-LM/\allowbreak{}vision & preprint \\
+\citet{Nielsen2024-WhenEnough} & 2024 & ternary & native-scratch & W & 16 & algorithm & MLP/\allowbreak{}GNN/\allowbreak{}encoder & preprint \\
+\citet{Ouyang2024-QiDScaling} & 2024 & n/\allowbreak{}a & analysis & W & var & algorithm & theory & preprint \\
+\citet{Sundaram2024-LLaVaOLMoBitnet} & 2024 & ternary & native-scratch & W+\allowbreak{}A & 8 & algorithm & VLM & preprint \\
+\citet{Tang2024-BiMamba} & 2024 & binary & native-scratch & W & 16 & algorithm & SSM & TMLR \\
+\citet{Wang2024-1bitAIInfra} & 2024 & ternary & systems & NA & NA & kernel+\allowbreak{}hw & systems & preprint \\
+\citet{Wang2024-BitNetA48} & 2024 & ternary & native-scratch & W+\allowbreak{}A+\allowbreak{}KV+\allowbreak{}sparsify & 4 & algo+\allowbreak{}kernel & text-decoder & preprint \\
+\citet{Wang2024-QSparse} & 2024 & ternary & native-scratch & A-sparsify & 8 & algorithm & text-decoder & preprint \\
+\citet{Xu2024-OneBit} & 2024 & binary & QAT-finetune & W & 16 & algorithm & text-decoder & Neur\allowbreak{}IPS \\
+\citet{Zhu2024-MatmulFree} & 2024 & ternary & native-scratch & W+\allowbreak{}A & 8 & algo+\allowbreak{}kernel+\allowbreak{}hw & text-decoder & preprint \\
+\citet{Dehghankar2024-EfficientMatmul} & 2024 & n/\allowbreak{}a & systems & W & NA & algorithm & systems & ICML25 \\
+\citet{Chen2024-TernaryEmbedding} & 2024 & ternary & QAT-finetune & W & 16 & algorithm & embedding & preprint \\
+\citet{Fan2024-ResilientEfficient} & 2024 & n/\allowbreak{}a & analysis & NA & NA & NA & analysis-security & preprint \\
+\citet{Kawamura2025-BitTTS} & 2025 & ternary & QAT-finetune & W & 16 & algorithm & TTS & Interspeech \\
+\citet{Ye2025-DBellQuant} & 2025 & binary & PTQ & W+\allowbreak{}A & 6 & algorithm & text-decoder & preprint \\
+\citet{Hoang2025-OutputAlign1bit} & 2025 & binary & PTQ & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Huang2025-Tequila} & 2025 & ternary & QAT-finetune & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Vaidhya2025-Spectra11} & 2025 & ternary & native-scratch & W & 16 & algo+\allowbreak{}kernel & text-decoder & preprint +\allowbreak{} ext. repro \\
+\citet{Ardakani2025-LLMPi} & 2025 & ternary & systems & W+\allowbreak{}A & 8 & kernel+\allowbreak{}hw & edge-systems & CVPRW \\
+\citet{Lee2025-LittleBit} & 2025 & binary & QAT-finetune & W & 16 & algorithm & text-decoder & Neur\allowbreak{}IPS \\
+\citet{Liu2025-SurveyBNNLLM} & 2025 & n/\allowbreak{}a & survey & NA & NA & NA & survey & preprint \\
+\citet{Ma2025-BitNet2B4T} & 2025 & ternary & native-scratch & W+\allowbreak{}A & 8 & algo+\allowbreak{}kernel+\allowbreak{}hw & text-decoder & preprint +\allowbreak{} Sec.10 \\
+\citet{Wang2025-MoTE} & 2025 & ternary & native-scratch & W-experts & 16 & algorithm & VLM/\allowbreak{}Mo\allowbreak{}E & preprint \\
+\citet{Nielsen2025-ContinualQAT} & 2025 & ternary & continual-QAT & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Yan2025-PT2LLM} & 2025 & ternary & PTQ & W & 16 & algorithm & text-decoder & ICLR26 \\
+\citet{Xiao2025-PTQTP} & 2025 & ternary & PTQ & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Liu2025-ParetoQ} & 2025 & mixed-partial & QAT-finetune & W & 16 & algorithm & theory/\allowbreak{}text-decoder & Neur\allowbreak{}IPS +\allowbreak{} ext. repro \\
+\citet{Panferov2025-QuEST} & 2025 & binary & QAT-finetune & W+\allowbreak{}A & 1 & algo+\allowbreak{}kernel & text-decoder & preprint \\
+\citet{Oh2025-TSAR} & 2025 & ternary & systems & NA & NA & kernel+\allowbreak{}hw & systems & DATE26 \\
+\citet{Tabesh2025-CAGE} & 2025 & mixed-partial & QAT-finetune & W+\allowbreak{}A & 3 & algorithm & text-decoder & MLSys26 \\
+\citet{Xu2025-TeLLMe} & 2025 & ternary & systems & NA & NA & hardware & systems & preprint \\
+\citet{Chen2025-TerEffic} & 2025 & ternary & systems & NA & NA & hardware & systems & preprint \\
+\citet{Tu2025-Rethink1bitOpt} & 2025 & binary & continual-QAT & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Wang2025-BitNetJMLR} & 2025 & mixed-partial & native-scratch & W+\allowbreak{}A & 8 & algo+\allowbreak{}kernel & text-decoder & JMLR \\
+\citet{Wang2025-BitNetCPP} & 2025 & ternary & systems & NA & NA & kernel & systems & ACL \\
+\citet{Wang2025-BitNetV2} & 2025 & ternary & native-scratch & W+\allowbreak{}A+\allowbreak{}KV & 4 & algo+\allowbreak{}kernel & text-decoder & preprint \\
+\citet{Wang2025-BitVLA} & 2025 & ternary & native-scratch & W+\allowbreak{}A & 8 & algorithm & VLA & preprint \\
+\citet{Anon2025-BinaryWA-PTQ} & 2025 & binary & PTQ & W+\allowbreak{}A & 1 & algorithm & text-decoder & preprint \\
+\citet{Anon2025-DoubleBinaryFactorization} & 2025 & binary & PTQ & W & 16 & algorithm & text-decoder & TMLR \\
+\citet{Wu2025-BitNetDistillation} & 2025 & ternary & QAT-finetune & W+\allowbreak{}A & 8 & algorithm & text-decoder & preprint \\
+\citet{Zhang2025-BitROM} & 2025 & ternary & systems & NA & NA & hardware & systems & ASP-DAC \\
+\citet{Gu2025-BTCLLM} & 2025 & binary & PTQ & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Anon2025-CPUvsGPU} & 2025 & ternary & systems & NA & NA & hardware & systems & preprint \\
+\citet{Anon2025-CompressionScalingLaws} & 2025 & n/\allowbreak{}a & analysis & W & var & algorithm & theory & preprint \\
+\citet{Chen2025-HBLLM} & 2025 & binary & PTQ & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Anon2025-STE-ZerothOrder} & 2025 & mixed-partial & QAT-finetune & W & 16 & algorithm & text-decoder & Neur\allowbreak{}IPS \\
+\citet{Chen2025-LoTAQAF} & 2025 & ternary & QAT-finetune & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Hao2025-LowPrecTrainingSurvey} & 2025 & n/\allowbreak{}a & survey & W+\allowbreak{}A & var & algorithm & survey & IEEE-TPAMI \\
+\citet{Anon2025-MultiBoolean} & 2025 & binary & PTQ & W & 16 & algorithm & text-decoder & ICLR \\
+\citet{Malekar2025-PIMLLM} & 2025 & ternary & systems & NA & NA & hardware & systems & preprint \\
+\citet{Anon2025-ProgBinPruning} & 2025 & binary & PTQ & W & 16 & algo+\allowbreak{}kernel & text-decoder & preprint \\
+\citet{Zhao2025-PTQ161} & 2025 & mixed-partial & PTQ & W & 16 & algorithm & text-decoder & ACL \\
+\citet{Xia2025-SDQLLM} & 2025 & binary & PTQ & W & 16 & algorithm & text-decoder & ECAI \\
+\citet{Anon2025-TENET} & 2025 & ternary & systems & NA & NA & hardware & systems & preprint \\
+\citet{Anon2025-VLMTernarization} & 2025 & ternary & QAT-finetune & W & 16 & algorithm & VLM & preprint \\
+\citet{Anon2025-OneBitASR} & 2025 & binary & QAT-finetune & W & 16 & algorithm & ASR & Interspeech \\
+\citet{Connor2025-UltraQuantisation} & 2025 & ternary & QAT-finetune & W & 16 & algorithm & embedding & preprint \\
+\citet{Huang2026-Sherry} & 2026 & ternary & QAT-finetune & W & 16 & algo+\allowbreak{}kernel & text-decoder & preprint \\
+\citet{Li2026-BitNetTextEmbeddings} & 2026 & ternary & native-scratch & W & 8 & algorithm & embedding & preprint \\
+\citet{Anon2026-Litespark} & 2026 & ternary & systems & NA & NA & kernel & systems & preprint \\
+\citet{Anon2026-NativeTernary} & 2026 & ternary & systems & W & NA & algorithm & storage & preprint \\
+\citet{Song2026-LBLLM} & 2026 & mixed-partial & PTQ & W+\allowbreak{}A & 4 & algorithm & text-decoder & preprint \\
+\citet{Nargund2026-TernaryLM} & 2026 & ternary & native-scratch & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Zhang2026-SparseBitNet} & 2026 & ternary & native-scratch & W+\allowbreak{}sparsify & 8 & algo+\allowbreak{}kernel+\allowbreak{}hw & text-decoder & preprint \\
+\citet{Zhao2026-TWLA} & 2026 & ternary & PTQ & W+\allowbreak{}A & 4 & algorithm & text-decoder & preprint \\
+\citet{Zuo2026-FairyFuse} & 2026 & ternary & systems & NA & NA & kernel & systems & preprint \\
+\citet{Wang2026-CATQ} & 2026 & ternary & PTQ & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Anon2026-EveryBitCounts} & 2026 & n/\allowbreak{}a & analysis & W & var & algorithm & theory & preprint \\
+\citet{Anon2026-ExpressivePowerWQ} & 2026 & n/\allowbreak{}a & analysis & W & var & algorithm & theory & preprint \\
+\citet{Wang2026-HESTIA} & 2026 & mixed-partial & QAT-finetune & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Anon2026-HGF} & 2026 & ternary & native-scratch & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Chong2026-NanoQuant} & 2026 & binary & PTQ & W & 16 & algorithm & text-decoder & preprint \\
+\citet{You2026-RaBiT} & 2026 & binary & QAT-finetune & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Zagitov2026-HARP} & 2026 & n/\allowbreak{}a & PTQ & W+\allowbreak{}A & 2 & algorithm & text-decoder & preprint \\
+\citet{Pavlov2026-InfluenceRotations} & 2026 & n/\allowbreak{}a & PTQ & W & 2 & algorithm & text-decoder & preprint \\
+\citet{Zhang2026-pQuant} & 2026 & mixed-partial & QAT-finetune & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Wang2026-LCQAT} & 2026 & mixed-partial & QAT-finetune & W & 16 & algorithm & text-decoder & ICML \\
+\citet{Alimaskina2026-ExtremeReasoning} & 2026 & n/\allowbreak{}a & analysis & W & 2 & algorithm & reasoning & preprint \\
+\citet{Zhao2026-BWLA} & 2026 & binary & PTQ & W+\allowbreak{}A & 6 & algorithm & text-decoder & preprint \\
+\citet{Xu2026-FittingNotEnough} & 2026 & n/\allowbreak{}a & analysis & W & var & algorithm & theory & preprint \\
+\citet{Wang2025-Fairy2i} & 2025 & mixed-partial & PTQ & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Maskey2026-1BitWonder} & 2026 & n/\allowbreak{}a & QAT-finetune & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Li2025-ICQuant} & 2025 & n/\allowbreak{}a & PTQ & W & 16 & algorithm & text-decoder & COLM \\
+\citet{Wang2025-TZLLM} & 2025 & n/\allowbreak{}a & systems & NA & NA & hardware & security & Euro\allowbreak{}Sys \\
+\citet{Shan2025-Platinum} & 2025 & ternary & systems & NA & NA & hardware & systems & ASP-DAC \\
+\citet{Li2025-VecLUT} & 2025 & ternary & systems & NA & NA & kernel & systems & Mobi\allowbreak{}Sys \\
+\citet{Guan2026-TOM} & 2026 & ternary & systems & NA & NA & hardware & systems & preprint \\
+\citet{Qiao2025-TeLLMev2} & 2025 & ternary & systems & NA & NA & hardware & systems & preprint \\
+\citet{Jorgensen2025-ResourceEfficientLMs} & 2025 & n/\allowbreak{}a & survey & NA & NA & algorithm & survey & preprint \\
+\citet{Aman2025-BitMar} & 2025 & mixed-partial & native-scratch & W & 16 & algorithm & VLM & preprint \\
+\citet{Chen2025-R2Q} & 2025 & mixed-partial & QAT-finetune & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Zhang2026-EdgeRazor} & 2026 & mixed-partial & QAT-finetune & W+\allowbreak{}A & 16 & algorithm & text-decoder & preprint \\
+\citet{Dehghankar2026-RSRcore} & 2026 & n/\allowbreak{}a & systems & NA & NA & kernel & systems & preprint \\
+\citet{Grainge2025-TeTRAVPR} & 2025 & ternary & QAT-finetune & W & 16 & algorithm & vision & IEEE-RAL \\
+\citet{Wang2025-iFairy} & 2025 & mixed-partial & native-scratch & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Ganesaraja2026-TernaryMamba} & 2026 & ternary & QAT-finetune & W & 16 & algorithm & SSM & preprint \\
+\citet{Zhang2025-TernaryCLIP} & 2025 & ternary & QAT-finetune & W & 16 & algorithm & VLM & preprint \\
+\citet{Steinmetz2025-ExtraRMSNorm} & 2025 & ternary & QAT-finetune & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Ortega2024-PIMAI} & 2024 & n/\allowbreak{}a & systems & NA & NA & hardware & systems & preprint \\
+\citet{Liu2023-BinTernNLG} & 2023 & ternary & QAT-finetune & W+\allowbreak{}A & 8 & algorithm & text-seq2seq & preprint \\
+\citet{Wei2024-TMAC} & 2024 & ternary & systems & NA & NA & kernel & systems & preprint \\
+\citet{Ji2024-BMTBAT} & 2024 & binary & QAT-finetune & W+\allowbreak{}A & NR & algo+\allowbreak{}kernel+\allowbreak{}hw & text-decoder & preprint \\
+\citet{Xu2024-CRVQ} & 2024 & mixed-partial & PTQ & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Edalati2024-OAC} & 2024 & binary & PTQ & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Malhotra2025-ReTern} & 2025 & ternary & systems & W+\allowbreak{}A & 8 & hardware & systems & preprint \\
+\citet{Xiao2025-LieQ} & 2025 & mixed-partial & PTQ & W & 16 & algorithm & text-decoder & preprint \\
+\citet{Georganas2025-UltraLowBitKernels} & 2025 & n/\allowbreak{}a & systems & NA & NA & kernel & systems & preprint \\
+\citet{Qi2025-DeltaLLM} & 2025 & ternary & systems & A-sparsify & 8 & algorithm & text-decoder & preprint \\
+\citet{Zhang2025-PDSwap} & 2025 & ternary & systems & NA & NA & hardware & systems & preprint \\
+\citet{Sajid2026-BitRL} & 2026 & ternary & QAT-finetune & W+\allowbreak{}A & 8 & algorithm & RL & preprint \\
+\citet{Geens2026-LUTAccelDesign} & 2026 & ternary & systems & NA & NA & hardware & systems & preprint \\
+\citet{Lin2026-VitaLLM} & 2026 & ternary & systems & NA & NA & hardware & systems & preprint \\
+\citet{Kang2026-BitTP} & 2026 & ternary & QAT-finetune & W & 16 & algorithm & robotics & preprint \\
+\citet{Abdalla2026-SAGEPTQ} & 2026 & mixed-partial & PTQ & W & 16 & algorithm & text-decoder & preprint \\
+\end{longtable}
+\endgroup
+\end{landscape}

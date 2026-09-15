@@ -1,0 +1,140 @@
+model                  thr         test        tok/s   +/- sd
+--------------------------------------------------------------
+bitnet_i2s               1        tg128        12.50     0.48
+bitnet_i2s               1        pp128        57.46     2.19
+bitnet_i2s               1        pp512        51.68     1.55
+bitnet_i2s               1       pp2048        39.38     0.59
+bitnet_i2s               2        tg128        21.20     1.56
+bitnet_i2s               2        pp128        90.83     7.98
+bitnet_i2s               2        pp512        74.34     6.05
+bitnet_i2s               2       pp2048        68.07     5.80
+bitnet_i2s               4        tg128        28.57     1.60
+bitnet_i2s               4        pp128        56.96     4.56
+bitnet_i2s               4        pp512       108.88     5.22
+bitnet_i2s               4       pp2048        88.17     3.49
+bitnet_i2s               8        tg128        26.83     0.32
+bitnet_i2s               8        pp128       125.26     4.93
+bitnet_i2s               8        pp512       111.79    11.05
+bitnet_i2s               8       pp2048        98.69     9.55
+bitnet_i2s              16        tg128        20.40     1.97
+bitnet_i2s              16        pp128        67.30     4.48
+bitnet_i2s              16        pp512        79.33     4.04
+bitnet_i2s              16       pp2048        69.90     3.26
+qwen_fp16                1        tg128         6.09     0.08
+qwen_fp16                1        pp128        29.18     1.29
+qwen_fp16                1        pp512        29.73     0.69
+qwen_fp16                1       pp2048        27.20     1.43
+qwen_fp16                2        tg128        10.52     0.29
+qwen_fp16                2        pp128        47.23     1.28
+qwen_fp16                2        pp512        49.46     1.29
+qwen_fp16                2       pp2048        46.49     0.81
+qwen_fp16                4        tg128        14.39     0.29
+qwen_fp16                4        pp128        70.68     0.62
+qwen_fp16                4        pp512        70.92     0.75
+qwen_fp16                4       pp2048        65.98     1.21
+qwen_fp16                8        tg128        13.20     0.63
+qwen_fp16                8        pp128        87.41     0.95
+qwen_fp16                8        pp512        84.22     5.53
+qwen_fp16                8       pp2048        79.75     4.50
+qwen_fp16               16        tg128        12.03     0.42
+qwen_fp16               16        pp128        83.70     1.57
+qwen_fp16               16        pp512        78.41     3.24
+qwen_fp16               16       pp2048        75.80     1.48
+qwen_q4_0                1        tg128        14.93     0.24
+qwen_q4_0                1        pp128        37.10     5.59
+qwen_q4_0                1        pp512        36.38     3.30
+qwen_q4_0                1       pp2048        37.14     4.84
+qwen_q4_0                2        tg128        27.73     0.55
+qwen_q4_0                2        pp128        78.54     5.56
+qwen_q4_0                2        pp512        79.10     4.30
+qwen_q4_0                2       pp2048        73.61     1.64
+qwen_q4_0                4        tg128        36.30     1.06
+qwen_q4_0                4        pp128       109.26     6.53
+qwen_q4_0                4        pp512       116.05     0.77
+qwen_q4_0                4       pp2048       104.40     1.73
+qwen_q4_0                8        tg128        34.23     3.56
+qwen_q4_0                8        pp128       133.27     2.25
+qwen_q4_0                8        pp512       123.45     8.88
+qwen_q4_0                8       pp2048       116.01     1.23
+qwen_q4_0               16        tg128        27.24     3.31
+qwen_q4_0               16        pp128       132.34     3.50
+qwen_q4_0               16        pp512       122.28     2.59
+qwen_q4_0               16       pp2048       105.01     5.12
+qwen_q4_k_m              1        tg128        15.74     0.44
+qwen_q4_k_m              1        pp128        52.94     1.72
+qwen_q4_k_m              1        pp512        54.42     1.62
+qwen_q4_k_m              1       pp2048        48.24     0.87
+qwen_q4_k_m              2        tg128        25.86     0.16
+qwen_q4_k_m              2        pp128        82.52     1.22
+qwen_q4_k_m              2        pp512        81.64     0.38
+qwen_q4_k_m              2       pp2048        70.95     1.42
+qwen_q4_k_m              4        tg128        33.83     0.25
+qwen_q4_k_m              4        pp128       107.91     1.86
+qwen_q4_k_m              4        pp512       107.56     2.67
+qwen_q4_k_m              4       pp2048        96.06     0.37
+qwen_q4_k_m              8        tg128        34.23     0.37
+qwen_q4_k_m              8        pp128       124.08     3.73
+qwen_q4_k_m              8        pp512       121.28     2.22
+qwen_q4_k_m              8       pp2048       113.30     1.30
+qwen_q4_k_m             16        tg128        30.53     1.72
+qwen_q4_k_m             16        pp128       131.34     1.08
+qwen_q4_k_m             16        pp512       126.44     2.65
+qwen_q4_k_m             16       pp2048       111.11     4.32
+qwen_q4_k_s              1        tg128        14.72     0.28
+qwen_q4_k_s              1        pp128        54.04     5.47
+qwen_q4_k_s              1        pp512        55.19     3.30
+qwen_q4_k_s              1       pp2048        49.26     0.71
+qwen_q4_k_s              2        tg128        21.75     3.35
+qwen_q4_k_s              2        pp128        88.99     1.56
+qwen_q4_k_s              2        pp512        84.94     3.43
+qwen_q4_k_s              2       pp2048        76.31     0.60
+qwen_q4_k_s              4        tg128        28.67     4.75
+qwen_q4_k_s              4        pp128       111.40    11.40
+qwen_q4_k_s              4        pp512       109.42     5.43
+qwen_q4_k_s              4       pp2048        84.02     7.51
+qwen_q4_k_s              8        tg128        33.83     1.71
+qwen_q4_k_s              8        pp128       132.50     6.72
+qwen_q4_k_s              8        pp512       124.05    19.45
+qwen_q4_k_s              8       pp2048       122.78     3.77
+qwen_q4_k_s             16        tg128        24.75     4.08
+qwen_q4_k_s             16        pp128       134.98     5.38
+qwen_q4_k_s             16        pp512       132.28     5.56
+qwen_q4_k_s             16       pp2048       107.38     9.99
+qwen_q8_0                1        tg128         9.65     0.12
+qwen_q8_0                1        pp128        32.34     1.57
+qwen_q8_0                1        pp512        29.55     1.79
+qwen_q8_0                1       pp2048        31.33     0.63
+qwen_q8_0                2        tg128        17.66     0.18
+qwen_q8_0                2        pp128        57.30     1.31
+qwen_q8_0                2        pp512        55.06     0.66
+qwen_q8_0                2       pp2048        50.55     1.28
+qwen_q8_0                4        tg128        24.11     0.12
+qwen_q8_0                4        pp128        76.08     1.26
+qwen_q8_0                4        pp512        72.44     3.07
+qwen_q8_0                4       pp2048        68.77     1.71
+qwen_q8_0                8        tg128        22.40     1.21
+qwen_q8_0                8        pp128        88.69     0.85
+qwen_q8_0                8        pp512        82.45    10.08
+qwen_q8_0                8       pp2048        80.49     3.08
+qwen_q8_0               16        tg128        19.40     1.41
+qwen_q8_0               16        pp128        72.44     1.92
+qwen_q8_0               16        pp512        56.06     1.36
+qwen_q8_0               16       pp2048        70.35     2.36
+
+bitnet_i2s             bitnet-b1.58 2B Q1_0    1.10 GiB on disk  2.41 B params   1218 MB peak WS
+qwen_fp16              qwen2 1.5B F16          3.31 GiB on disk  1.78 B params   3017 MB peak WS
+qwen_q4_0              qwen2 1.5B Q4_0         0.99 GiB on disk  1.78 B params   1661 MB peak WS
+qwen_q4_k_m            qwen2 1.5B Q4_K - Medium  1.04 GiB on disk  1.78 B params   1603 MB peak WS
+qwen_q4_k_s            qwen2 1.5B Q4_K - Small  0.99 GiB on disk  1.78 B params   1643 MB peak WS
+qwen_q8_0              qwen2 1.5B Q8_0         1.76 GiB on disk  1.78 B params   1637 MB peak WS
+
+decode @ 8 threads: bitnet_i2s 26.8 t/s = 37.3 ms/token
+   qwen_q8_0  22.4 t/s = 44.6 ms/token   (bitnet 1.20x)
+   qwen_fp16  13.2 t/s = 75.8 ms/token   (bitnet 2.03x)
+prefill128 @ 8 threads: bitnet_i2s 125.3 t/s | qwen_q8_0 88.7 (1.41x) | qwen_fp16 87.4 (1.43x)
+
+decode @ 16 threads: bitnet_i2s 20.4 t/s = 49.0 ms/token
+   qwen_q8_0  19.4 t/s = 51.6 ms/token   (bitnet 1.05x)
+   qwen_fp16  12.0 t/s = 83.1 ms/token   (bitnet 1.70x)
+prefill128 @ 16 threads: bitnet_i2s 67.3 t/s | qwen_q8_0 72.4 (0.93x) | qwen_fp16 83.7 (0.80x)
+

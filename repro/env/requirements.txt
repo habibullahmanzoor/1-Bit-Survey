@@ -1,0 +1,9 @@
+# Pin exact versions at setup time. Arm A needs a CUDA-enabled torch for the RTX 4080.
+lm-eval @ git+https://github.com/EleutherAI/lm-evaluation-harness@<PIN_COMMIT>
+torch            # install the cu12x wheel matching the local driver
+transformers
+accelerate
+datasets
+sentencepiece
+# Arm B (bitnet.cpp / llama.cpp) are built from source, not pip - see ../README.md
+triton-windows == 3.1.0.post17   # Windows: Triton build matching torch 2.5.1 inductor; without it BitNet cannot torch.compile (eager is ~35x slower for few-shot)

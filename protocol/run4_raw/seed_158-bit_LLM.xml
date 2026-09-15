@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/ECi3GTKpa4SsSp2q3EwpnFDIrFE</id>
+  <title>arXiv Query: search_query=abs:"1.58-bit LLM" AND (cat:cs.CL OR cat:cs.LG OR cat:cs.AI OR cat:cs.AR) AND submittedDate:"202301010000 TO 202606302359"&amp;id_list=&amp;start=0&amp;max_results=200</title>
+  <updated>2026-09-05T10:56:55Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%221.58-bit+LLM%22+AND+((cat:cs.CL+OR+(cat:cs.LG+OR+(cat:cs.AI+OR+cat:cs.AR)))+AND+submittedDate:%22202301010000+TO+202606302359%22)&amp;start=0&amp;max_results=200&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>200</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2402.17764v1</id>
+    <title>The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits</title>
+    <updated>2024-02-27T18:56:19Z</updated>
+    <link href="https://arxiv.org/abs/2402.17764v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.17764v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent research, such as BitNet, is paving the way for a new era of 1-bit Large Language Models (LLMs). In this work, we introduce a 1-bit LLM variant, namely BitNet b1.58, in which every single parameter (or weight) of the LLM is ternary {-1, 0, 1}. It matches the full-precision (i.e., FP16 or BF16) Transformer LLM with the same model size and training tokens in terms of both perplexity and end-task performance, while being significantly more cost-effective in terms of latency, memory, throughput, and energy consumption. More profoundly, the 1.58-bit LLM defines a new scaling law and recipe for training new generations of LLMs that are both high-performance and cost-effective. Furthermore, it enables a new computation paradigm and opens the door for designing specific hardware optimized for 1-bit LLMs.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-27T18:56:19Z</published>
+    <arxiv:comment>Work in progress</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Lingxiao Ma</name>
+    </author>
+    <author>
+      <name>Lei Wang</name>
+    </author>
+    <author>
+      <name>Wenhui Wang</name>
+    </author>
+    <author>
+      <name>Shaohan Huang</name>
+    </author>
+    <author>
+      <name>Li Dong</name>
+    </author>
+    <author>
+      <name>Ruiping Wang</name>
+    </author>
+    <author>
+      <name>Jilong Xue</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.13998v1</id>
+    <title>BitNet Distillation</title>
+    <updated>2025-10-15T18:28:12Z</updated>
+    <link href="https://arxiv.org/abs/2510.13998v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.13998v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we present BitNet Distillation (BitDistill), a lightweight pipeline that fine-tunes off-the-shelf full-precision LLMs (e.g., Qwen) into 1.58-bit precision (i.e., ternary weights {-1, 0, 1}) for specific downstream tasks, achieving strong task-specific performance with minimal computational cost. Specifically, BitDistill incorporates three key techniques: the SubLN module, as introduced in BitNet; multi-head attention distillation, based on MiniLM; and continual pre-training, which serves as a crucial warm-up step to mitigate the scalability issue of the performance gap between finetuned full-precision and 1.58-bit LLMs on specific tasks. Experimental results show that BitDistill achieves performance comparable to the full-precision counterpart models across model size, while enabling up to 10x memory savings and 2.65x faster inference on CPUs. Code is available at https://github.com/microsoft/BitNet.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-15T18:28:12Z</published>
+    <arxiv:comment>12 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xun Wu</name>
+    </author>
+    <author>
+      <name>Shaohan Huang</name>
+    </author>
+    <author>
+      <name>Wenhui Wang</name>
+    </author>
+    <author>
+      <name>Ting Song</name>
+    </author>
+    <author>
+      <name>Li Dong</name>
+    </author>
+    <author>
+      <name>Yan Xia</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.20745v1</id>
+    <title>HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs</title>
+    <updated>2026-01-28T16:22:42Z</updated>
+    <link href="https://arxiv.org/abs/2601.20745v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.20745v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As large language models (LLMs) continue to scale, deployment is increasingly bottlenecked by the memory wall, motivating a shift toward extremely low-bit quantization. However, most quantization-aware training (QAT) methods apply hard rounding and the straight-through estimator (STE) from the beginning of the training, which prematurely discretizes the optimization landscape and induces persistent gradient mismatch between latent weights and quantized weights, hindering effective optimization of quantized models. To address this, we propose Hestia, a Hessian-guided differentiable QAT framework for extremely low-bit LLMs, which replaces the rigid step function with a temperature-controlled softmax relaxation to maintain gradient flow early in training while progressively hardening quantization. Furthermore, Hestia leverages a tensor-wise Hessian trace metric as a lightweight curvature signal to drive fine-grained temperature annealing, enabling sensitivity-aware discretization across the model. Evaluations on Llama-3.2 show that Hestia consistently outperforms existing ternary QAT baselines, yielding average zero-shot improvements of 5.39% and 4.34% for the 1B and 3B models. These results indicate that Hessian-guided relaxation effectively recovers representational capacity, establishing a more robust training path for 1.58-bit LLMs. The code is available at https://github.com/hestia2026/Hestia.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-28T16:22:42Z</published>
+    <arxiv:comment>13 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Guoan Wang</name>
+    </author>
+    <author>
+      <name>Feiyu Wang</name>
+    </author>
+    <author>
+      <name>Zongwei Lv</name>
+    </author>
+    <author>
+      <name>Yikun Zong</name>
+    </author>
+    <author>
+      <name>Tong Yang</name>
+    </author>
+  </entry>
+</feed>

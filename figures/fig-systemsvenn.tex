@@ -1,0 +1,29 @@
+\documentclass[11pt,tikz,border={14pt 14pt 14pt 14pt}]{standalone}
+\usepackage[a4paper,margin=0.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\begin{document}
+
+\definecolor{vennAlgo}{HTML}{2166AC}
+\definecolor{vennKernel}{HTML}{D95F0E}
+\definecolor{vennHW}{HTML}{1BAF7A}
+\begin{tikzpicture}[font=\small]
+\draw[fill=vennAlgo, opacity=0.32, draw=vennAlgo!70!black, thick] (-1,1) circle (1.8);
+\draw[fill=vennKernel, opacity=0.32, draw=vennKernel!70!black, thick] (1,1) circle (1.8);
+\draw[fill=vennHW, opacity=0.32, draw=vennHW!70!black, thick] (0,-0.9) circle (1.8);
+\node[font=\bfseries] at (-2.5,2.7) {algorithm};
+\node[font=\bfseries] at (2.5,2.7) {kernel};
+\node[font=\bfseries] at (0,-3.0) {hardware};
+\node at (-2.1,1.9) {95};
+\node at (2.1,1.9) {7};
+\node at (0,-2.3) {16};
+\node at (0,1.55) {10};
+\node at (-1.05,-0.55) {0};
+\node at (1.05,-0.55) {3};
+\node[font=\bfseries] at (0,0.35) {5};
+\node[font=\scriptsize] at (0,-4.0) {(4 survey works with no systems-stack contribution are not pictured)};
+\end{tikzpicture}
+\end{document}

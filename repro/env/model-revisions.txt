@@ -1,0 +1,22 @@
+# Model artifacts used in the reproduction (recorded 2026-09-07; extended 2026-09-08)
+
+## Hugging Face snapshots (commit dir = revision)
+  models--microsoft--bitnet-b1.58-2B-4T-bf16  ->  276681394656abdadb8e80e5b2c3db5e5d7fcaff
+  models--Qwen--Qwen2.5-1.5B-Instruct  ->  989aa7980e4cf806f80c7fef2b1adb7bc71aa306
+  models--tiiuae--Falcon3-1B-Instruct-1.58bit  ->  72fd3f95fcd82639c902304919629edda8c6f2b4
+  models--microsoft--bitnet-b1.58-2B-4T-gguf  ->  a1f2f1c765812aa8af3f6eda4a313707064bba15
+  models--Qwen--Qwen2.5-1.5B-Instruct-GGUF  ->  91cad51170dc346986eccefdc2dd33a9da36ead9
+
+## HF snapshots added for the review-round-3 controlled comparison (2026-09-08)
+  models--tiiuae--Falcon3-1B-Instruct            (bf16 counterpart of the 1.58bit checkpoint above)
+  models--SpectraSuite--TriLM_2.4B_Unpacked      (ternary; matched to FloatLM below)
+  models--SpectraSuite--FloatLM_2.4B             (FP16; params/tokenizer/data/300B-tok matched to TriLM)
+  Qwen2.5-1.5B-Instruct 4-bit: bitsandbytes nf4 (bnb 0.50.2), quantised at load from the snapshot above
+
+## GGUF SHA-256
+4221b252fdd5fd25e15847adfeb5ee88886506ba50b8a34548374492884c2162 *models/bitnet-b1.58-2B-4T.i2_s.gguf
+fc89e330deb3fd8fa560f1c0f35a1e2b8da96d59e13445559ed190307a6f5649 *models/qwen2.5-1.5b-instruct.fp16.gguf
+40bce35c0f97edb15785a4de0f646bfc2ebdff79fb75395e4291245c4f89f72c *models/qwen2.5-1.5b-instruct.q4_0.gguf   (llama-quantize from fp16 gguf, 2026-09-08)
+eee0176b86f95aff2e794f88c13b613a47c13380131ccdf926de8d650e6402d2 *models/qwen2.5-1.5b-instruct.q4_k_s.gguf (llama-quantize from fp16 gguf, 2026-09-08)
+6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e *models/qwen2.5-1.5b-instruct.q4_k_m.gguf
+d7efb072e7724d25048a4fda0a3e10b04bdef5d06b1403a1c93bd9f1240a63c8 *models/qwen2.5-1.5b-instruct.q8_0.gguf

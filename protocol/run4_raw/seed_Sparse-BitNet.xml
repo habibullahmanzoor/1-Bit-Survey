@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/pFsHjS+EnFwEgeKyup6pCs4PdeU</id>
+  <title>arXiv Query: search_query=abs:"Sparse-BitNet" AND (cat:cs.CL OR cat:cs.LG OR cat:cs.AI OR cat:cs.AR) AND submittedDate:"202301010000 TO 202606302359"&amp;id_list=&amp;start=0&amp;max_results=200</title>
+  <updated>2026-09-05T10:56:32Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22Sparse-BitNet%22+AND+((cat:cs.CL+OR+(cat:cs.LG+OR+(cat:cs.AI+OR+cat:cs.AR)))+AND+submittedDate:%22202301010000+TO+202606302359%22)&amp;start=0&amp;max_results=200&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>200</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2603.05168v1</id>
+    <title>Sparse-BitNet: 1.58-bit LLMs are Naturally Friendly to Semi-Structured Sparsity</title>
+    <updated>2026-03-05T13:37:50Z</updated>
+    <link href="https://arxiv.org/abs/2603.05168v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.05168v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Semi-structured N:M sparsity and low-bit quantization (e.g., 1.58-bit BitNet) are two promising approaches for improving the efficiency of large language models (LLMs), yet they have largely been studied in isolation. In this work, we investigate their interaction and show that 1.58-bit BitNet is naturally more compatible with N:M sparsity than full-precision models. To study this effect, we propose Sparse-BitNet, a unified framework that jointly applies 1.58-bit quantization and dynamic N:M sparsification while ensuring stable training for the first time. Across multiple model scales and training regimes (sparse pretraining and dense-to-sparse schedules), 1.58-bit BitNet consistently exhibits smaller performance degradation than full-precision baselines at the same sparsity levels and can tolerate higher structured sparsity before accuracy collapse. Moreover, using our custom sparse tensor core, Sparse-BitNet achieves substantial speedups in both training and inference, reaching up to 1.30X. These results highlight that combining extremely low-bit quantization with semi-structured N:M sparsity is a promising direction for efficient LLMs. Code available at https://github.com/AAzdi/Sparse-BitNet</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-05T13:37:50Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Di Zhang</name>
+    </author>
+    <author>
+      <name>Xun Wu</name>
+    </author>
+    <author>
+      <name>Shaohan Huang</name>
+    </author>
+    <author>
+      <name>Yudong Wang</name>
+    </author>
+    <author>
+      <name>Hanyong Shao</name>
+    </author>
+    <author>
+      <name>Yingbo Hao</name>
+    </author>
+    <author>
+      <name>Zewen Chi</name>
+    </author>
+    <author>
+      <name>Li Dong</name>
+    </author>
+    <author>
+      <name>Ting Song</name>
+    </author>
+    <author>
+      <name>Yan Xia</name>
+    </author>
+    <author>
+      <name>Zhifang Sui</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+</feed>

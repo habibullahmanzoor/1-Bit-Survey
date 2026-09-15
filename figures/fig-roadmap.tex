@@ -1,0 +1,134 @@
+% Standalone build of the "paper organization" figure (Figure 1).
+% Compile:  pdflatex fig-roadmap.tex   ->  fig-roadmap.pdf
+% The main paper includes the resulting PDF with \includegraphics, so forest
+% is not needed in the main document's compile.
+\documentclass[border=6pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage[edges]{forest}
+
+\newlength{\colw}\setlength{\colw}{7.35cm}
+
+\forestset{
+  paperorg/.style={
+    for tree={
+      folder,
+      grow'=0,
+      font=\footnotesize,
+      edge={draw=black!45, line width=0.4pt},
+      inner ysep=1.3pt, inner xsep=2pt,
+      l sep=10pt, s sep=1pt,
+    },
+    where level=0{font=\footnotesize\bfseries}{},
+    where level=1{font=\footnotesize\bfseries}{},
+  },
+  contrib/.style={fill=black!8, rounded corners=1pt, inner xsep=3pt},
+}
+
+\newcommand{\colhead}[1]{%
+  \par\noindent{\footnotesize\bfseries #1}\par
+  \vspace{1pt}\noindent\textcolor{black!35}{\rule{\colw}{0.4pt}}\par\vspace{2pt}}
+
+\begin{document}
+\begin{minipage}[t]{\colw}\vspace{0pt}
+\colhead{Paper organization}
+\begin{forest} paperorg
+[{}, phantom, s sep=1pt
+  [{\S2\enspace Background \& preliminaries}
+    [{2.1\enspace Number formats \& effective bits}]
+    [{2.2\enspace Binary neural-network lineage}]
+    [{2.3\enspace Straight-through estimator}]
+    [{2.4\enspace Transformer-specific obstacles}]
+    [{2.5\enspace Scaling behavior}]
+    [{2.6\enspace Evaluation metrics}]
+  ]
+  [{\S3\enspace Scope \& corpus}
+    [{3.1\enspace Scope \& eligibility}]
+    [{3.2\enspace How the corpus was assembled}]
+    [{3.3\enspace Effective bits \& evidence basis}]
+    [{3.4\enspace Limitations}]
+  ]
+  [{\S4\enspace Taxonomy of binary \& ternary LLMs}
+    [{4.1\enspace Weight representation}]
+    [{4.2\enspace Training paradigm}]
+    [{4.3\enspace Quantized components}]
+    [{4.4\enspace Optimization mechanism}]
+    [{4.5\enspace Systems stack}]
+    [{4.6\enspace Secondary cut by modality}]
+    [{4.7\enspace Reading the taxonomy}]
+  ]
+  [{\S5\enspace Architectural design}
+    [{5.1\enspace The BitLinear primitive}]
+    [{5.2\enspace Ternary versus binary in practice}]
+    [{5.3\enspace Activation quantization}]
+    [{5.4\enspace KV cache}]
+    [{5.5\enspace Beyond the dense decoder}]
+    [{5.6\enspace Matmul-free designs}]
+  ]
+  [{\S6\enspace Training methodology \& theory}
+    [{6.1\enspace The native training loop}]
+    [{6.2\enspace Recipes}]
+    [{6.3\enspace The STE and its alternatives}]
+    [{6.4\enspace Distillation}]
+    [{6.5\enspace Post-training routes to one bit}]
+    [{6.6\enspace Scaling laws at one bit}]
+    [{6.7\enspace Stability \& smoothness}]
+  ]
+  [{\S7\enspace Inference systems \& hardware}
+    [{7.1\enspace The need for a software stack}]
+    [{7.2\enspace bitnet.cpp \& CPU kernels}]
+    [{7.3\enspace GPU}]
+    [{7.4\enspace Custom accelerators}]
+    [{7.5\enspace Summary of the systems corpus}]
+  ]
+]
+\end{forest}
+\end{minipage}\hspace{7mm}%
+\begin{minipage}[t]{\colw}\vspace{0pt}
+\colhead{Paper organization \textmd{\itshape(continued)}}
+\begin{forest} paperorg
+[{}, phantom, s sep=1pt
+  [{\S8\enspace Performance \& benchmarking}, contrib
+    [{8.1\enspace The comparison problem}]
+    [{8.2\enspace Perplexity \& the parity claim}]
+    [{8.3\enspace Downstream benchmarks}]
+    [{8.4\enspace Reasoning \& generation quality}]
+    [{8.5\enspace Efficiency}]
+    [{8.6\enspace A common-axis comparison}]
+    [{8.7\enspace Summary of the evidence}]
+  ]
+  [{\S9\enspace Applications \& extensions}
+    [{9.1\enspace On-device \& edge deployment}]
+    [{9.2\enspace Embedding models}]
+    [{9.3\enspace Speech}]
+    [{9.4\enspace Vision-language \& VLA models}]
+    [{9.5\enspace Mixture-of-experts}]
+    [{9.6\enspace Ecosystem beyond one laboratory}]
+    [{9.7\enspace Environmental framing}]
+  ]
+  [{\S10\enspace Independent re-evaluation}, contrib
+    [{10.1\enspace Rationale \& scope}]
+    [{10.2\enspace Setup}]
+    [{10.3\enspace Accuracy results}]
+    [{10.4\enspace Efficiency results}]
+    [{10.5\enspace Summary of findings}]
+    [{10.6\enspace Reproducibility audit}]
+    [{10.7\enspace Threats}]
+  ]
+  [{\S11\enspace Challenges \& open problems}
+    [{11.1\enspace Capacity ceiling \& token budget}]
+    [{11.2\enspace Training stability at scale}]
+    [{11.3\enspace The activation-precision floor}]
+    [{11.4\enspace A theory of STE training}]
+    [{11.5\enspace Hardware co-design}]
+    [{11.6\enspace Reasoning \& smoothness}]
+    [{11.7\enspace Robustness, safety, security}]
+    [{11.8\enspace Sub-1.58-bit representations}]
+    [{11.9\enspace Evaluation \& contamination}]
+  ]
+  [{\S12\enspace Conclusion}]
+]
+\end{forest}
+\end{minipage}
+\end{document}

@@ -1,0 +1,32 @@
+\documentclass[11pt,tikz,border={14pt 14pt 14pt 14pt}]{standalone}
+\usepackage[a4paper,margin=0.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\begin{document}
+
+\definecolor{heatBlue}{HTML}{2166AC}
+\begin{tikzpicture}[x=1cm, y=1cm]
+\node[font=\small, anchor=east] at (-0.15,-0.47) {binary};
+\fill[heatBlue!33!white] (0.00,0.00) rectangle ++(2.50,-0.95); \node[black, font=\small] at (1.25,-0.47) {6};
+\fill[heatBlue!12!white] (2.50,0.00) rectangle ++(2.50,-0.95); \node[black, font=\small] at (3.75,-0.47) {1};
+\fill[heatBlue!50!white] (5.00,0.00) rectangle ++(2.50,-0.95); \node[black, font=\small] at (6.25,-0.47) {9};
+\fill[heatBlue!89!white] (7.50,0.00) rectangle ++(2.50,-0.95); \node[white, font=\small] at (8.75,-0.47) {16};
+\node[font=\small, anchor=east] at (-0.15,-1.42) {ternary};
+\fill[heatBlue!100!white] (0.00,-0.95) rectangle ++(2.50,-0.95); \node[white, font=\small] at (1.25,-1.42) {18};
+\fill[heatBlue!12!white] (2.50,-0.95) rectangle ++(2.50,-0.95); \node[black, font=\small] at (3.75,-1.42) {1};
+\fill[heatBlue!89!white] (5.00,-0.95) rectangle ++(2.50,-0.95); \node[white, font=\small] at (6.25,-1.42) {16};
+\fill[heatBlue!22!white] (7.50,-0.95) rectangle ++(2.50,-0.95); \node[black, font=\small] at (8.75,-1.42) {4};
+\node[font=\small, anchor=east] at (-0.15,-2.38) {mixed-partial};
+\fill[heatBlue!17!white] (0.00,-1.90) rectangle ++(2.50,-0.95); \node[black, font=\small] at (1.25,-2.38) {3};
+\fill[heatBlue!12!white] (2.50,-1.90) rectangle ++(2.50,-0.95); \node[black, font=\small] at (3.75,-2.38) {0};
+\fill[heatBlue!61!white] (5.00,-1.90) rectangle ++(2.50,-0.95); \node[white, font=\small] at (6.25,-2.38) {11};
+\fill[heatBlue!39!white] (7.50,-1.90) rectangle ++(2.50,-0.95); \node[black, font=\small] at (8.75,-2.38) {7};
+\node[font=\scriptsize] at (1.25,0.55) {native};
+\node[font=\scriptsize] at (3.75,0.55) {cont.QAT};
+\node[font=\scriptsize] at (6.25,0.55) {QAT-FT};
+\node[font=\scriptsize] at (8.75,0.55) {PTQ};
+\end{tikzpicture}
+\end{document}

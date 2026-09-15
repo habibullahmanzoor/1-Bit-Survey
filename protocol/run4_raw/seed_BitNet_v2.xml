@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/S/45AlxXTn4bm8Q+csPyKqb2rZs</id>
+  <title>arXiv Query: search_query=abs:"BitNet v2" AND (cat:cs.CL OR cat:cs.LG OR cat:cs.AI OR cat:cs.AR) AND submittedDate:"202301010000 TO 202606302359"&amp;id_list=&amp;start=0&amp;max_results=200</title>
+  <updated>2026-09-05T10:55:49Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22BitNet+v2%22+AND+((cat:cs.CL+OR+(cat:cs.LG+OR+(cat:cs.AI+OR+cat:cs.AR)))+AND+submittedDate:%22202301010000+TO+202606302359%22)&amp;start=0&amp;max_results=200&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>200</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2504.18415v2</id>
+    <title>BitNet v2: Native 4-bit Activations with Hadamard Transformation for 1-bit LLMs</title>
+    <updated>2025-06-13T05:55:26Z</updated>
+    <link href="https://arxiv.org/abs/2504.18415v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.18415v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Efficient deployment of 1-bit Large Language Models (LLMs) is hindered by activation outliers, which complicate quantization to low bit-widths. We introduce BitNet v2, a novel framework enabling native 4-bit activation quantization for 1-bit LLMs. To tackle outliers in attention and feed-forward network activations, we propose H-BitLinear, a module applying an online Hadamard transformation prior to activation quantization. This transformation smooths sharp activation distributions into more Gaussian-like forms, suitable for low-bit representation. Experiments show BitNet v2 trained from scratch with 8-bit activations matches BitNet b1.58 performance. Crucially, BitNet v2 achieves minimal performance degradation when trained with native 4-bit activations, significantly reducing memory footprint and computational cost for batched inference.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-25T15:17:52Z</published>
+    <arxiv:comment>Work in progress</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+</feed>

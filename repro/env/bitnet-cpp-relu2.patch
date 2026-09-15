@@ -1,0 +1,7 @@
+--- a/3rdparty/llama.cpp/src/models/bitnet.cpp
++++ b/3rdparty/llama.cpp/src/models/bitnet.cpp
+@@ FFN activation for BitNet b1.58 2B4T
+-                LLM_FFN_SILU, LLM_FFN_PAR, il);
++                // BitNet b1.58 2B4T uses a gated squared-ReLU FFN (config hidden_act = "relu2").
++                // Upstream hardcodes SiLU, which wrecks output (WikiText ppl ~87 vs ~13). Issue #588.
++                LLM_FFN_RELU_SQR, LLM_FFN_PAR, il);

@@ -1,0 +1,40 @@
+# === LaTeX build intermediates (the .tex and .pdf are tracked; these are regenerated) ===
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# === Large or third-party reproduction assets (see repro/ENVIRONMENT.md + repro/env/) ===
+# multi-GB checkpoints and GGUFs; hashes in repro/env/model-revisions.txt
+repro/models/
+# local virtualenv; pins in repro/env/requirements.lock.txt
+repro/.venv/
+# cloned + patched microsoft/BitNet; commit + patch in repro/env/
+repro/BitNet/
+# cloned dependency
+repro/llama.cpp/
+# cloned dependency; commit in repro/env/harness-commit.txt
+repro/lm-evaluation-harness/
+repro/**/build*/
+repro/**/__pycache__/
+repro/err.txt
+
+# === Archived corpus PDFs (third-party; indexed in papers/INDEX.md + data/inventory.csv) ===
+papers/*.pdf
+papers/_web/
+papers/_excluded/
+
+# === scratch / OS ===
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+*.bak
+~$*
+tmp/
+.claude/

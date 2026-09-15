@@ -1,0 +1,35 @@
+\documentclass[11pt,tikz,border={14pt 14pt 14pt 14pt}]{standalone}
+\usepackage[a4paper,margin=0.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\begin{document}
+
+\definecolor{bitsAccent}{HTML}{D95F0E}
+\definecolor{bitsGray}{HTML}{94A3B8}
+\definecolor{bitsDark}{HTML}{334155}
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.85\textwidth, height=8.4cm,
+  xlabel={bits per weight}, xlabel style={font=\small},
+  xmin=0.5, xmax=4.5, xmajorgrids, grid style={draw=black!10},
+  symbolic y coords={STBLLM,BiLLM,RaBiT,PB-LLM,PTQ1.61,{Native ternary},ARB-LLM},
+  ytick={STBLLM,BiLLM,RaBiT,PB-LLM,PTQ1.61,{Native ternary},ARB-LLM},
+  hide obscured y ticks=false, yticklabel style={font=\small}, y dir=reverse,
+  tick align=outside, axis line style={draw=black!45},
+  legend style={font=\scriptsize, at={(0.98,0.03)}, anchor=south east, draw=black!30},
+  legend cell align=left,
+]
+\addplot[only marks, mark=*, mark size=2.2pt, color=bitsGray] coordinates {(1.08,BiLLM) (2.0,RaBiT)};
+\addlegendentry{reported (headline)}
+\addplot[only marks, mark=*, mark size=2.6pt, color=bitsDark] coordinates {(2.88,BiLLM) (2.02,RaBiT) (1.1,ARB-LLM) (1.61,PTQ1.61) (1.70,PB-LLM) (4.13,STBLLM)};
+\addlegendentry{effective (strict accounting)}
+\addplot[only marks, mark=*, mark size=2.8pt, color=bitsAccent] coordinates {(1.58,{Native ternary})};
+\addlegendentry{native ternary (genuine)}
+\draw[bitsGray] (axis cs:1.08,BiLLM) -- (axis cs:2.88,BiLLM);
+\draw[bitsGray] (axis cs:2.0,RaBiT) -- (axis cs:2.02,RaBiT);
+\end{axis}
+\end{tikzpicture}
+\end{document}

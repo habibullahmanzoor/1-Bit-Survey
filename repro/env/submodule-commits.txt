@@ -1,0 +1,10 @@
+# Runtime and submodule commits used for Arm B (recorded 2026-09-07)
+
+microsoft/BitNet                         HEAD  0b341e582afbf9e1011f24744b554c96a3477eb5
+  3rdparty/llama.cpp                      HEAD  390c307752ab78fd8189f359d6954c9ba1be74af
+    (branch: release-bitnet-embedding-0.6b-270m)
+    local change: FFN activation LLM_FFN_SILU -> LLM_FFN_RELU_SQR in
+                  src/models/bitnet.cpp  (env/bitnet-cpp-relu2.patch)
+
+EleutherAI/lm-evaluation-harness         HEAD  b954108c9baaaa934b4ad842033b31a97ee30816
+  (also in env/harness-commit.txt)

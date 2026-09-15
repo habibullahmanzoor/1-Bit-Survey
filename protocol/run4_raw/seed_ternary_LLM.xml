@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/R+i3p09sfYmTnDmaThVM5iByrRY</id>
+  <title>arXiv Query: search_query=abs:"ternary LLM" AND (cat:cs.CL OR cat:cs.LG OR cat:cs.AI OR cat:cs.AR) AND submittedDate:"202301010000 TO 202606302359"&amp;id_list=&amp;start=0&amp;max_results=200</title>
+  <updated>2026-09-05T10:56:51Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22ternary+LLM%22+AND+((cat:cs.CL+OR+(cat:cs.LG+OR+(cat:cs.AI+OR+cat:cs.AR)))+AND+submittedDate:%22202301010000+TO+202606302359%22)&amp;start=0&amp;max_results=200&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>200</opensearch:itemsPerPage>
+  <opensearch:totalResults>11</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2407.07093v1</id>
+    <title>FBI-LLM: Scaling Up Fully Binarized LLMs from Scratch via Autoregressive Distillation</title>
+    <updated>2024-07-09T17:59:48Z</updated>
+    <link href="https://arxiv.org/abs/2407.07093v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.07093v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work presents a Fully BInarized Large Language Model (FBI-LLM), demonstrating for the first time how to train a large-scale binary language model from scratch (not the partial binary or ternary LLM like BitNet b1.58) to match the performance of its full-precision counterparts (e.g., FP16 or BF16) in transformer-based LLMs. It achieves this by employing an autoregressive distillation (AD) loss with maintaining equivalent model dimensions (130M, 1.3B, 7B) and training data volume as regular LLM pretraining, while delivering competitive results in terms of perplexity and task-specific effectiveness. Intriguingly, by analyzing the training trajectory, we find that the pretrained weight is not necessary for training binarized LLMs from scratch. This research encourages a new computational framework and may facilitate the future design of specialized hardware tailored for fully 1-bit LLMs. We make all models, code, and training dataset fully accessible and transparent to support further research (Code: https://github.com/LiqunMa/FBI-LLM. Model: https://huggingface.co/LiqunMa/).</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-09T17:59:48Z</published>
+    <arxiv:comment>Github at https://github.com/LiqunMa/FBI-LLM</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Liqun Ma</name>
+    </author>
+    <author>
+      <name>Mingjie Sun</name>
+    </author>
+    <author>
+      <name>Zhiqiang Shen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.11880v1</id>
+    <title>Bitnet.cpp: Efficient Edge Inference for Ternary LLMs</title>
+    <updated>2025-02-17T15:06:28Z</updated>
+    <link href="https://arxiv.org/abs/2502.11880v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.11880v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The advent of 1-bit large language models (LLMs), led by BitNet b1.58, has spurred interest in ternary LLMs. Despite this, research and practical applications focusing on efficient edge inference for ternary LLMs remain scarce. To bridge this gap, we introduce Bitnet.cpp, an inference system optimized for BitNet b1.58 and ternary LLMs. Given that mixed-precision matrix multiplication (mpGEMM) constitutes the bulk of inference time in ternary LLMs, Bitnet.cpp incorporates a novel mpGEMM library to facilitate sub-2-bits-per-weight, efficient and lossless inference. The library features two core solutions: Ternary Lookup Table (TL), which addresses spatial inefficiencies of previous bit-wise methods, and Int2 with a Scale (I2_S), which ensures lossless edge inference, both enabling high-speed inference. Our experiments show that Bitnet.cpp achieves up to a 6.25x increase in speed over full-precision baselines and up to 2.32x over low-bit baselines, setting new benchmarks in the field. Additionally, we expand TL to element-wise lookup table (ELUT) for low-bit LLMs in the appendix, presenting both theoretical and empirical evidence of its considerable potential. Bitnet.cpp is publicly available at https://github.com/microsoft/BitNet/tree/paper , offering a sophisticated solution for the efficient and practical deployment of edge LLMs.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-17T15:06:28Z</published>
+    <arxiv:comment>18 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jinheng Wang</name>
+    </author>
+    <author>
+      <name>Hansong Zhou</name>
+    </author>
+    <author>
+      <name>Ting Song</name>
+    </author>
+    <author>
+      <name>Shijie Cao</name>
+    </author>
+    <author>
+      <name>Yan Xia</name>
+    </author>
+    <author>
+      <name>Ting Cao</name>
+    </author>
+    <author>
+      <name>Jianyu Wei</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.16266v2</id>
+    <title>TeLLMe: An Energy-Efficient Ternary LLM Accelerator for Prefilling and Decoding on Edge FPGAs</title>
+    <updated>2025-04-24T18:14:11Z</updated>
+    <link href="https://arxiv.org/abs/2504.16266v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.16266v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deploying large language models (LLMs) on edge platforms is challenged by their high computational and memory demands. Although recent low-bit quantization methods (e.g., BitNet, DeepSeek) compress weights to as little as 1.58 bits with minimal accuracy loss, edge deployment is still constrained by limited on-chip resources, power budgets, and the often-neglected latency of the prefill phase. We present TeLLMe, the first ternary LLM accelerator for low-power FPGAs (e.g., AMD KV260) that fully supports both prefill and autoregressive decoding using 1.58-bit weights and 8-bit activations. Our contributions include: (1) a table-lookup matrix engine for ternary matmul that merges grouped activations with online precomputation to minimize resource use; (2) a fused, bandwidth-efficient attention module featuring a reversed reordering scheme to accelerate prefill; and (3) a tightly integrated normalization and quantization--dequantization unit optimized for ultra-low-bit inference. Under a 7W power budget, TeLLMe delivers up to 9 tokens/s throughput over 1,024-token contexts and prefill latencies of 0.55--1.15 s for 64--128 token prompts, marking a significant energy-efficiency advance and establishing a new edge FPGA benchmark for generative AI.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-22T21:00:58Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Ye Qiao</name>
+    </author>
+    <author>
+      <name>Zhiheng Chen</name>
+    </author>
+    <author>
+      <name>Yifan Zhang</name>
+    </author>
+    <author>
+      <name>Yian Wang</name>
+    </author>
+    <author>
+      <name>Sitao Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.08823v1</id>
+    <title>An Extra RMSNorm is All You Need for Fine Tuning to 1.58 Bits</title>
+    <updated>2025-05-12T21:14:29Z</updated>
+    <link href="https://arxiv.org/abs/2505.08823v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.08823v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) have transformed natural-language processing, yet their scale makes real-world deployment costly. Post-training quantization reduces memory and computation but often degrades accuracy, while quantization-aware training can recover performance at the cost of extra training. Pushing quantization to the ternary (2-bit) regime yields even larger savings but is notoriously unstable. Building on recent work showing that a bias-free, RMS-normalized Transformer with straight-through estimation can reach 1.58-bit precision, we demonstrate that simply inserting RMS normalization before every linear projection and applying a gradual, layer-wise quantization schedule stably fine-tunes full-precision checkpoints into ternary LLMs. Our approach matches or surpasses more elaborate knowledge-distillation pipelines on standard language-modeling benchmarks without adding model complexity. These results indicate that careful normalization alone can close much of the accuracy gap between ternary and full-precision LLMs, making ultra-low-bit inference practical.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-12T21:14:29Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Cody Steinmetz</name>
+    </author>
+    <author>
+      <name>Gavin Childress</name>
+    </author>
+    <author>
+      <name>Aaron Herbst</name>
+    </author>
+    <author>
+      <name>Gavin Jones</name>
+    </author>
+    <author>
+      <name>Jasdeep Singh</name>
+    </author>
+    <author>
+      <name>Eli Vang</name>
+    </author>
+    <author>
+      <name>Keagan Weinstock</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.01140v1</id>
+    <title>ReTern: Exploiting Natural Redundancy and Sign Transformations for Enhanced Fault Tolerance in Compute-in-Memory based Ternary LLMs</title>
+    <updated>2025-06-01T19:49:01Z</updated>
+    <link href="https://arxiv.org/abs/2506.01140v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.01140v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ternary large language models (LLMs), which utilize ternary precision weights and 8-bit activations, have demonstrated competitive performance while significantly reducing the high computational and memory requirements of full-precision LLMs. The energy efficiency and performance of Ternary LLMs can be further improved by deploying them on ternary computing-in-memory (TCiM) accelerators, thereby alleviating the von-Neumann bottleneck. However, TCiM accelerators are prone to memory stuck-at faults (SAFs) leading to degradation in the model accuracy. This is particularly severe for LLMs due to their low weight sparsity. To boost the SAF tolerance of TCiM accelerators, we propose ReTern that is based on (i) fault-aware sign transformations (FAST) and (ii) TCiM bit-cell reprogramming exploiting their natural redundancy. The key idea is to utilize FAST to minimize computations errors due to SAFs in +1/-1 weights, while the natural bit-cell redundancy is exploited to target SAFs in 0 weights (zero-fix). Our experiments on BitNet b1.58 700M and 3B ternary LLMs show that our technique furnishes significant fault tolerance, notably 35% reduction in perplexity on the Wikitext dataset in the presence of faults. These benefits come at the cost of &lt; 3%, &lt; 7%, and &lt; 1% energy, latency and area overheads respectively.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-01T19:49:01Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Akul Malhotra</name>
+    </author>
+    <author>
+      <name>Sumeet Kumar Gupta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.13765v1</id>
+    <title>TENET: An Efficient Sparsity-Aware LUT-Centric Architecture for Ternary LLM Inference On Edge</title>
+    <updated>2025-09-17T07:24:25Z</updated>
+    <link href="https://arxiv.org/abs/2509.13765v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.13765v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ternary quantization has emerged as a powerful technique for reducing both computational and memory footprint of large language models (LLM), enabling efficient real-time inference deployment without significantly compromising model accuracy. Conventional LLM inference platforms (e.g GPUs) cannot capitalize on its benefits, as they (i) lack native support for ternary arithmetic and memory specialization and (ii) remain severely under-utilized in low-batch, real-time scenarios. In this work, we propose TENET, a sparse-aware LUT-centric architecture that co-optimizes algorithm, compute, and memory for ternary LLM inference. To maximize the efficiency of Ternary Linear layer, TENET introduces a Sparse Ternary LUT (STL) core that optimizes ternary mixed-precision GEMM using a symmetric precompute lookup table. It also features Dynamic Activation N:M Sparsity to exploit the sparsity within the activation of each token. Additionally, we propose a LUT-based 64B:80B ternary weight decompression module to fully exploit the memory efficiency of ternary values. At the system level, we design a heterogeneous TENET accelerator with full programmability that integrates STL cores with high-precision cores. An associated Linear-Projection-aware Sparse Attention dataflow is introduced to optimize memory access and hardware utilization. We implement TENET accelerator prototype on both FPGA and ASIC platforms. Experiments across various model sizes and workloads demonstrate that TENET-FPGA and TENET-ASIC improve energy efficiency by 4.3$\times$ and 21.1$\times$, respectively, compared to the A100 GPU. Furthermore, TENET-ASIC achieves a 2.7$\times$ average speedup compared to the A100 GPU in end-to-end inference latency.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-17T07:24:25Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Zhirui Huang</name>
+    </author>
+    <author>
+      <name>Rui Ma</name>
+    </author>
+    <author>
+      <name>Shijie Cao</name>
+    </author>
+    <author>
+      <name>Ran Shu</name>
+    </author>
+    <author>
+      <name>Ian Wang</name>
+    </author>
+    <author>
+      <name>Ting Cao</name>
+    </author>
+    <author>
+      <name>Chixiao Chen</name>
+    </author>
+    <author>
+      <name>Yongqiang Xiong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.15926v2</id>
+    <title>TeLLMe v2: An Efficient End-to-End Ternary LLM Prefill and Decode Accelerator with Table-Lookup Matmul on Edge FPGAs</title>
+    <updated>2025-10-21T17:20:02Z</updated>
+    <link href="https://arxiv.org/abs/2510.15926v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.15926v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>With the emergence of wearable devices and other embedded systems, deploying large language models (LLMs) on edge platforms has become an urgent need. However, this is challenging because of their high computational and memory demands. Although recent low-bit quantization methods (e.g., BitNet, DeepSeek) compress weights to as low as 1.58~bits with minimal accuracy loss, edge deployment is still constrained by limited on-chip resources, power budgets, and the often-neglected long latency of the prefill stage. We present \textbf{TeLLMe}, the first table-lookup-based ternary LLM accelerator for low-power edge FPGAs that fully supports both prefill and autoregressive decoding using 1.58-bit weights and 8-bit activations. TeLLMe incorporates several novel techniques, including (1) a table-lookup-based ternary matrix multiplication (TLMM) engine utilizing grouped activations and online precomputation for low resource utilization and high throughput; (2) a fine-grained analytic URAM-based weight buffer management scheme for efficient loading and compute engine access; (3) a streaming dataflow architecture that fuses floating-point element-wise operations with linear computations to hide latency; (4) a reversed-reordered prefill stage attention with fused attention operations for high memory efficiency; and (5) a resource-efficient specialized decoding stage attention. Under a 5~W power budget, TeLLMe delivers up to 25~tokens/s decoding throughput and 0.45--0.96~s time-to-first-token (TTFT) for 64--128 token prompts, marking a significant energy-efficiency advancement in LLM inference on edge FPGAs.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-03T05:37:51Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Ye Qiao</name>
+    </author>
+    <author>
+      <name>Zhiheng Chen</name>
+    </author>
+    <author>
+      <name>Yifan Zhang</name>
+    </author>
+    <author>
+      <name>Yian Wang</name>
+    </author>
+    <author>
+      <name>Sitao Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.13676v1</id>
+    <title>T-SAR: A Full-Stack Co-design for CPU-Only Ternary LLM Inference via In-Place SIMD ALU Reorganization</title>
+    <updated>2025-11-17T18:32:03Z</updated>
+    <link href="https://arxiv.org/abs/2511.13676v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.13676v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent advances in LLMs have outpaced the computational and memory capacities of edge platforms that primarily employ CPUs, thereby challenging efficient and scalable deployment. While ternary quantization enables significant resource savings, existing CPU solutions rely heavily on memory-based lookup tables (LUTs) which limit scalability, and FPGA or GPU accelerators remain impractical for edge use. This paper presents T-SAR, the first framework to achieve scalable ternary LLM inference on CPUs by repurposing the SIMD register file for dynamic, in-register LUT generation with minimal hardware modifications. T-SAR eliminates memory bottlenecks and maximizes data-level parallelism, delivering 5.6-24.5x and 1.1-86.2x improvements in GEMM latency and GEMV throughput, respectively, with only 3.2% power and 1.4% area overheads in SIMD units. T-SAR achieves up to 2.5-4.9x the energy efficiency of an NVIDIA Jetson AGX Orin, establishing a practical approach for efficient LLM inference on edge platforms.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-17T18:32:03Z</published>
+    <arxiv:comment>Accepted to DATE 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Hyunwoo Oh</name>
+    </author>
+    <author>
+      <name>KyungIn Nam</name>
+    </author>
+    <author>
+      <name>Rajat Bhattacharjya</name>
+    </author>
+    <author>
+      <name>Hanning Chen</name>
+    </author>
+    <author>
+      <name>Tamoghno Das</name>
+    </author>
+    <author>
+      <name>Sanggeon Yun</name>
+    </author>
+    <author>
+      <name>Suyeon Jang</name>
+    </author>
+    <author>
+      <name>Andrew Ding</name>
+    </author>
+    <author>
+      <name>Nikil Dutt</name>
+    </author>
+    <author>
+      <name>Mohsen Imani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.27462v1</id>
+    <title>RSR-core: A High-Performance Engine for Low-Bit Matrix-Vector Multiplication</title>
+    <updated>2026-03-29T00:55:14Z</updated>
+    <link href="https://arxiv.org/abs/2603.27462v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.27462v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Matrix-vector multiplication is a fundamental building block in neural networks, vector databases, and large language models, particularly during inference. As a result, efficient matrix-vector multiplication engines directly translate into more efficient inference. Recent work has explored low-bit quantization of model weights, where matrices are represented using binary (1-bit) or ternary (1.58-bit) values while activation is kept in higher precision. These representations enable efficient hardware-level computation. In parallel, algorithms such as Redundant Segment Reduction (RSR) provide theoretical guarantees for accelerating low-bit matrix-vector multiplication. However, existing implementations operate at the application level and cannot be efficiently integrated into hardware kernels, limiting practical performance. To bridge this gap, we present RSR-core, a high-performance engine that implements the RSR algorithm as optimized low-level kernels for both CPU and CUDA environments. RSR-core supports efficient matrix-vector multiplication for binary and ternary weight matrices and general vectors while enabling practical deployment of RSR algorithm in real inference pipelines. RSR-core is provided as a production-ready engine with HuggingFace integration for preprocessing low-bit models and running accelerated inference. Experimental results demonstrate significant performance improvements over baseline HuggingFace PyTorch multiplication, achieving up to 62x speedup on CPU and up to 1.9x speedup for token generation on CUDA for popular ternary LLMs. The source code is publicly available at https://github.com/UIC-InDeXLab/RSR-core.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-29T00:55:14Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Mohsen Dehghankar</name>
+    </author>
+    <author>
+      <name>Abolfazl Asudeh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.20913v1</id>
+    <title>FairyFuse: Multiplication-Free LLM Inference on CPUs via Fused Ternary Kernels</title>
+    <updated>2026-04-22T02:42:10Z</updated>
+    <link href="https://arxiv.org/abs/2604.20913v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.20913v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models are increasingly deployed on CPU-only platforms where memory bandwidth is the primary bottleneck for autoregressive generation. Weight quantization to four bits or below reduces memory pressure, yet existing systems still dequantize weights and perform floating-point multiplications, limiting the achievable gains. Ternary weights in {-1, 0, +1} provide a more efficient alternative, replacing multiplications with conditional additions, subtractions, or no-ops. While Fairy2i shows that ternary LLMs can match FP16 quality, its runtime does not exploit this structure. We present FairyFuse, an inference system that enables multiplication-free execution on commodity CPUs by fusing the eight real-valued sub-GEMVs of each widely-linear layer into a single AVX-512 loop using masked additions and subtractions, with zero floating-point multiplications. Roofline analysis shows that 16x weight compression shifts memory-bound GEMV toward the compute regime on bandwidth-limited CPUs, yielding a 29.6x kernel speedup while offering little benefit on GPUs. End-to-end, FairyFuse achieves 32.4 tokens per second on a single Intel Xeon 8558P, outperforming llama.cpp Q4_K_M by 1.24x with near-lossless quality (WikiText-2 perplexity 5.52 vs. 5.47 FP16; downstream accuracy 66.0%).</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-22T02:42:10Z</published>
+    <arxiv:comment>16 pages, 10 figures, 4 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Fei Zuo</name>
+    </author>
+    <author>
+      <name>Xiaoyan Xi</name>
+    </author>
+    <author>
+      <name>Quanyi Zeng</name>
+    </author>
+    <author>
+      <name>Feiyu Wang</name>
+    </author>
+    <author>
+      <name>Ho Fai Leung</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27396v1</id>
+    <title>VitaLLM: A Versatile, Ultra-Compact Ternary LLM Accelerator with Dependency-Aware Scheduling</title>
+    <updated>2026-04-30T04:07:21Z</updated>
+    <link href="https://arxiv.org/abs/2604.27396v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27396v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deploying Large Language Models (LLMs) on resource-constrained edge devices faces critical bottlenecks in memory bandwidth and power consumption. While ternary quantization (e.g., BitNet b1.58) significantly reduces model size, its direct deployment on general-purpose hardware is hindered by workload imbalance, bandwidth-bound decoding, and strict data dependencies. To address these challenges, we propose \textbf{VitaLLM}, a hardware-software co-designed accelerator tailored for efficient ternary LLM inference. We introduce a heterogeneous \textbf{Dual-Core Compute Strategy} that synergizes specialized TINT-Cores for massive ternary projections with a unified BoothFlex-Core for mixed-precision attention, ensuring high utilization across both compute-bound prefill and bandwidth-bound decode stages. Furthermore, we develop a \textbf{Leading One Prediction (LOP)} mechanism to prune redundant Key-Value (KV) cache fetches and a \textbf{Dependency-Aware Scheduling} framework to hide the latency of nonlinear operations. Implemented in TSMC 16nm technology, VitaLLM achieves a decoding throughput of 70.70 tokens/s within an ultra-compact area of 0.223 mm$^2$ and a power consumption of 65.97 mW. The design delivers a superior Figure of Merit (FOM) of 17.4 TOPS/mm$^2$/W, significantly outperforming state-of-the-art accelerators. Finally, we explore an extended bit-serial design (BoothFlex-BS) to demonstrate the architecture's adaptability for precision-agile inference.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T04:07:21Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <arxiv:journal_ref>IEEE Transactions on Circuits and Systems for Artificial Intelligence, 2026</arxiv:journal_ref>
+    <author>
+      <name>Zi-Wei Lin</name>
+    </author>
+    <author>
+      <name>Tian-Sheuan Chang</name>
+    </author>
+    <arxiv:doi>10.1109/TCASAI.2026.3689494</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TCASAI.2026.3689494" title="doi"/>
+  </entry>
+</feed>

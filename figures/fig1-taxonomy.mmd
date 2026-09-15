@@ -1,0 +1,49 @@
+%% Figure 1 - Five-axis taxonomy. Lightweight fallback; the drawio (from
+%% ../scripts/gen_fig1.py, which reads ../data/inventory.csv) is the source of record.
+%% Root n = 140 rows in Table 1: 135 included primary studies + 5 pre-2023 foundational
+%% works shown for context.
+flowchart LR
+  R["Native 1-bit / 1.58-bit LLMs (n = 140)"]
+
+  R --> A1["1 - Weight representation"]
+  A1 --> A1a["ternary {-1,0,+1}  n=62"]
+  A1 --> A1b["binary {-1,+1}  n=34"]
+  A1 --> A1c["mixed / partial  n=21"]
+  A1c --> A1c1["salient-column split (BiLLM, PB-LLM, PTQ1.61)"]
+  A1c --> A1c2["residual / factor branch (RaBiT, pQuant)"]
+  A1c --> A1c3["complex {+-1,+-i} (iFairy, Fairy2i)"]
+
+  R --> A2["2 - Training paradigm"]
+  A2 --> A2a["native from-scratch  n=27"]
+  A2 --> A2b["continual-QAT  FP->1.58  n=2"]
+  A2 --> A2c["QAT fine-tune  n=37"]
+  A2 --> A2d["PTQ  calibration only  n=30"]
+
+  R --> A3["3 - Components quantised"]
+  A3 --> A3a["W only  n=78"]
+  A3 --> A3b["W + A  n=30"]
+  A3 --> A3c["+ 3-bit KV cache  n=2"]
+  A3 --> A3d["+ sparsification  n=4"]
+
+  R --> A4["4 - Optimisation mechanism"]
+  A4 --> A4a["scaled-STE + variants (~20)"]
+  A4 --> A4b["STE improvements: curvature / trust / ZO (~6)"]
+  A4 --> A4c["distillation-driven (~13)"]
+  A4 --> A4d["reconstruction / calibration PTQ (~16)"]
+  A4 --> A4e["rotation / incoherence: Hadamard, butterfly, Walsh (~7)"]
+  A4 --> A4f["decomposition / factorisation (~10)"]
+  A4 --> A4g["stochastic rounding (1)"]
+  A4 --> A4h["sparsity-coupled: N:M, top-K, 3:4 (~5)"]
+
+  R --> A5["5 - Systems stack"]
+  A5 --> A5a["algorithm only  n=95"]
+  A5 --> A5b["+ kernel: I2_S, TL1/TL2, fused, GPU  n=25"]
+  A5 --> A5c["+ hardware: LUT-ASIC, CiROM, PIM, FPGA, SIMD-ISA  n=16"]
+  A5 --> A5d["5 works co-design algorithm + kernel + hardware"]
+
+  R -.secondary.-> S["Modality / use"]
+  S --> Sa["text decoder  n=72"]
+  S --> Sb["embedding / ASR / TTS  n=5"]
+  S --> Sc["VLM / VLA / MoE  n=6"]
+  S --> Sd["SSM / Mamba  n=2"]
+  S --> Se["theory / analysis / surveys  n=14"]

@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/gsayqiiyk8BA0FC9PYVL/wNZYiI</id>
+  <title>arXiv Query: search_query=abs:"BitLinear" AND (cat:cs.CL OR cat:cs.LG OR cat:cs.AI OR cat:cs.AR) AND submittedDate:"202301010000 TO 202606302359"&amp;id_list=&amp;start=0&amp;max_results=200</title>
+  <updated>2026-09-05T10:55:52Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22BitLinear%22+AND+((cat:cs.CL+OR+(cat:cs.LG+OR+(cat:cs.AI+OR+cat:cs.AR)))+AND+submittedDate:%22202301010000+TO+202606302359%22)&amp;start=0&amp;max_results=200&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>200</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2310.11453v1</id>
+    <title>BitNet: Scaling 1-bit Transformers for Large Language Models</title>
+    <updated>2023-10-17T17:59:15Z</updated>
+    <link href="https://arxiv.org/abs/2310.11453v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.11453v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The increasing size of large language models has posed challenges for deployment and raised concerns about environmental impact due to high energy consumption. In this work, we introduce BitNet, a scalable and stable 1-bit Transformer architecture designed for large language models. Specifically, we introduce BitLinear as a drop-in replacement of the nn.Linear layer in order to train 1-bit weights from scratch. Experimental results on language modeling show that BitNet achieves competitive performance while substantially reducing memory footprint and energy consumption, compared to state-of-the-art 8-bit quantization methods and FP16 Transformer baselines. Furthermore, BitNet exhibits a scaling law akin to full-precision Transformers, suggesting its potential for effective scaling to even larger language models while maintaining efficiency and performance benefits.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-17T17:59:15Z</published>
+    <arxiv:comment>Work in progress</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Li Dong</name>
+    </author>
+    <author>
+      <name>Shaohan Huang</name>
+    </author>
+    <author>
+      <name>Huaijie Wang</name>
+    </author>
+    <author>
+      <name>Lingxiao Ma</name>
+    </author>
+    <author>
+      <name>Fan Yang</name>
+    </author>
+    <author>
+      <name>Ruiping Wang</name>
+    </author>
+    <author>
+      <name>Yi Wu</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.18415v2</id>
+    <title>BitNet v2: Native 4-bit Activations with Hadamard Transformation for 1-bit LLMs</title>
+    <updated>2025-06-13T05:55:26Z</updated>
+    <link href="https://arxiv.org/abs/2504.18415v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.18415v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Efficient deployment of 1-bit Large Language Models (LLMs) is hindered by activation outliers, which complicate quantization to low bit-widths. We introduce BitNet v2, a novel framework enabling native 4-bit activation quantization for 1-bit LLMs. To tackle outliers in attention and feed-forward network activations, we propose H-BitLinear, a module applying an online Hadamard transformation prior to activation quantization. This transformation smooths sharp activation distributions into more Gaussian-like forms, suitable for low-bit representation. Experiments show BitNet v2 trained from scratch with 8-bit activations matches BitNet b1.58 performance. Crucially, BitNet v2 achieves minimal performance degradation when trained with native 4-bit activations, significantly reducing memory footprint and computational cost for batched inference.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-25T15:17:52Z</published>
+    <arxiv:comment>Work in progress</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.11743v4</id>
+    <title>Uncertainty Makes It Stable: Curiosity-Driven Quantized Mixture-of-Experts</title>
+    <updated>2026-08-29T15:58:40Z</updated>
+    <link href="https://arxiv.org/abs/2511.11743v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.11743v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deploying deep neural networks on resource-constrained devices faces two critical challenges: maintaining accuracy under aggressive quantization while ensuring predictable inference latency. We present a curiosity-driven quantized Mixture-of-Experts framework that addresses both through Bayesian epistemic uncertainty-based routing across heterogeneous experts (BitNet ternary, 1-16 bit BitLinear, post-training quantization). Evaluated on audio classification benchmarks (ESC-50, Quinn, UrbanSound8K), our 4-bit quantization maintains 99.9 percent of full-precision F1 (0.858 vs 0.859) with 4x compression and 31 percent energy savings versus 8-bit, while both achieve statistical parity with full precision (p &gt; 0.05).
+  Crucially, curiosity-driven routing simultaneously improves accuracy and stability: on Quinn, F1 increases from 0.802 to 0.809 while cross-fold variance drops by 85 percent (p &lt; 0.001, Levene's test), with reductions of 50 to 94 percent across datasets. The routing is self-organizing, with the high-precision 8-bit expert automatically receiving the most uncertain samples (20 percent lower confidence, p &lt; 0.001), while lightweight experts handle easier inputs. Datasets with already low baseline variance show no artificial stability gain, confirming the mechanism targets genuine epistemic uncertainty rather than overfitting routing decisions.
+  At 1.2M parameters, the framework provides interpretable, precision-aware routing suitable for safety-sensitive edge deployments where both accuracy and predictability are critical.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-13T15:32:41Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Sebastián Andrés Cajas Ordóñez</name>
+    </author>
+    <author>
+      <name>Luis Fernando Torres Torres</name>
+    </author>
+    <author>
+      <name>Mackenzie J. Meni</name>
+    </author>
+    <author>
+      <name>Carlos Andrés Duran Paredes</name>
+    </author>
+    <author>
+      <name>Eric Arazo</name>
+    </author>
+    <author>
+      <name>Cristian Bosch</name>
+    </author>
+    <author>
+      <name>Ricardo Simon Carbajo</name>
+    </author>
+    <author>
+      <name>Yuan Lai</name>
+    </author>
+    <author>
+      <name>Leo Anthony Celi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.29705v1</id>
+    <title>BitTP: The Lightweight Trajectory Prediction Model with BitLLM for Edge-Devices</title>
+    <updated>2026-05-28T10:04:02Z</updated>
+    <link href="https://arxiv.org/abs/2605.29705v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.29705v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Trajectory prediction is a fundamental task for autonomous systems, requiring complex reasoning about multi-agent interactions and intents. Large language models (LLMs) have recently been adopted for this task, as they provide strong contextual reasoning and interpretable, language-based trajectory representations. However, these LLM-based predictors are extremely memory- and compute-intensive, making them difficult to deploy on resource-constrained edge devices such as on-board computers in autonomous robots. To bridge this gap, we propose BitTP, which converts an LLM-based trajectory predictor into a lightweight bitlinear architecture. We demonstrate that weight-only quantization to 1.58-bit (BitTP-Weight) is optimal. Crucially, activations must remain in full precision, as quantizing them leads to severe degradation and instability in spatio-temporal reasoning. Empirically, BitTP-Weight not only preserves but improves prediction quality over the full-precision (BF16) LLM baseline, reducing ADE by 14.29% and FDE by 20.97% on average, while simultaneously reducing memory usage and inference latency relative to other quantization methods. These results demonstrate that carefully designed quantization acts as an effective regularizer, enabling the practical deployment of sophisticated LLM-based reasoning on edge devices. Code is available at: https://github.com/MintCat98/BitTP.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-28T10:04:02Z</published>
+    <arxiv:comment>Camera-ready version. Accepted as a findings paper at CVPR 2026. 8 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Mincheol Kang</name>
+    </author>
+    <author>
+      <name>Hyunjin Lim</name>
+    </author>
+    <author>
+      <name>Bomin Kang</name>
+    </author>
+    <author>
+      <name>Daehee Park</name>
+    </author>
+  </entry>
+</feed>

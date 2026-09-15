@@ -1,0 +1,10 @@
+warning: no usable GPU found, --gpu-layers option will be ignored
+warning: one possible reason is that llama.cpp was compiled without GPU support
+warning: consult docs/build.md for compilation instructions
+0.01.406.940 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.05.405.470 I 
+0.05.406.688 I system_info: n_threads = 8 (n_threads_batch = 8) / 32 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | REPACK = 1 | 
+0.05.566.385 I hellaswag_score : loaded 10042 tasks from prompt.
+0.05.566.416 I ================================= is_spm = 0
+0.05.566.426 I hellaswag_score : selecting 1000 randomized tasks.
+0.06.859.597 I hellaswag_score : calculating hellaswag score over selected tasks.

@@ -1,0 +1,12 @@
+model             WikiText-2 ppl          HellaSwag acc (n)
+------------------------------------------------------------
+qwen_fp16        8.851 +/- 0.059 65.30%  (1000; [62.3, 68.2])
+qwen_q8_0        8.858 +/- 0.059 65.80%  (1000; [62.8, 68.7])
+qwen_q4_k_m      9.252 +/- 0.062 65.60%  (1000; [62.6, 68.5])
+bitnet_i2s      86.879 +/- 0.774 38.70%  (1000; [35.7, 41.8])
+bitnet_i2s_FIXED   12.993 +/- 0.092 62.40%  (1000; [59.4, 65.3])
+
+Qwen quantisation ppl delta vs FP16:  Q8_0 +0.007 (+0.1%),  Q4_K_M +0.400 (+4.5%)
+Qwen quantisation HellaSwag delta vs FP16:  Q8_0 +0.50 pp,  Q4_K_M +0.30 pp
+
+BitNet FFN-activation patch (issue #588):  WikiText-2 ppl 86.88 -> 12.99,  HellaSwag 38.7% -> 62.4%

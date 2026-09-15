@@ -1,0 +1,1310 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/G8m/hYIXdINROBI6YzhZ1dof+1A</id>
+  <title>arXiv Query: search_query=abs:"BitNet" AND (cat:cs.CL OR cat:cs.LG OR cat:cs.AI OR cat:cs.AR) AND submittedDate:"202301010000 TO 202606302359"&amp;id_list=&amp;start=0&amp;max_results=200</title>
+  <updated>2026-09-05T10:55:38Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22BitNet%22+AND+((cat:cs.CL+OR+(cat:cs.LG+OR+(cat:cs.AI+OR+cat:cs.AR)))+AND+submittedDate:%22202301010000+TO+202606302359%22)&amp;start=0&amp;max_results=200&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>200</opensearch:itemsPerPage>
+  <opensearch:totalResults>46</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2310.11453v1</id>
+    <title>BitNet: Scaling 1-bit Transformers for Large Language Models</title>
+    <updated>2023-10-17T17:59:15Z</updated>
+    <link href="https://arxiv.org/abs/2310.11453v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.11453v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The increasing size of large language models has posed challenges for deployment and raised concerns about environmental impact due to high energy consumption. In this work, we introduce BitNet, a scalable and stable 1-bit Transformer architecture designed for large language models. Specifically, we introduce BitLinear as a drop-in replacement of the nn.Linear layer in order to train 1-bit weights from scratch. Experimental results on language modeling show that BitNet achieves competitive performance while substantially reducing memory footprint and energy consumption, compared to state-of-the-art 8-bit quantization methods and FP16 Transformer baselines. Furthermore, BitNet exhibits a scaling law akin to full-precision Transformers, suggesting its potential for effective scaling to even larger language models while maintaining efficiency and performance benefits.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-17T17:59:15Z</published>
+    <arxiv:comment>Work in progress</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Li Dong</name>
+    </author>
+    <author>
+      <name>Shaohan Huang</name>
+    </author>
+    <author>
+      <name>Huaijie Wang</name>
+    </author>
+    <author>
+      <name>Lingxiao Ma</name>
+    </author>
+    <author>
+      <name>Fan Yang</name>
+    </author>
+    <author>
+      <name>Ruiping Wang</name>
+    </author>
+    <author>
+      <name>Yi Wu</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.17764v1</id>
+    <title>The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits</title>
+    <updated>2024-02-27T18:56:19Z</updated>
+    <link href="https://arxiv.org/abs/2402.17764v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.17764v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent research, such as BitNet, is paving the way for a new era of 1-bit Large Language Models (LLMs). In this work, we introduce a 1-bit LLM variant, namely BitNet b1.58, in which every single parameter (or weight) of the LLM is ternary {-1, 0, 1}. It matches the full-precision (i.e., FP16 or BF16) Transformer LLM with the same model size and training tokens in terms of both perplexity and end-task performance, while being significantly more cost-effective in terms of latency, memory, throughput, and energy consumption. More profoundly, the 1.58-bit LLM defines a new scaling law and recipe for training new generations of LLMs that are both high-performance and cost-effective. Furthermore, it enables a new computation paradigm and opens the door for designing specific hardware optimized for 1-bit LLMs.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-27T18:56:19Z</published>
+    <arxiv:comment>Work in progress</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Lingxiao Ma</name>
+    </author>
+    <author>
+      <name>Lei Wang</name>
+    </author>
+    <author>
+      <name>Wenhui Wang</name>
+    </author>
+    <author>
+      <name>Shaohan Huang</name>
+    </author>
+    <author>
+      <name>Li Dong</name>
+    </author>
+    <author>
+      <name>Ruiping Wang</name>
+    </author>
+    <author>
+      <name>Jilong Xue</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.09527v1</id>
+    <title>BitNet b1.58 Reloaded: State-of-the-art Performance Also on Smaller Networks</title>
+    <updated>2024-06-24T20:55:36Z</updated>
+    <link href="https://arxiv.org/abs/2407.09527v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.09527v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently proposed methods for 1-bit and 1.58-bit quantization aware training investigate the performance and behavior of these methods in the context of large language models, finding state-of-the-art performance for models with more than 3B parameters. In this work, we investigate 1.58-bit quantization for small language and vision models ranging from 100K to 48M parameters. We introduce a variant of BitNet b1.58, which allows to rely on the median rather than the mean in the quantization process.
+  Through extensive experiments we investigate the performance of 1.58-bit models obtained through quantization aware training. We further investigate the robustness of 1.58-bit quantization-aware training to changes in the learning rate and regularization through weight decay, finding different patterns for small language and vision models than previously reported for large language models.
+  Our results showcase that 1.58-bit quantization-aware training provides state-of-the-art performance for small language models when doubling hidden layer sizes and reaches or even surpasses state-of-the-art performance for small vision models of identical size. Ultimately, we demonstrate that 1.58-bit quantization-aware training is a viable and promising approach also for training smaller deep learning networks, facilitating deployment of such models in low-resource use-cases and encouraging future research.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-24T20:55:36Z</published>
+    <arxiv:comment>17 pages, 4 Tables, 14 grafs. Accepted to DeLTA</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Jacob Nielsen</name>
+    </author>
+    <author>
+      <name>Peter Schneider-Kamp</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.00088v2</id>
+    <title>T-MAC: CPU Renaissance via Table Lookup for Low-Bit LLM Deployment on Edge</title>
+    <updated>2025-03-25T09:27:16Z</updated>
+    <link href="https://arxiv.org/abs/2407.00088v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.00088v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The deployment of Large Language Models (LLMs) on edge devices is increasingly important to enhance on-device intelligence. Weight quantization is crucial for reducing the memory footprint of LLMs on devices. However, low-bit LLMs necessitate mixed precision matrix multiplication (mpGEMM) of low precision weights and high precision activations during inference. Existing systems, lacking native support for mpGEMM, resort to dequantize weights for high precision computation. Such an indirect way can lead to a significant inference overhead.
+  In this paper, we introduce T-MAC, an innovative lookup table(LUT)-based method designed for efficient low-bit LLM (i.e., weight-quantized LLM) inference on CPUs. T-MAC directly supports mpGEMM without dequantization, while simultaneously eliminating multiplications and reducing additions required. Specifically, T-MAC transforms the traditional data-type-centric multiplication to bit-wise table lookup, and enables a unified and scalable mpGEMM solution.
+  Our LUT-based kernels scale linearly to the weight bit-width. Evaluated on low-bit Llama and BitNet models, T-MAC demonstrates up to 4x increase in throughput and 70% reduction in energy consumption compared to llama.cpp. For BitNet-b1.58-3B, T-MAC delivers a token generation throughput of 30 tokens/s with a single core and 71 tokens/s with eight cores on M2-Ultra, and 11 tokens/s on lower-end devices like Raspberry Pi 5, which significantly exceeds the adult average reading speed. T-MAC with LUT-based computing paradigm, paves the way for the practical deployment of low-bit LLMs on resource-constrained edge devices without compromising computational efficiency. The system is open-sourced at https://github.com/microsoft/T-MAC .</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-25T08:38:38Z</published>
+    <arxiv:comment>EuroSys 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Jianyu Wei</name>
+    </author>
+    <author>
+      <name>Shijie Cao</name>
+    </author>
+    <author>
+      <name>Ting Cao</name>
+    </author>
+    <author>
+      <name>Lingxiao Ma</name>
+    </author>
+    <author>
+      <name>Lei Wang</name>
+    </author>
+    <author>
+      <name>Yanyong Zhang</name>
+    </author>
+    <author>
+      <name>Mao Yang</name>
+    </author>
+    <arxiv:doi>10.1145/3689031.3696099</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3689031.3696099" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.07093v1</id>
+    <title>FBI-LLM: Scaling Up Fully Binarized LLMs from Scratch via Autoregressive Distillation</title>
+    <updated>2024-07-09T17:59:48Z</updated>
+    <link href="https://arxiv.org/abs/2407.07093v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.07093v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work presents a Fully BInarized Large Language Model (FBI-LLM), demonstrating for the first time how to train a large-scale binary language model from scratch (not the partial binary or ternary LLM like BitNet b1.58) to match the performance of its full-precision counterparts (e.g., FP16 or BF16) in transformer-based LLMs. It achieves this by employing an autoregressive distillation (AD) loss with maintaining equivalent model dimensions (130M, 1.3B, 7B) and training data volume as regular LLM pretraining, while delivering competitive results in terms of perplexity and task-specific effectiveness. Intriguingly, by analyzing the training trajectory, we find that the pretrained weight is not necessary for training binarized LLMs from scratch. This research encourages a new computational framework and may facilitate the future design of specialized hardware tailored for fully 1-bit LLMs. We make all models, code, and training dataset fully accessible and transparent to support further research (Code: https://github.com/LiqunMa/FBI-LLM. Model: https://huggingface.co/LiqunMa/).</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-09T17:59:48Z</published>
+    <arxiv:comment>Github at https://github.com/LiqunMa/FBI-LLM</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Liqun Ma</name>
+    </author>
+    <author>
+      <name>Mingjie Sun</name>
+    </author>
+    <author>
+      <name>Zhiqiang Shen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.10969v3</id>
+    <title>Q-Sparse: All Large Language Models can be Fully Sparsely-Activated</title>
+    <updated>2024-07-24T14:57:48Z</updated>
+    <link href="https://arxiv.org/abs/2407.10969v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.10969v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce, Q-Sparse, a simple yet effective approach to training sparsely-activated large language models (LLMs). Q-Sparse enables full sparsity of activations in LLMs which can bring significant efficiency gains in inference. This is achieved by applying top-K sparsification to the activations and the straight-through-estimator to the training. We also introduce Block Q-Sparse for batch training and inference. The key results from this work are, (1) Q-Sparse can achieve results comparable to those of baseline LLMs while being much more efficient at inference time; (2) We present an inference-optimal scaling law for sparsely-activated LLMs; (3) Q-Sparse is effective in different settings, including training-from-scratch, continue-training of off-the-shelf LLMs, and finetuning; (4) Q-Sparse works for both full-precision and 1-bit LLMs (e.g., BitNet b1.58). Particularly, the synergy of BitNet b1.58 and Q-Sparse (can be equipped with MoE) provides the cornerstone and a clear path to revolutionize the efficiency, including cost and energy consumption, of future LLMs.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-15T17:59:29Z</published>
+    <arxiv:comment>Work in progress</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Ruiping Wang</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.16144v2</id>
+    <title>1-bit AI Infra: Part 1.1, Fast and Lossless BitNet b1.58 Inference on CPUs</title>
+    <updated>2024-10-23T11:17:42Z</updated>
+    <link href="https://arxiv.org/abs/2410.16144v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.16144v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent advances in 1-bit Large Language Models (LLMs), such as BitNet and BitNet b1.58, present a promising approach to enhancing the efficiency of LLMs in terms of speed and energy consumption. These developments also enable local LLM deployment across a broad range of devices. In this work, we introduce bitnet.cpp, a tailored software stack designed to unlock the full potential of 1-bit LLMs. Specifically, we develop a set of kernels to support fast and lossless inference of ternary BitNet b1.58 LLMs on CPUs. Extensive experiments demonstrate that bitnet.cpp achieves significant speedups, ranging from 2.37x to 6.17x on x86 CPUs and from 1.37x to 5.07x on ARM CPUs, across various model sizes. The code is available at https://github.com/microsoft/BitNet.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-21T16:14:57Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Jinheng Wang</name>
+    </author>
+    <author>
+      <name>Hansong Zhou</name>
+    </author>
+    <author>
+      <name>Ting Song</name>
+    </author>
+    <author>
+      <name>Shaoguang Mao</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Yan Xia</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.04965v1</id>
+    <title>BitNet a4.8: 4-bit Activations for 1-bit LLMs</title>
+    <updated>2024-11-07T18:41:50Z</updated>
+    <link href="https://arxiv.org/abs/2411.04965v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.04965v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent research on the 1-bit Large Language Models (LLMs), such as BitNet b1.58, presents a promising direction for reducing the inference cost of LLMs while maintaining their performance. In this work, we introduce BitNet a4.8, enabling 4-bit activations for 1-bit LLMs. BitNet a4.8 employs a hybrid quantization and sparsification strategy to mitigate the quantization errors introduced by the outlier channels. Specifically, we utilize 4-bit activations for inputs to the attention and feed-forward network layers, while sparsifying intermediate states followed with 8-bit quantization. Extensive experiments demonstrate that BitNet a4.8 achieves performance comparable to BitNet b1.58 with equivalent training costs, while being faster in inference with enabling 4-bit (INT4/FP4) kernels. Additionally, BitNet a4.8 activates only 55% of parameters and supports 3-bit KV cache, further enhancing the efficiency of large-scale LLM deployment and inference.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-07T18:41:50Z</published>
+    <arxiv:comment>Work in progress</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.16205v3</id>
+    <title>MH-MoE: Multi-Head Mixture-of-Experts</title>
+    <updated>2024-11-29T08:48:17Z</updated>
+    <link href="https://arxiv.org/abs/2411.16205v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.16205v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multi-Head Mixture-of-Experts (MH-MoE) demonstrates superior performance by using the multi-head mechanism to collectively attend to information from various representation spaces within different experts. In this paper, we present a novel implementation of MH-MoE that maintains both FLOPs and parameter parity with sparse Mixture of Experts models. Experimental results on language models show that the new implementation yields quality improvements over both vanilla MoE and fine-grained MoE models. Additionally, our experiments demonstrate that MH-MoE is compatible with 1-bit Large Language Models (LLMs) such as BitNet.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-25T09:05:36Z</published>
+    <arxiv:comment>7 pages, 0 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Shaohan Huang</name>
+    </author>
+    <author>
+      <name>Xun Wu</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.04787v3</id>
+    <title>Direct Quantized Training of Language Models with Stochastic Rounding</title>
+    <updated>2025-10-10T05:08:17Z</updated>
+    <link href="https://arxiv.org/abs/2412.04787v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.04787v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Although recent quantized Large Language Models (LLMs), such as BitNet, have paved the way for significant reduction in memory usage during deployment with binary or ternary weights, training these models still demands substantial memory footprints. This is partly because high-precision (i.e., unquantized) weights required for straight-through estimation must be maintained throughout the whole training process. To address this, we explore directly updating the quantized low-precision weights without relying on straight-through estimation during backpropagation, aiming to save memory usage during training. Specifically, we employ a stochastic rounding technique to minimize the information loss caused by the use of low-bit weights throughout training. Experimental results on our LLaMA-structured models of various sizes indicate that (1) training with only low-precision weights is feasible even when they are constrained to ternary values; (2) extending the bit width to 8 bits achieves performance on par with BitNet b1.58; (3) our models remain robust to precision scaling and memory reduction, showing minimal performance degradation when moving from FP32 to lower-memory environments (BF16/FP8); and (4) our models also support inference using ternary weights, showcasing their flexibility in deployment.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-06T05:41:11Z</published>
+    <arxiv:comment>Accepted to ACML 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Kaiyan Zhao</name>
+    </author>
+    <author>
+      <name>Tsuguchika Tabaru</name>
+    </author>
+    <author>
+      <name>Kenichi Kobayashi</name>
+    </author>
+    <author>
+      <name>Takumi Honda</name>
+    </author>
+    <author>
+      <name>Masafumi Yamazaki</name>
+    </author>
+    <author>
+      <name>Yoshimasa Tsuruoka</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.11880v1</id>
+    <title>Bitnet.cpp: Efficient Edge Inference for Ternary LLMs</title>
+    <updated>2025-02-17T15:06:28Z</updated>
+    <link href="https://arxiv.org/abs/2502.11880v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.11880v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The advent of 1-bit large language models (LLMs), led by BitNet b1.58, has spurred interest in ternary LLMs. Despite this, research and practical applications focusing on efficient edge inference for ternary LLMs remain scarce. To bridge this gap, we introduce Bitnet.cpp, an inference system optimized for BitNet b1.58 and ternary LLMs. Given that mixed-precision matrix multiplication (mpGEMM) constitutes the bulk of inference time in ternary LLMs, Bitnet.cpp incorporates a novel mpGEMM library to facilitate sub-2-bits-per-weight, efficient and lossless inference. The library features two core solutions: Ternary Lookup Table (TL), which addresses spatial inefficiencies of previous bit-wise methods, and Int2 with a Scale (I2_S), which ensures lossless edge inference, both enabling high-speed inference. Our experiments show that Bitnet.cpp achieves up to a 6.25x increase in speed over full-precision baselines and up to 2.32x over low-bit baselines, setting new benchmarks in the field. Additionally, we expand TL to element-wise lookup table (ELUT) for low-bit LLMs in the appendix, presenting both theoretical and empirical evidence of its considerable potential. Bitnet.cpp is publicly available at https://github.com/microsoft/BitNet/tree/paper , offering a sophisticated solution for the efficient and practical deployment of edge LLMs.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-17T15:06:28Z</published>
+    <arxiv:comment>18 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jinheng Wang</name>
+    </author>
+    <author>
+      <name>Hansong Zhou</name>
+    </author>
+    <author>
+      <name>Ting Song</name>
+    </author>
+    <author>
+      <name>Shijie Cao</name>
+    </author>
+    <author>
+      <name>Yan Xia</name>
+    </author>
+    <author>
+      <name>Ting Cao</name>
+    </author>
+    <author>
+      <name>Jianyu Wei</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.19008v1</id>
+    <title>Binary Neural Networks for Large Language Model: A Survey</title>
+    <updated>2025-02-26T10:14:19Z</updated>
+    <link href="https://arxiv.org/abs/2502.19008v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.19008v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) have wide applications in the field of natural language processing(NLP), such as GPT-4 and Llama. However, with the exponential growth of model parameter sizes, LLMs bring significant resource overheads. Low-bit quantization, as a key technique, reduces memory usage and computational demands by decreasing the bit-width of model parameters, activations, and gradients. Previous quantization methods for LLMs have largely employed Post-Training Quantization (PTQ) and Quantization-Aware Training (QAT). PTQ does not require any retraining of the original model, while QAT involves optimizing precision during training to achieve the best quantization parameters. The BitNet team proposed a radically different approach, where quantization is performed from the start of model training, utilizing low-precision binary weights during the training process. This approach has led to the emergence of many binary quantization techniques for large language models. This paper provides a comprehensive review of these binary quantization techniques. Specifically, we will introduce binary quantization techniques in deep neural networks and further explore their application to LLMs, reviewing their various contributions, implementations, and applications.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-26T10:14:19Z</published>
+    <arxiv:comment>23 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Liangdong Liu</name>
+    </author>
+    <author>
+      <name>Zhitong Zheng</name>
+    </author>
+    <author>
+      <name>Cong Wang</name>
+    </author>
+    <author>
+      <name>Tianhuang Su</name>
+    </author>
+    <author>
+      <name>Zhenyu Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.02118v1</id>
+    <title>LLMPi: Optimizing LLMs for High-Throughput on Raspberry Pi</title>
+    <updated>2025-04-02T20:29:39Z</updated>
+    <link href="https://arxiv.org/abs/2504.02118v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.02118v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deploying Large Language Models (LLMs) on resource-constrained edge devices like the Raspberry Pi presents challenges in computational efficiency, power consumption, and response latency. This paper explores quantization-based optimization techniques to enable high-throughput, energy-efficient execution of LLMs on low-power embedded systems. Our approach leverages k-quantization, a Post-Training Quantization (PTQ) method designed for different bit-widths, enabling efficient 2-bit, 4-bit, 6-bit, and 8-bit weight quantization. Additionally, we employ ternary quantization using Quantization-Aware Training (QAT) for BitNet models, allowing for more effective adaptation to lower-bit representations while preserving accuracy.
+  Our findings highlight the potential of quantized LLMs for real-time conversational AI on edge devices, paving the way for low-power, high-efficiency AI deployment in mobile and embedded applications. This study demonstrates that aggressive quantization strategies can significantly reduce energy consumption while maintaining inference quality, making LLMs practical for resource-limited environments.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-02T20:29:39Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Mahsa Ardakani</name>
+    </author>
+    <author>
+      <name>Jinendra Malekar</name>
+    </author>
+    <author>
+      <name>Ramtin Zand</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.03387v2</id>
+    <title>BitHEP -- The Limits of Low-Precision ML in HEP</title>
+    <updated>2026-02-11T08:44:19Z</updated>
+    <link href="https://arxiv.org/abs/2504.03387v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.03387v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The increasing complexity of modern neural network architectures demands fast and memory-efficient implementations to mitigate computational bottlenecks. In this work, we evaluate the recently proposed BitNet architecture in HEP applications, assessing its performance in classification, regression, and generative modeling tasks. Specifically, we investigate its suitability for quark-gluon discrimination, SMEFT parameter estimation, and detector simulation, comparing its efficiency and accuracy to state-of-the-art methods. Our results show that while BitNet consistently performs competitively in classification tasks, its performance in regression and generation varies with the size and type of the network, highlighting key limitations and potential areas for improvement.</summary>
+    <category term="hep-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="hep-ex" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-04T11:57:59Z</published>
+    <arxiv:comment>20 pages, 6 figures. v2: accepted for publication</arxiv:comment>
+    <arxiv:primary_category term="hep-ph"/>
+    <arxiv:journal_ref>SciPost Phys. 20, 038 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Claudius Krause</name>
+    </author>
+    <author>
+      <name>Daohan Wang</name>
+    </author>
+    <author>
+      <name>Ramon Winterhalder</name>
+    </author>
+    <arxiv:doi>10.21468/SciPostPhys.20.2.038</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.21468/SciPostPhys.20.2.038" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.12285v2</id>
+    <title>BitNet b1.58 2B4T Technical Report</title>
+    <updated>2025-04-25T03:07:55Z</updated>
+    <link href="https://arxiv.org/abs/2504.12285v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.12285v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce BitNet b1.58 2B4T, the first open-source, native 1-bit Large Language Model (LLM) at the 2-billion parameter scale. Trained on a corpus of 4 trillion tokens, the model has been rigorously evaluated across benchmarks covering language understanding, mathematical reasoning, coding proficiency, and conversational ability. Our results demonstrate that BitNet b1.58 2B4T achieves performance on par with leading open-weight, full-precision LLMs of similar size, while offering significant advantages in computational efficiency, including substantially reduced memory footprint, energy consumption, and decoding latency. To facilitate further research and adoption, the model weights are released via Hugging Face along with open-source inference implementations for both GPU and CPU architectures.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-16T17:51:43Z</published>
+    <arxiv:comment>Work in progress</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Shaohan Huang</name>
+    </author>
+    <author>
+      <name>Xingxing Zhang</name>
+    </author>
+    <author>
+      <name>Ying Hu</name>
+    </author>
+    <author>
+      <name>Ting Song</name>
+    </author>
+    <author>
+      <name>Yan Xia</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.16266v2</id>
+    <title>TeLLMe: An Energy-Efficient Ternary LLM Accelerator for Prefilling and Decoding on Edge FPGAs</title>
+    <updated>2025-04-24T18:14:11Z</updated>
+    <link href="https://arxiv.org/abs/2504.16266v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.16266v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deploying large language models (LLMs) on edge platforms is challenged by their high computational and memory demands. Although recent low-bit quantization methods (e.g., BitNet, DeepSeek) compress weights to as little as 1.58 bits with minimal accuracy loss, edge deployment is still constrained by limited on-chip resources, power budgets, and the often-neglected latency of the prefill phase. We present TeLLMe, the first ternary LLM accelerator for low-power FPGAs (e.g., AMD KV260) that fully supports both prefill and autoregressive decoding using 1.58-bit weights and 8-bit activations. Our contributions include: (1) a table-lookup matrix engine for ternary matmul that merges grouped activations with online precomputation to minimize resource use; (2) a fused, bandwidth-efficient attention module featuring a reversed reordering scheme to accelerate prefill; and (3) a tightly integrated normalization and quantization--dequantization unit optimized for ultra-low-bit inference. Under a 7W power budget, TeLLMe delivers up to 9 tokens/s throughput over 1,024-token contexts and prefill latencies of 0.55--1.15 s for 64--128 token prompts, marking a significant energy-efficiency advance and establishing a new edge FPGA benchmark for generative AI.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-22T21:00:58Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Ye Qiao</name>
+    </author>
+    <author>
+      <name>Zhiheng Chen</name>
+    </author>
+    <author>
+      <name>Yifan Zhang</name>
+    </author>
+    <author>
+      <name>Yian Wang</name>
+    </author>
+    <author>
+      <name>Sitao Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.18415v2</id>
+    <title>BitNet v2: Native 4-bit Activations with Hadamard Transformation for 1-bit LLMs</title>
+    <updated>2025-06-13T05:55:26Z</updated>
+    <link href="https://arxiv.org/abs/2504.18415v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.18415v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Efficient deployment of 1-bit Large Language Models (LLMs) is hindered by activation outliers, which complicate quantization to low bit-widths. We introduce BitNet v2, a novel framework enabling native 4-bit activation quantization for 1-bit LLMs. To tackle outliers in attention and feed-forward network activations, we propose H-BitLinear, a module applying an online Hadamard transformation prior to activation quantization. This transformation smooths sharp activation distributions into more Gaussian-like forms, suitable for low-bit representation. Experiments show BitNet v2 trained from scratch with 8-bit activations matches BitNet b1.58 performance. Crucially, BitNet v2 achieves minimal performance degradation when trained with native 4-bit activations, significantly reducing memory footprint and computational cost for batched inference.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-25T15:17:52Z</published>
+    <arxiv:comment>Work in progress</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.01140v1</id>
+    <title>ReTern: Exploiting Natural Redundancy and Sign Transformations for Enhanced Fault Tolerance in Compute-in-Memory based Ternary LLMs</title>
+    <updated>2025-06-01T19:49:01Z</updated>
+    <link href="https://arxiv.org/abs/2506.01140v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.01140v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ternary large language models (LLMs), which utilize ternary precision weights and 8-bit activations, have demonstrated competitive performance while significantly reducing the high computational and memory requirements of full-precision LLMs. The energy efficiency and performance of Ternary LLMs can be further improved by deploying them on ternary computing-in-memory (TCiM) accelerators, thereby alleviating the von-Neumann bottleneck. However, TCiM accelerators are prone to memory stuck-at faults (SAFs) leading to degradation in the model accuracy. This is particularly severe for LLMs due to their low weight sparsity. To boost the SAF tolerance of TCiM accelerators, we propose ReTern that is based on (i) fault-aware sign transformations (FAST) and (ii) TCiM bit-cell reprogramming exploiting their natural redundancy. The key idea is to utilize FAST to minimize computations errors due to SAFs in +1/-1 weights, while the natural bit-cell redundancy is exploited to target SAFs in 0 weights (zero-fix). Our experiments on BitNet b1.58 700M and 3B ternary LLMs show that our technique furnishes significant fault tolerance, notably 35% reduction in perplexity on the Wikitext dataset in the presence of faults. These benefits come at the cost of &lt; 3%, &lt; 7%, and &lt; 1% energy, latency and area overheads respectively.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-01T19:49:01Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Akul Malhotra</name>
+    </author>
+    <author>
+      <name>Sumeet Kumar Gupta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.19608v1</id>
+    <title>DeltaLLM: A Training-Free Framework Exploiting Temporal Sparsity for Efficient Edge LLM Inference</title>
+    <updated>2025-07-25T18:23:18Z</updated>
+    <link href="https://arxiv.org/abs/2507.19608v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.19608v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deploying Large Language Models (LLMs) on edge devices remains challenging due to their quadratically increasing computations with the sequence length. Existing studies for dynamic attention pruning are designed for hardware with massively parallel computation capabilities, such as GPUs or TPUs, and aim at long context lengths (e.g., 64K), making them unsuitable for edge scenarios. We present DeltaLLM, a training-free framework that exploits temporal sparsity in attention patterns to enable efficient LLM inference across both the prefilling and decoding stages, on resource-constrained edge devices. DeltaLLM introduces an accuracy- and memory-aware delta matrix construction strategy that introduces temporal sparsity, and a context-aware hybrid attention mechanism that combines full attention in a local context window with delta approximation outside it to increase accuracy. We evaluate our framework on the edge-device-friendly BitNet-b1.58-2B-4T model and Llama3.2-1B-Instruct model across diverse language tasks. The results show that on BitNet, our framework increases the attention sparsity from 0% to 60% during the prefilling stage with slight accuracy improvement on the WG task, and 0% to 57% across both the prefilling and decoding stages, with even higher F1 score from 29.63 to 30.97 on SQuAD-v2 task. On the Llama model, it can also achieve up to 60% sparsity during the prefilling stage and around 57% across both stages with negligible accuracy drop. These results demonstrate that DeltaLLM offers a promising solution for efficient edge deployment, requiring no fine-tuning and seamlessly integrating with existing inference pipelines.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-25T18:23:18Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Jiawen Qi</name>
+    </author>
+    <author>
+      <name>Chang Gao</name>
+    </author>
+    <author>
+      <name>Zhaochun Ren</name>
+    </author>
+    <author>
+      <name>Qinyu Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.07361v1</id>
+    <title>Word2Spike: Poisson Rate Coding for Associative Memories and Neuromorphic Algorithms</title>
+    <updated>2025-09-09T03:15:22Z</updated>
+    <link href="https://arxiv.org/abs/2509.07361v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.07361v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Spiking neural networks offer a promising path toward energy-efficient, brain-like associative memory. This paper introduces Word2Spike, a novel rate coding mechanism that combines continuous word embeddings and neuromorphic architectures. We develop a one-to-one mapping that converts multi-dimensional word vectors into spike-based attractor states using Poisson processes. Using BitNet b1.58 quantization, we maintain 97% semantic similarity of continuous embeddings on SimLex-999 while achieving 100% reconstruction accuracy on 10,000 words from OpenAI's text-embedding-3-large. We preserve analogy performance (100% of original embedding performance) even under intentionally introduced noise, indicating a resilient mechanism for semantic encoding in neuromorphic systems. Next steps include integrating the mapping with spiking transformers and liquid state machines (resembling Hopfield Networks) for further evaluation.</summary>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-09T03:15:22Z</published>
+    <arxiv:comment>Presented at 2025 AI in Health Conference, Ken Kennedy Institute, Rice University</arxiv:comment>
+    <arxiv:primary_category term="cs.NE"/>
+    <author>
+      <name>Archit Kalra</name>
+    </author>
+    <author>
+      <name>Midhun Sadanand</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.08542v1</id>
+    <title>BitROM: Weight Reload-Free CiROM Architecture Towards Billion-Parameter 1.58-bit LLM Inference</title>
+    <updated>2025-09-10T12:46:29Z</updated>
+    <link href="https://arxiv.org/abs/2509.08542v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.08542v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Compute-in-Read-Only-Memory (CiROM) accelerators offer outstanding energy efficiency for CNNs by eliminating runtime weight updates. However, their scalability to Large Language Models (LLMs) is fundamentally constrained by their vast parameter sizes. Notably, LLaMA-7B - the smallest model in LLaMA series - demands more than 1,000 cm2 of silicon area even in advanced CMOS nodes. This paper presents BitROM, the first CiROM-based accelerator that overcomes this limitation through co-design with BitNet's 1.58-bit quantization model, enabling practical and efficient LLM inference at the edge. BitROM introduces three key innovations: 1) a novel Bidirectional ROM Array that stores two ternary weights per transistor; 2) a Tri-Mode Local Accumulator optimized for ternary-weight computations; and 3) an integrated Decode-Refresh (DR) eDRAM that supports on-die KV-cache management, significantly reducing external memory access during decoding. In addition, BitROM integrates LoRA-based adapters to enable efficient transfer learning across various downstream tasks. Evaluated in 65nm CMOS, BitROM achieves 20.8 TOPS/W and a bit density of 4,967 kB/mm2 - offering a 10x improvement in area efficiency over prior digital CiROM designs. Moreover, the DR eDRAM contributes to a 43.6% reduction in external DRAM access, further enhancing deployment efficiency for LLMs in edge applications.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-10T12:46:29Z</published>
+    <arxiv:comment>Accepted to ASP-DAC 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Wenlun Zhang</name>
+    </author>
+    <author>
+      <name>Xinyu Li</name>
+    </author>
+    <author>
+      <name>Shimpei Ando</name>
+    </author>
+    <author>
+      <name>Kentaro Yoshioka</name>
+    </author>
+    <arxiv:doi>10.1109/ASP-DAC66049.2026.11420813</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/ASP-DAC66049.2026.11420813" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.09424v1</id>
+    <title>ENSI: Efficient Non-Interactive Secure Inference for Large Language Models</title>
+    <updated>2025-09-11T13:04:22Z</updated>
+    <link href="https://arxiv.org/abs/2509.09424v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.09424v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Secure inference enables privacy-preserving machine learning by leveraging cryptographic protocols that support computations on sensitive user data without exposing it. However, integrating cryptographic protocols with large language models (LLMs) presents significant challenges, as the inherent complexity of these protocols, together with LLMs' massive parameter scale and sophisticated architectures, severely limits practical usability. In this work, we propose ENSI, a novel non-interactive secure inference framework for LLMs, based on the principle of co-designing the cryptographic protocols and LLM architecture. ENSI employs an optimized encoding strategy that seamlessly integrates CKKS scheme with a lightweight LLM variant, BitNet, significantly reducing the computational complexity of encrypted matrix multiplications. In response to the prohibitive computational demands of softmax under homomorphic encryption (HE), we pioneer the integration of the sigmoid attention mechanism with HE as a seamless, retraining-free alternative. Furthermore, by embedding the Bootstrapping operation within the RMSNorm process, we efficiently refresh ciphertexts while markedly decreasing the frequency of costly bootstrapping invocations. Experimental evaluations demonstrate that ENSI achieves approximately an 8x acceleration in matrix multiplications and a 2.6x speedup in softmax inference on CPU compared to state-of-the-art method, with the proportion of bootstrapping is reduced to just 1%.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-11T13:04:22Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Zhiyu He</name>
+    </author>
+    <author>
+      <name>Maojiang Wang</name>
+    </author>
+    <author>
+      <name>Xinwen Gao</name>
+    </author>
+    <author>
+      <name>Yuchuan Luo</name>
+    </author>
+    <author>
+      <name>Lin Liu</name>
+    </author>
+    <author>
+      <name>Shaojing Fu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.15926v2</id>
+    <title>TeLLMe v2: An Efficient End-to-End Ternary LLM Prefill and Decode Accelerator with Table-Lookup Matmul on Edge FPGAs</title>
+    <updated>2025-10-21T17:20:02Z</updated>
+    <link href="https://arxiv.org/abs/2510.15926v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.15926v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>With the emergence of wearable devices and other embedded systems, deploying large language models (LLMs) on edge platforms has become an urgent need. However, this is challenging because of their high computational and memory demands. Although recent low-bit quantization methods (e.g., BitNet, DeepSeek) compress weights to as low as 1.58~bits with minimal accuracy loss, edge deployment is still constrained by limited on-chip resources, power budgets, and the often-neglected long latency of the prefill stage. We present \textbf{TeLLMe}, the first table-lookup-based ternary LLM accelerator for low-power edge FPGAs that fully supports both prefill and autoregressive decoding using 1.58-bit weights and 8-bit activations. TeLLMe incorporates several novel techniques, including (1) a table-lookup-based ternary matrix multiplication (TLMM) engine utilizing grouped activations and online precomputation for low resource utilization and high throughput; (2) a fine-grained analytic URAM-based weight buffer management scheme for efficient loading and compute engine access; (3) a streaming dataflow architecture that fuses floating-point element-wise operations with linear computations to hide latency; (4) a reversed-reordered prefill stage attention with fused attention operations for high memory efficiency; and (5) a resource-efficient specialized decoding stage attention. Under a 5~W power budget, TeLLMe delivers up to 25~tokens/s decoding throughput and 0.45--0.96~s time-to-first-token (TTFT) for 64--128 token prompts, marking a significant energy-efficiency advancement in LLM inference on edge FPGAs.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-03T05:37:51Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Ye Qiao</name>
+    </author>
+    <author>
+      <name>Zhiheng Chen</name>
+    </author>
+    <author>
+      <name>Yifan Zhang</name>
+    </author>
+    <author>
+      <name>Yian Wang</name>
+    </author>
+    <author>
+      <name>Sitao Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.05288v1</id>
+    <title>DP-Adam-AC: Privacy-preserving Fine-Tuning of Localizable Language Models Using Adam Optimization with Adaptive Clipping</title>
+    <updated>2025-10-06T18:56:15Z</updated>
+    <link href="https://arxiv.org/abs/2510.05288v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.05288v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) such as ChatGPT have evolved into powerful and ubiquitous tools. Fine-tuning on small datasets allows LLMs to acquire specialized skills for specific tasks efficiently. Although LLMs provide great utility in both general and task-specific use cases, they are limited by two security-related concerns. First, traditional LLM hardware requirements make them infeasible to run locally on consumer-grade devices. A remote network connection with the LLM provider's server is usually required, making the system vulnerable to network attacks. Second, fine-tuning an LLM for a sensitive task may involve sensitive data. Non-private fine-tuning algorithms produce models vulnerable to training data reproduction attacks. Our work addresses these security concerns by enhancing differentially private optimization algorithms and applying them to fine-tune localizable language models. We introduce adaptable gradient clipping along with other engineering enhancements to the standard DP-Adam optimizer to create DP-Adam-AC. We use our optimizer to fine-tune examples of two localizable LLM designs, small language model (Qwen2.5-0.5B) and 1.58 bit quantization (Bitnet-b1.58-2B). We demonstrate promising improvements in loss through experimentation with two synthetic datasets.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-06T18:56:15Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ruoxing Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.10560v1</id>
+    <title>BitMar: Low-Bit Multimodal Fusion with Episodic Memory for Edge Devices</title>
+    <updated>2025-10-12T11:59:41Z</updated>
+    <link href="https://arxiv.org/abs/2510.10560v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.10560v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cross-attention transformers and other multimodal vision-language models excel at grounding and generation; however, their extensive, full-precision backbones make it challenging to deploy them on edge devices. Memory-augmented architectures enhance the utilization of past context; however, most works rarely pair them with aggressive edge-oriented quantization. We introduce BitMar, a quantized multimodal transformer that proposes an external human-like episodic memory for effective image-text generation on hardware with limited resources. BitMar utilizes 1.58-bit encoders, one for text (BitNet-style) and one for vision (DiNOv2-based), to create compact embeddings that are combined and used to query a fixed-size key-value episodic memory. During vector retrieval, the BitNet decoder applies per-layer conditioning, which increases the contextual relevance of generated content. The decoder also employs attention sinks with a sliding-window mechanism to process long or streaming inputs under tight memory budgets. The combination of per-layer conditioning and sliding-window attention achieves a strong quality-speed trade-off, delivering competitive captioning and multimodal understanding at low latency with a small model footprint. These characteristics make BitMar well-suited for edge deployment.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-12T11:59:41Z</published>
+    <arxiv:comment>6 pages, BabyLM Workshop, EMNLP 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Euhid Aman</name>
+    </author>
+    <author>
+      <name>Esteban Carlin</name>
+    </author>
+    <author>
+      <name>Hsing-Kuo Pao</name>
+    </author>
+    <author>
+      <name>Giovanni Beltrame</name>
+    </author>
+    <author>
+      <name>Ghaluh Indah Permata Sari</name>
+    </author>
+    <author>
+      <name>Yie-Tarng Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.10623v3</id>
+    <title>ADiP: Adaptive-Precision Systolic Array for Matrix Multiplication Acceleration</title>
+    <updated>2026-04-01T18:23:10Z</updated>
+    <link href="https://arxiv.org/abs/2510.10623v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.10623v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Transformers are at the core of modern AI nowadays. They rely heavily on matrix multiplication and require efficient acceleration due to their substantial memory and computational requirements. Quantization plays a vital role in reducing memory usage, and can be exploited for computations by designing reconfigurable architectures that enhance matrix multiplication by dynamically adjusting the precision. This paper proposes ADiP, a novel adaptive-precision systolic array architecture designed for efficient matrix multiplication acceleration. The proposed architecture consists of $N$ $\times$ $N$ reconfigurable processing elements (PEs), along with shared shifters and accumulators. ADiP supports multiple computation modes, including symmetric single-matrix multiplication as well as asymmetric multi-matrix multiplication with a shared input matrix, thereby improving data reuse and PE utilization. By adapting to different precisions, ADiP achieves up to 4$\times$ higher throughput and up to 4$\times$ higher memory efficiency. Analytical models are developed for ADiP architecture, including latency and throughput for different architecture configurations. A comprehensive hardware design space exploration is demonstrated using commercial 22nm technology. Furthermore, ADiP is evaluated on different Transformer-based workloads from GPT-2 medium, BERT large, and BitNet-1.58B models, delivering total latency improvement up to 53.6%, and total energy improvement up to 24.4% for attention workloads in BitNet-1.58B model. At a 64$\times$64 size with reconfigurable 4,096 PEs, ADiP achieves a peak throughput of 8.192 TOPS, 16.384 TOPS, and 32.768 TOPS for 8bit$\times$8bit, 8bit$\times$4bit, and 8bit$\times$2bit operations, respectively.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-12T14:03:22Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Ahmed J. Abdelmaksoud</name>
+    </author>
+    <author>
+      <name>Cristian Sestito</name>
+    </author>
+    <author>
+      <name>Shiwei Wang</name>
+    </author>
+    <author>
+      <name>Themis Prodromakis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.13998v1</id>
+    <title>BitNet Distillation</title>
+    <updated>2025-10-15T18:28:12Z</updated>
+    <link href="https://arxiv.org/abs/2510.13998v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.13998v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we present BitNet Distillation (BitDistill), a lightweight pipeline that fine-tunes off-the-shelf full-precision LLMs (e.g., Qwen) into 1.58-bit precision (i.e., ternary weights {-1, 0, 1}) for specific downstream tasks, achieving strong task-specific performance with minimal computational cost. Specifically, BitDistill incorporates three key techniques: the SubLN module, as introduced in BitNet; multi-head attention distillation, based on MiniLM; and continual pre-training, which serves as a crucial warm-up step to mitigate the scalability issue of the performance gap between finetuned full-precision and 1.58-bit LLMs on specific tasks. Experimental results show that BitDistill achieves performance comparable to the full-precision counterpart models across model size, while enabling up to 10x memory savings and 2.65x faster inference on CPUs. Code is available at https://github.com/microsoft/BitNet.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-15T18:28:12Z</published>
+    <arxiv:comment>12 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xun Wu</name>
+    </author>
+    <author>
+      <name>Shaohan Huang</name>
+    </author>
+    <author>
+      <name>Wenhui Wang</name>
+    </author>
+    <author>
+      <name>Ting Song</name>
+    </author>
+    <author>
+      <name>Li Dong</name>
+    </author>
+    <author>
+      <name>Yan Xia</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.11743v4</id>
+    <title>Uncertainty Makes It Stable: Curiosity-Driven Quantized Mixture-of-Experts</title>
+    <updated>2026-08-29T15:58:40Z</updated>
+    <link href="https://arxiv.org/abs/2511.11743v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.11743v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deploying deep neural networks on resource-constrained devices faces two critical challenges: maintaining accuracy under aggressive quantization while ensuring predictable inference latency. We present a curiosity-driven quantized Mixture-of-Experts framework that addresses both through Bayesian epistemic uncertainty-based routing across heterogeneous experts (BitNet ternary, 1-16 bit BitLinear, post-training quantization). Evaluated on audio classification benchmarks (ESC-50, Quinn, UrbanSound8K), our 4-bit quantization maintains 99.9 percent of full-precision F1 (0.858 vs 0.859) with 4x compression and 31 percent energy savings versus 8-bit, while both achieve statistical parity with full precision (p &gt; 0.05).
+  Crucially, curiosity-driven routing simultaneously improves accuracy and stability: on Quinn, F1 increases from 0.802 to 0.809 while cross-fold variance drops by 85 percent (p &lt; 0.001, Levene's test), with reductions of 50 to 94 percent across datasets. The routing is self-organizing, with the high-precision 8-bit expert automatically receiving the most uncertain samples (20 percent lower confidence, p &lt; 0.001), while lightweight experts handle easier inputs. Datasets with already low baseline variance show no artificial stability gain, confirming the mechanism targets genuine epistemic uncertainty rather than overfitting routing decisions.
+  At 1.2M parameters, the framework provides interpretable, precision-aware routing suitable for safety-sensitive edge deployments where both accuracy and predictability are critical.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-13T15:32:41Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Sebastián Andrés Cajas Ordóñez</name>
+    </author>
+    <author>
+      <name>Luis Fernando Torres Torres</name>
+    </author>
+    <author>
+      <name>Mackenzie J. Meni</name>
+    </author>
+    <author>
+      <name>Carlos Andrés Duran Paredes</name>
+    </author>
+    <author>
+      <name>Eric Arazo</name>
+    </author>
+    <author>
+      <name>Cristian Bosch</name>
+    </author>
+    <author>
+      <name>Ricardo Simon Carbajo</name>
+    </author>
+    <author>
+      <name>Yuan Lai</name>
+    </author>
+    <author>
+      <name>Leo Anthony Celi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.21910v1</id>
+    <title>Platinum: Path-Adaptable LUT-Based Accelerator Tailored for Low-Bit Weight Matrix Multiplication</title>
+    <updated>2025-11-26T20:53:14Z</updated>
+    <link href="https://arxiv.org/abs/2511.21910v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.21910v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid scaling of large language models demands more efficient hardware. Quantization offers a promising trade-off between efficiency and performance. With ultra-low-bit quantization, there are abundant opportunities for results reuse, and thus it can be boosted with lookup tables (LUTs) based acceleration. However, existing LUT-based methods suffer from computation and hardware overheads for LUT construction, and rely solely on bit-serial computation, which is suboptimal for ternary-weight networks. We propose Platinum, a lightweight ASIC accelerator for integer weight mixed-precision matrix multiplication (mpGEMM) using LUTs. Platinum reduces LUT construction overhead via offline-generated construction paths and supports both general bit-serial and optimized ternary-weight execution through adaptive path switching. On BitNet b1.58-3B, Platinum achieves up to 73.6x, 4.09x, and 2.15x speedups over SpikingEyeriss, Prosperity, and 16-thread T-MAC (CPU), respectively, along with energy reductions of 32.4x, 3.23x, and 20.9x, all within a 0.96mm2 chip area. This demonstrates the potential of LUT-based ASICs as efficient, scalable solutions for ultra-low-bit neural networks on edge platforms.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-26T20:53:14Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Haoxuan Shan</name>
+    </author>
+    <author>
+      <name>Cong Guo</name>
+    </author>
+    <author>
+      <name>Chiyue Wei</name>
+    </author>
+    <author>
+      <name>Feng Cheng</name>
+    </author>
+    <author>
+      <name>Junyao Zhang</name>
+    </author>
+    <author>
+      <name>Hai "Helen" Li</name>
+    </author>
+    <author>
+      <name>Yiran Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.11550v1</id>
+    <title>PD-Swap: Prefill-Decode Logic Swapping for End-to-End LLM Inference on Edge FPGAs via Dynamic Partial Reconfiguration</title>
+    <updated>2025-12-12T13:35:09Z</updated>
+    <link href="https://arxiv.org/abs/2512.11550v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.11550v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Aggressively quantized large language models (LLMs), such as BitNet-style 1.58-bit Transformers with ternary weights, make it feasible to deploy generative AI on low-power edge FPGAs. However, as prompts grow to tens of thousands of tokens, edge hardware performance drops sharply with sequence length due to quadratic prefill cost and rapidly increasing KV-cache bandwidth demands, making inference latency of longer context length a first-order system concern. Recent studies on LLMs expose a fundamental prefill-decode asymmetry: prefill is compute-bound and dominated by dense matrix-matrix operations, whereas decoding is memory-bandwidth-bound and dominated by KV-cache traffic. A static accelerator must provision resources and a single dataflow for both regimes, leading to duplicated attention logic, underutilized fabric, and tight LUT/URAM limits that cap model size and usable context. We propose a prefill--decode disaggregated LLM accelerator, PD-Swap, that uses Dynamic Partial Reconfiguration (DPR) to time-multiplex the attention module on edge FPGAs. The core table-lookup ternary matrix multiplication and weight-buffering engines remain static, while the attention subsystem is a reconfigurable partition with two phase-specialized architectures: a compute-heavy, token-parallel prefill engine and a bandwidth-optimized, KV-cache-centric decoding engine. A roofline-inspired model and design space exploration jointly optimize reconfigurable-region size, parallelism under reconfiguration and routability constraints, and reconfiguration latency is hidden by computation latency. PD-Swap achieves up to 27~tokens/s decoding throughput, outperforming prior state-of-the-art works by 1.3x--2.1x (larger gains at longer context lengths), without extra area cost.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-12T13:35:09Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Yifan Zhang</name>
+    </author>
+    <author>
+      <name>Zhiheng Chen</name>
+    </author>
+    <author>
+      <name>Ye Qiao</name>
+    </author>
+    <author>
+      <name>Sitao Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.05269v1</id>
+    <title>Hybrid Gated Flow (HGF): Stabilizing 1.58-bit LLMs via Selective Low-Rank Correction</title>
+    <updated>2026-02-05T03:47:17Z</updated>
+    <link href="https://arxiv.org/abs/2602.05269v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.05269v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The deployment of Large Language Models (LLMs) on edge devices is fundamentally constrained by the "Memory Wall" -- a hardware limitation where memory bandwidth, not compute, becomes the bottleneck. Recent 1.58-bit quantization techniques (e.g., BitNet b1.58) dramatically reduce memory footprint but typically incur a perplexity degradation of 20-25% compared to FP16 baselines. In this work, we introduce Hybrid Gated Flow (HGF), a dual-stream architecture that couples a 1.58-bit ternary backbone with a learnable, low-rank FP16 correction path controlled by adaptive gates.
+  Through extensive experiments on the TinyStories dataset across two training regimes (2500 and 3500 steps), we demonstrate that HGF 5.4 achieves a validation loss of 0.9306 compared to BitNet's 1.0294, recovering approximately 55% of the quality gap between pure ternary quantization and the FP16 baseline (0.8490). This recovery is achieved with only ~12-15% memory overhead beyond the ternary backbone.
+  Furthermore, we provide empirical evidence for an emergent phenomenon: quantization as structural regularization. While a full-precision differential attention baseline (Diff_Only) exhibited training instability with validation loss exceeding 1.68, the ternary-anchored HGF maintained robust convergence throughout training. Finally, we report preliminary results extending this architecture to 1.2B and 3B parameter models trained on SlimPajama and FineWeb-Edu. These larger-scale experiments confirm that the architectural stability and quality recovery observed in small-scale proxies scale linearly to production-grade language modeling regimes.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-05T03:47:17Z</published>
+    <arxiv:comment>21 pages, 4 figures, 6 tables. Code and models will be released at opencores.ai</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>David Alejandro Trejo Pizzo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.06252v2</id>
+    <title>D-Legion: A Scalable Many-Core Architecture for Accelerating Matrix Multiplication in Quantized LLMs</title>
+    <updated>2026-04-04T16:57:05Z</updated>
+    <link href="https://arxiv.org/abs/2602.06252v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.06252v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The performance gains obtained by large language models (LLMs) are closely linked to their substantial computational and memory requirements. Quantized LLMs offer significant advantages with extremely quantized models, motivating the development of specialized architectures to accelerate their workloads. This paper proposes D-Legion, a novel scalable many-core architecture, designed using many adaptive-precision systolic array cores, to accelerate matrix multiplication in quantized LLMs. The proposed architecture consists of a set of Legions where each Legion has a group of adaptive-precision systolic arrays. D-Legion supports multiple computation modes, including quantized sparse and dense matrix multiplications. The block structured sparsity is exploited within a fully-sparse, or partially-sparse windows. In addition, memory accesses of partial summations (psums) are spatially reduced through parallel accumulators. Furthermore, data reuse is maximized through optimized scheduling techniques by multicasting matrix tiles across the Legions. A comprehensive design space exploration is performed in terms of Legion/core granularity to determine the optimal Legion configuration. Moreover, D-Legion is evaluated on attention workloads from two BitNet models, delivering up to 8.2$\times$ lower latency, up to 3.8$\times$ higher memory savings, and up to 3$\times$ higher psum memory savings compared to state-of-the-art work. D-Legion, with eight Legions and 64 total cores, achieves a peak throughput of 135.68 TOPS at a frequency of 1 GHz. A scaled version of D-Legion, with 32 Legions, is compared to Google TPUv4i, achieving up to 2.5$\times$ lower total latency, up to 2.3$\times$ higher total throughput, and up to 2.7$\times$ higher total memory savings.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-05T23:02:23Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Ahmed J. Abdelmaksoud</name>
+    </author>
+    <author>
+      <name>Cristian Sestito</name>
+    </author>
+    <author>
+      <name>Shiwei Wang</name>
+    </author>
+    <author>
+      <name>Themis Prodromakis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.20662v1</id>
+    <title>TOM: A Ternary Read-only Memory Accelerator for LLM-powered Edge Intelligence</title>
+    <updated>2026-02-24T08:08:41Z</updated>
+    <link href="https://arxiv.org/abs/2602.20662v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.20662v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The deployment of Large Language Models (LLMs) for real-time intelligence on edge devices is rapidly growing. However, conventional hardware architectures face a fundamental memory wall challenge, where limited on-device memory capacity and bandwidth severely constrain the size of deployable models and their inference speed, while also limiting on-device adaptation. To address this challenge, we propose TOM, a hybrid ROM-SRAM accelerator co-designed with ternary quantization, which balances extreme density with on-device tunability. TOM exploits the synergy between ternary quantization and ROM to achieve extreme memory density and bandwidth, while preserving flexibility through a hybrid ROM-SRAM architecture designed for QLoRA-based tunability. Specifically, we introduce: (1) a sparsity-aware ROM architecture that synthesizes ternary weights as standard-cell logic, eliminating area overhead from zero-valued bits; (2) a distributed processing architecture that co-locates high-density ROM banks with flexible SRAM-based QLoRA adapters and compute units; and (3) a workload-aware dynamic power gating scheme that exploits the logic-based nature of ROM to power down inactive banks, minimizing dynamic energy consumption. TOM achieves an inference throughput of 3,306 TPS using BitNet-2B model, demonstrating its effectiveness in delivering real-time, energy-efficient edge intelligence.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-24T08:08:41Z</published>
+    <arxiv:comment>13 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Hongyi Guan</name>
+    </author>
+    <author>
+      <name>Yijia Zhang</name>
+    </author>
+    <author>
+      <name>Wenqiang Wang</name>
+    </author>
+    <author>
+      <name>Yizhao Gao</name>
+    </author>
+    <author>
+      <name>Shijie Cao</name>
+    </author>
+    <author>
+      <name>Chen Zhang</name>
+    </author>
+    <author>
+      <name>Ningyi Xu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.05168v1</id>
+    <title>Sparse-BitNet: 1.58-bit LLMs are Naturally Friendly to Semi-Structured Sparsity</title>
+    <updated>2026-03-05T13:37:50Z</updated>
+    <link href="https://arxiv.org/abs/2603.05168v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.05168v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Semi-structured N:M sparsity and low-bit quantization (e.g., 1.58-bit BitNet) are two promising approaches for improving the efficiency of large language models (LLMs), yet they have largely been studied in isolation. In this work, we investigate their interaction and show that 1.58-bit BitNet is naturally more compatible with N:M sparsity than full-precision models. To study this effect, we propose Sparse-BitNet, a unified framework that jointly applies 1.58-bit quantization and dynamic N:M sparsification while ensuring stable training for the first time. Across multiple model scales and training regimes (sparse pretraining and dense-to-sparse schedules), 1.58-bit BitNet consistently exhibits smaller performance degradation than full-precision baselines at the same sparsity levels and can tolerate higher structured sparsity before accuracy collapse. Moreover, using our custom sparse tensor core, Sparse-BitNet achieves substantial speedups in both training and inference, reaching up to 1.30X. These results highlight that combining extremely low-bit quantization with semi-structured N:M sparsity is a promising direction for efficient LLMs. Code available at https://github.com/AAzdi/Sparse-BitNet</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-05T13:37:50Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Di Zhang</name>
+    </author>
+    <author>
+      <name>Xun Wu</name>
+    </author>
+    <author>
+      <name>Shaohan Huang</name>
+    </author>
+    <author>
+      <name>Yudong Wang</name>
+    </author>
+    <author>
+      <name>Hanyong Shao</name>
+    </author>
+    <author>
+      <name>Yingbo Hao</name>
+    </author>
+    <author>
+      <name>Zewen Chi</name>
+    </author>
+    <author>
+      <name>Li Dong</name>
+    </author>
+    <author>
+      <name>Ting Song</name>
+    </author>
+    <author>
+      <name>Yan Xia</name>
+    </author>
+    <author>
+      <name>Zhifang Sui</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.05232v1</id>
+    <title>SlideSparse: Fast and Flexible (2N-2):2N Structured Sparsity</title>
+    <updated>2026-03-05T14:49:16Z</updated>
+    <link href="https://arxiv.org/abs/2603.05232v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.05232v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>NVIDIA's 2:4 Sparse Tensor Cores deliver 2x throughput but demand strict 50% pruning -- a ratio that collapses LLM reasoning accuracy (Qwen3: 54% to 15%). Milder $(2N-2):2N$ patterns (e.g., 6:8, 25% pruning) preserve accuracy yet receive no hardware support, falling back to dense execution without any benefit from sparsity. We present SlideSparse, the first system to unlock Sparse Tensor Core acceleration for the $(2N-2):2N$ model family on commodity GPUs. Our Sliding Window Decomposition reconstructs any $(2N-2):2N$ weight block into $N-1$ overlapping 2:4-compliant windows without any accuracy loss; Activation Lifting fuses the corresponding activation rearrangement into per-token quantization at near-zero cost. Integrated into vLLM, SlideSparse is evaluated across various GPUs (A100, H100, B200, RTX 4090, RTX 5080, DGX-spark), precisions (FP4, INT8, FP8, BF16, FP16), and model families (Llama, Qwen, BitNet). On compute-bound workloads, the measured speedup ratio (1.33x) approaches the theoretical upper-bound $N/(N-1)=4/3$ at 6:8 weight sparsity in Qwen2.5-7B, establishing $(2N-2):2N$ as a practical path to accuracy-preserving LLM acceleration. Code available at https://github.com/bcacdwk/vllmbench.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-05T14:49:16Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hanyong Shao</name>
+    </author>
+    <author>
+      <name>Yingbo Hao</name>
+    </author>
+    <author>
+      <name>Ting Song</name>
+    </author>
+    <author>
+      <name>Yan Xia</name>
+    </author>
+    <author>
+      <name>Di Zhang</name>
+    </author>
+    <author>
+      <name>Shaohan Huang</name>
+    </author>
+    <author>
+      <name>Xun Wu</name>
+    </author>
+    <author>
+      <name>Songchen Xu</name>
+    </author>
+    <author>
+      <name>Le Xu</name>
+    </author>
+    <author>
+      <name>Li Dong</name>
+    </author>
+    <author>
+      <name>Zewen Chi</name>
+    </author>
+    <author>
+      <name>Yi Zou</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.10054v1</id>
+    <title>Quantization of Ricci Curvature in Information Geometry</title>
+    <updated>2026-03-09T17:44:10Z</updated>
+    <link href="https://arxiv.org/abs/2603.10054v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.10054v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In 2004, while studying the information geometry of binary Bayesian networks (bitnets), the author conjectured that the volume-averaged Ricci scalar &lt;R&gt; computed with respect to the Fisher information metric is universally quantized to positive half-integers: &lt;R&gt; in (1/2)Z. This paper resolves the conjecture after 20 years. We prove it for tree-structured and complete-graph bitnets via a universal Beta function cancellation mechanism, and disprove it in general by exhibiting explicit loop counterexamples.
+  We extend the program to Gaussian DAG networks, where a sign dichotomy holds: discrete bitnets have positive curvature, while Gaussian networks form solvable Lie groups with negative curvature.</summary>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-09T17:44:10Z</published>
+    <arxiv:comment>15 pages, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.IT"/>
+    <author>
+      <name>Carlos C. Rodriguez</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.25813v1</id>
+    <title>MAGNET: Autonomous Expert Model Generation via Decentralized Autoresearch and BitNet Training</title>
+    <updated>2026-03-26T18:21:57Z</updated>
+    <link href="https://arxiv.org/abs/2603.25813v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.25813v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present MAGNET (Model Autonomously Growing Network), a decentralized system for autonomous generation, training, and serving of domain-expert language models across commodity hardware. MAGNET integrates four components: (1) autoresearch, an autonomous ML research pipeline that automates dataset generation, hyperparameter exploration, evaluation, and error-driven iteration; (2) BitNet b1.58 ternary training, enabling CPU-native inference via bitnet.cpp without GPU hardware; (3) DiLoCo-based distributed merging for communication-efficient aggregation of domain specialists; and (4) on-chain contribution tracking on the HOOTi EVM chain. We validate autoresearch through three case studies: video safety classification (balanced accuracy 0.9287 to 0.9851), cryptocurrency directional prediction (41% to 54.9% hit rate), and BitNet hyperparameter optimization (10-phase sweep, -16.7% validation loss).</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-26T18:21:57Z</published>
+    <arxiv:comment>20 pages, 4 figures, 8 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yongwan Kim</name>
+    </author>
+    <author>
+      <name>Sungchul Park</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.03336v2</id>
+    <title>NativeTernary: A Self-Delimiting Binary Encoding with Unary Run-Length Hierarchy Markers for Ternary Neural Network Weights, Structured Data, and General Computing Infrastructure</title>
+    <updated>2026-04-08T03:25:35Z</updated>
+    <link href="https://arxiv.org/abs/2604.03336v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.03336v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>BitNet b1.58 (Ma et al., 2024) demonstrates that large language models can operate entirely on ternary weights {-1, 0, +1}, yet no native binary wire format exists for such models. NativeTernary closes this gap. Benchmarked against GGUF on the real BitNet b1.58 2B4T architecture (24 layers, ~170 tensors, 2B parameters): NativeTernary encodes ternary weights at exactly 2.000 bits per weight -- 1.31x smaller than GGUF Q2_K and 4.0x smaller than GGUF int8 -- while reducing boundary and framing overhead by 460x (91 bytes vs ~42KB of GGUF tensor headers). Encode throughput: 47--69 MB/s. Decode throughput: 35--45 MB/s on commodity hardware. The decoder is a 10-line stateless state machine resilient to bitstream corruption.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-03T06:58:03Z</published>
+    <arxiv:comment>v2: benchmark results added. Real BitNet b1.58 2B4T architecture analysis: NativeTernary framing overhead 460x smaller than GGUF tensor headers (91 bytes vs 42KB). 1.31x smaller than GGUF Q2_K. C implementation: https://github.com/sm45118/nativeternary</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Maharshi Savdhariya</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.24273v1</id>
+    <title>BitRL: Reinforcement Learning with 1-bit Quantized Language Models for Resource-Constrained Edge Deployment</title>
+    <updated>2026-04-27T10:03:37Z</updated>
+    <link href="https://arxiv.org/abs/2604.24273v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.24273v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The deployment of intelligent reinforcement learning (RL) agents on resource-constrained edge devices remains a fundamental challenge due to the substantial memory, computational, and energy requirements of modern deep learning systems. While large language models (LLMs) have emerged as powerful architectures for decision-making agents, their multi-billion parameter scale confines them to cloud-based deployment, raising concerns about latency, privacy, and connectivity dependence.
+  We introduce BitRL, a framework for building RL agents using 1-bit quantized language models that enables practical on-device learning and inference under severe resource constraints. Leveraging the BitNet b1.58 architecture with ternary weights (-1, 0, +1) and an optimized inference stack, BitRL achieves 10-16x memory reduction and 3-5x energy efficiency improvements over full-precision baselines while maintaining 85-98 percent of task performance across benchmarks.
+  We provide theoretical analysis of quantization as structured parameter perturbation, derive convergence bounds for quantized policy gradients under frozen-backbone architectures, and identify the exploration-stability trade-off in extreme quantization. Our framework systematically integrates 1-bit quantized language models with reinforcement learning for edge deployment and demonstrates effectiveness on commodity hardware.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-27T10:03:37Z</published>
+    <arxiv:comment>6pages, 1 Figure, IEEE International Conference of Frontiers of Engineering and Emerging Technologies 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Md. Ashiq Ul Islam Sajid</name>
+    </author>
+    <author>
+      <name>Mohammad Sakib Mahmood</name>
+    </author>
+    <author>
+      <name>Md. Tareq Hasan</name>
+    </author>
+    <author>
+      <name>Md Abdur Rahim</name>
+    </author>
+    <author>
+      <name>Rafat Ara</name>
+    </author>
+    <author>
+      <name>Md. Arafat Hossain</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.25183v1</id>
+    <title>Hardware Generation and Exploration of Lookup Table-Based Accelerators for 1.58-bit LLM Inference</title>
+    <updated>2026-04-28T03:42:53Z</updated>
+    <link href="https://arxiv.org/abs/2604.25183v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.25183v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ternary weight quantization (e.g., BitNet b1.58) offers a promising path to mitigate the memory bandwidth bottleneck in Large Language Model (LLM) inference. However, conventional compute platforms lack native support for ternary-weight arithmetic, often relying on inefficient dequantization. Lookup table (LUT)-based hardware architectures provide an effective alternative by replacing multiplications with conditional additions, but their design space remains largely unexplored. Existing designs rely on heuristic parameter selection, lacking a systematic understanding of the architectural trade-offs. This work addresses this gap by formalizing the design space of ternary LUT-based accelerators and presenting an open-source hardware generator coupled with an analytical cost model, validated against synthesis in TSMC 16nm technology. By spanning the full architectural space, this framework not only enables rapid design space exploration but also establishes a common footing for fair cross-design evaluation, which was previously hindered by inconsistent instantiations across published accelerators. Using this framework, we challenge several assumptions and design choices in recent literature. We demonstrate that the optimal architecture is fundamentally governed by the activation data type: while LUT-based reuse offers significant gains for high-cost arithmetic (e.g., FP16), it yields diminishing returns for small integer types. Furthermore, we show that maximizing core size consistently improves area density compared to highly tiled approaches. Our optimized designs achieve a 2.2x area reduction compared to multiplier-based baselines. Moreover, by benchmarking state-of-the-art implementations against our model, we reveal that correcting suboptimal parameters yields up to a 1.2x area improvement.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-28T03:42:53Z</published>
+    <arxiv:comment>Presented as ISPASS 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Robin Geens</name>
+    </author>
+    <author>
+      <name>Joran Heldens</name>
+    </author>
+    <author>
+      <name>Joren Dumoulin</name>
+    </author>
+    <author>
+      <name>Marian Verhelst</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.27396v1</id>
+    <title>VitaLLM: A Versatile, Ultra-Compact Ternary LLM Accelerator with Dependency-Aware Scheduling</title>
+    <updated>2026-04-30T04:07:21Z</updated>
+    <link href="https://arxiv.org/abs/2604.27396v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.27396v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deploying Large Language Models (LLMs) on resource-constrained edge devices faces critical bottlenecks in memory bandwidth and power consumption. While ternary quantization (e.g., BitNet b1.58) significantly reduces model size, its direct deployment on general-purpose hardware is hindered by workload imbalance, bandwidth-bound decoding, and strict data dependencies. To address these challenges, we propose \textbf{VitaLLM}, a hardware-software co-designed accelerator tailored for efficient ternary LLM inference. We introduce a heterogeneous \textbf{Dual-Core Compute Strategy} that synergizes specialized TINT-Cores for massive ternary projections with a unified BoothFlex-Core for mixed-precision attention, ensuring high utilization across both compute-bound prefill and bandwidth-bound decode stages. Furthermore, we develop a \textbf{Leading One Prediction (LOP)} mechanism to prune redundant Key-Value (KV) cache fetches and a \textbf{Dependency-Aware Scheduling} framework to hide the latency of nonlinear operations. Implemented in TSMC 16nm technology, VitaLLM achieves a decoding throughput of 70.70 tokens/s within an ultra-compact area of 0.223 mm$^2$ and a power consumption of 65.97 mW. The design delivers a superior Figure of Merit (FOM) of 17.4 TOPS/mm$^2$/W, significantly outperforming state-of-the-art accelerators. Finally, we explore an extended bit-serial design (BoothFlex-BS) to demonstrate the architecture's adaptability for precision-agile inference.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-30T04:07:21Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <arxiv:journal_ref>IEEE Transactions on Circuits and Systems for Artificial Intelligence, 2026</arxiv:journal_ref>
+    <author>
+      <name>Zi-Wei Lin</name>
+    </author>
+    <author>
+      <name>Tian-Sheuan Chang</name>
+    </author>
+    <arxiv:doi>10.1109/TCASAI.2026.3689494</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TCASAI.2026.3689494" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.00320v1</id>
+    <title>VitaLLM: A Versatile and Tiny Accelerator for Mixed-Precision LLM Inference on Edge Devices</title>
+    <updated>2026-05-01T00:59:46Z</updated>
+    <link href="https://arxiv.org/abs/2605.00320v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.00320v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present VitaLLM, a mixed precision accelerator that enables ternary weight large language models to run efficiently on edge devices. The design combines two compute cores, a multiplier free TINT core for ternary-INT projections and a BoothFlex core that reuses a radix-4 Booth datapath for both INT8$\times$INT8 attention and ternary-INT-sustaining utilization without duplicating arrays. A predictive sparse attention mechanism employs a leading-one (LO) surrogate with a comparison-free top-$K$ selector to prune key/value (KV) fetches by roughly $1-K/M$ for $M$ cached tokens, confining exact attention to $K$ candidates. System-level integration uses head-level pipelining and an absmax-based quantization barrier to standardize cross-core interfaces and overlap nonlinear reductions with linear tiles. A 16 nm silicon prototype at 1 GHz/0.8 V achieves 72.46 tokens/s in decode and 0.88 s prefill (64 tokens) within 0.214 mm^2 and 120 KB on-chip memory, while reducing KV traffic and improving utilization in ablations. These results demonstrate practical BitNet b1.58 (3B) inference on edge-class platforms and provide a compact blueprint for future mixed-precision LLM accelerators.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-01T00:59:46Z</published>
+    <arxiv:comment>accepted in ISCAS 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Zi-Wei Lin</name>
+    </author>
+    <author>
+      <name>Tian-Sheuan Chang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.00365v1</id>
+    <title>SPARQLe: Sub-Precision Activation Representation for Quantized LLM Inference</title>
+    <updated>2026-05-29T21:07:27Z</updated>
+    <link href="https://arxiv.org/abs/2606.00365v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.00365v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid growth in sizes of Large language models (LLMs) results in high compute and memory costs during inference. Quantization has been a significant pathway to addressing this challenge. In the quest to push the limits of quantization, weights, which are static, can often be quantized aggressively (e.g. 4 bits), while activations often require higher precision (e.g., 8 bits) to preserve accuracy, forcing hardware to operate with higher-precision datapaths. We leverage the statistical property that a significant fraction of activations are concentrated around zero, resulting in sparsity in the higher-order bits. Our proposal, SPARQLe, is a hardware-software co-design framework that exploits this sub-precision redundancy in any given quantized model. SPARQLe represents each 2k-bit activation tensor as a dense k-bit LSB tensor and a sparse k-bit MSB tensor compressed with a precision bitmap, and proposes a lightweight algorithm to increase MSB sparsity. SPARQLe reduces activation memory traffic and enables efficient computation on k-bit datapaths while preserving 2k-bit activation accuracy. SPARQLe includes an accelerator that operates directly on this hybrid format with minimal control overheads. Across the BitNet 3B, Llama2 7B, and Llama3 8B models, SPARQLe reduces prefill latency by 16-24.3% and decode latency by 13.5-23.4%, with 17-26.7% and 6.5-14.2% lower prefill and decode energy, respectively. SPARQLe demonstrates that sub-precision activation sparsity offers an effective and complementary pathway towards efficient LLM inference.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-29T21:07:27Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Aradhana Mohan Parvathy</name>
+    </author>
+    <author>
+      <name>Soumendu Kumar Ghosh</name>
+    </author>
+    <author>
+      <name>Shamik Kundu</name>
+    </author>
+    <author>
+      <name>Arnab Raha</name>
+    </author>
+    <author>
+      <name>Souvik Kundu</name>
+    </author>
+    <author>
+      <name>Deepak A. Mathaikutty</name>
+    </author>
+    <author>
+      <name>Anand Raghunathan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.22621v1</id>
+    <title>Multi-Level Resistive Synapses for On-Chip Neural Networks: A Physics-Based Design of a Memristive Crossbar Fabric with Quasi-Continuous Conductance States</title>
+    <updated>2026-06-21T18:04:51Z</updated>
+    <link href="https://arxiv.org/abs/2606.22621v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.22621v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Building on resistive communication, this paper presents a physics-based design of an on-chip neural network with multi-level memristive synapses supporting a dense spectrum of conductance states. Derived from ionic transport physics, we develop a state-variable model and quantify storable sub-levels under thermal noise, drift, and quantized conductance. We assemble these devices into a 1T1R crossbar fabric, derive the linear algebra of analog vector-matrix multiplication (VMM) under wire resistance, and design a differential synapse for signed weights. A multilayer pipeline executes inference, backpropagation, and weight updates physically in the analog domain. We derive the in-situ outer-product learning rule, its discretization onto the conductance lattice, and the resulting quantization noise. We provide energy, area, capacity, and inter-tile models, showing this substrate is ideally suited for large language models (LLMs). Our design eliminates weight movement, surpassing binary ReRAM and traditional CMOS. We detail the material stack (HfO_2-based), the FEOL/BEOL CMOS foundry-integration flow, a self-contained SPICE model, the complete memristive-FPGA neuromorphic system, and an in-memory self-attention engine with current-mode translinear softmax. Finally, a ternary BitNet datapath shows projected per-token efficiency orders of magnitude better than advanced CPUs or GPUs. The result is a self-contained hardware-native blueprint for a high-density, analog, in-memory neural processor.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-21T18:04:51Z</published>
+    <arxiv:comment>22 pages, 14 figures, includes self-contained SPICE compact model validation</arxiv:comment>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>David Alejandro Trejo Pizzo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.25674v2</id>
+    <title>BitNet Text Embeddings</title>
+    <updated>2026-07-22T12:59:40Z</updated>
+    <link href="https://arxiv.org/abs/2606.25674v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.25674v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>LLM-based text embedders have substantially improved retrieval and semantic representation quality, but their deployment remains costly: large backbone models slow down embedding inference, while high-dimensional full-precision embeddings impose substantial storage and bandwidth overhead on large-scale indexes. In this paper, we present BITEMBED, an extreme low-bit framework for LLM-based text embedding that jointly targets encoding efficiency and vector storage. BITEMBED converts pretrained LLM backbones into BitNet-style embedding encoders with ternary weights, quantized activations, and lightweight normalization refinement. The converted model is adapted to representation learning through continual contrastive pre-training, followed by supervised contrastive fine-tuning with both similarity-distribution distillation and attention-relation distillation from a full-precision teacher. Beyond quantizing the backbone, BITEMBED further trains output embeddings to support multiple storage precisions meeting different storage needs in various scenarios. Experiments on MMTEB (eng, v2) with Qwen3-0.6B and Gemma3-270M show that BITEMBED is largely comparable to full precision teacher embedders. Moreover, BITEMBED flexibly obtains text embeddings of various precisions, achieving a trade-off between performance and storage cost.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-24T10:37:01Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Zhen Li</name>
+    </author>
+    <author>
+      <name>Xin Huang</name>
+    </author>
+    <author>
+      <name>Liang Wang</name>
+    </author>
+    <author>
+      <name>Nan Yang</name>
+    </author>
+    <author>
+      <name>Ting Song</name>
+    </author>
+    <author>
+      <name>Yan Xia</name>
+    </author>
+    <author>
+      <name>Xun Wu</name>
+    </author>
+    <author>
+      <name>Shaohan Huang</name>
+    </author>
+    <author>
+      <name>Huishuai Zhang</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+    <author>
+      <name>Dongyan Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.26650v1</id>
+    <title>CAT-Q: Cost-efficient and Accurate Ternary Quantization for LLMs</title>
+    <updated>2026-06-25T06:24:02Z</updated>
+    <link href="https://arxiv.org/abs/2606.26650v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.26650v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we present CAT-Q, Cost-efficient and Accurate Ternary Quantization, for compressing and accelerating LLMs. Unlike existing state-of-the-art ternary quantization methods that rely on data-intensive and costly quantization-aware training to mitigate severe performance degradation, CAT-Q is a simple yet effective post-training quantization scheme that is readily applicable to LLMs with diverse architectures and model sizes. It has two key components, learnable modulation (LM) and softened ternarization (ST), which are coupled from an optimization perspective. LM leverages a composition of learnable factors to modulate the distribution of pre-trained high-precision weights and the ternary threshold, making them less sensitive to ternarization. ST further introduces a differentiable transition function to guide the ternarization process toward stable convergence. We show that, for pre-trained LLMs with 1.7B to 8B parameters, CAT-Q can efficiently quantize them into ternary models using only 512 calibration samples, while achieving superior performance than the seminal BitNet 1.58-bit v1 and v2 families (with 1.3B to 7B parameters) trained with 100B tokens, yielding about a 100,000X reduction in training tokens. Moreover, we show for the first time that CAT-Q can quantize much larger pre-trained LLMs having 14B to 235B parameters into leading ternary models within just 8 to 60 hours on 8 A100-80GB GPUs. Code is available at https://github.com/IntelChina-AI/BitTern.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-25T06:24:02Z</published>
+    <arxiv:comment>This work is accepted to ICML 2026 as an oral. The project page: https://github.com/IntelChina-AI/BitTern</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Shigeng Wang</name>
+    </author>
+    <author>
+      <name>Chao Li</name>
+    </author>
+    <author>
+      <name>Yangyuxuan Kang</name>
+    </author>
+    <author>
+      <name>Jiawei Fan</name>
+    </author>
+    <author>
+      <name>Anbang Yao</name>
+    </author>
+  </entry>
+</feed>

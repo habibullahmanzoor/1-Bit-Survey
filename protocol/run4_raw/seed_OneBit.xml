@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/U1VL/OLTZtk7+nPYE6yPaJjuLfI</id>
+  <title>arXiv Query: search_query=abs:"OneBit" AND (cat:cs.CL OR cat:cs.LG OR cat:cs.AI OR cat:cs.AR) AND submittedDate:"202301010000 TO 202606302359"&amp;id_list=&amp;start=0&amp;max_results=200</title>
+  <updated>2026-09-05T10:56:18Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22OneBit%22+AND+((cat:cs.CL+OR+(cat:cs.LG+OR+(cat:cs.AI+OR+cat:cs.AR)))+AND+submittedDate:%22202301010000+TO+202606302359%22)&amp;start=0&amp;max_results=200&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>200</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2402.11295v6</id>
+    <title>OneBit: Towards Extremely Low-bit Large Language Models</title>
+    <updated>2024-11-29T11:47:55Z</updated>
+    <link href="https://arxiv.org/abs/2402.11295v6" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.11295v6" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Model quantification uses low bit-width values to represent the weight matrices of existing models to be quantized, which is a promising approach to reduce both storage and computational overheads of deploying highly anticipated LLMs. However, current quantization methods suffer severe performance degradation when the bit-width is extremely reduced, and thus focus on utilizing 4-bit or 8-bit values to quantize models. This paper boldly quantizes the weight matrices of LLMs to 1-bit, paving the way for the extremely low bit-width deployment of LLMs. For this target, we introduce a 1-bit model compressing framework named OneBit, including a novel 1-bit parameter representation method to better quantize LLMs as well as an effective parameter initialization method based on matrix decomposition to improve the convergence speed of the quantization framework. Sufficient experimental results indicate that OneBit achieves good performance (at least 81% of the non-quantized performance on LLaMA models) with robust training processes when only using 1-bit weight matrices.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-17T14:26:57Z</published>
+    <arxiv:comment>Accepted by NeurIPS 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Yuzhuang Xu</name>
+    </author>
+    <author>
+      <name>Xu Han</name>
+    </author>
+    <author>
+      <name>Zonghan Yang</name>
+    </author>
+    <author>
+      <name>Shuo Wang</name>
+    </author>
+    <author>
+      <name>Qingfu Zhu</name>
+    </author>
+    <author>
+      <name>Zhiyuan Liu</name>
+    </author>
+    <author>
+      <name>Weidong Liu</name>
+    </author>
+    <author>
+      <name>Wanxiang Che</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.12471v2</id>
+    <title>Diffusion Model Based Signal Recovery Under 1-Bit Quantization</title>
+    <updated>2026-01-10T15:06:18Z</updated>
+    <link href="https://arxiv.org/abs/2511.12471v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.12471v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion models (DMs) have demonstrated to be powerful priors for signal recovery, but their application to 1-bit quantization tasks, such as 1-bit compressed sensing and logistic regression, remains a challenge. This difficulty stems from the inherent non-linear link function in these tasks, which is either non-differentiable or lacks an explicit characterization. To tackle this issue, we introduce Diff-OneBit, which is a fast and effective DM-based approach for signal recovery under 1-bit quantization. Diff-OneBit addresses the challenge posed by non-differentiable or implicit links functions via leveraging a differentiable surrogate likelihood function to model 1-bit quantization, thereby enabling gradient based iterations. This function is integrated into a flexible plug-and-play framework that decouples the data-fidelity term from the diffusion prior, allowing any pretrained DM to act as a denoiser within the iterative reconstruction process. Extensive experiments on the FFHQ, CelebA and ImageNet datasets demonstrate that Diff-OneBit gives high-fidelity reconstructed images, outperforming state-of-the-art methods in both reconstruction quality and computational efficiency across 1-bit compressed sensing and logistic regression tasks. Our code is available at https://github.com/Chenyouming123/DiffOneBit.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-16T06:18:14Z</published>
+    <arxiv:comment>AAAI2026</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Youming Chen</name>
+    </author>
+    <author>
+      <name>Zhaoqiang Liu</name>
+    </author>
+  </entry>
+</feed>

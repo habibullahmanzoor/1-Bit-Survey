@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/0qehjJsytMrgmMxsjQPc43WYWc8</id>
+  <title>arXiv Query: search_query=abs:"BiLLM" AND (cat:cs.CL OR cat:cs.LG OR cat:cs.AI OR cat:cs.AR) AND submittedDate:"202301010000 TO 202606302359"&amp;id_list=&amp;start=0&amp;max_results=200</title>
+  <updated>2026-09-05T10:56:22Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22BiLLM%22+AND+((cat:cs.CL+OR+(cat:cs.LG+OR+(cat:cs.AI+OR+cat:cs.AR)))+AND+submittedDate:%22202301010000+TO+202606302359%22)&amp;start=0&amp;max_results=200&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>200</opensearch:itemsPerPage>
+  <opensearch:totalResults>5</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2402.04291v2</id>
+    <title>BiLLM: Pushing the Limit of Post-Training Quantization for LLMs</title>
+    <updated>2024-05-15T13:55:12Z</updated>
+    <link href="https://arxiv.org/abs/2402.04291v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.04291v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Pretrained large language models (LLMs) exhibit exceptional general language processing capabilities but come with significant demands on memory and computational resources. As a powerful compression technology, binarization can extremely reduce model weights to a mere 1 bit, lowering the expensive computation and memory requirements. However, existing quantization techniques fall short of maintaining LLM performance under ultra-low bit-widths. In response to this challenge, we present BiLLM, a groundbreaking 1-bit post-training quantization scheme tailored for pretrained LLMs. Based on the weight distribution of LLMs, BiLLM first identifies and structurally selects salient weights, and minimizes the compression loss through an effective binary residual approximation strategy. Moreover, considering the bell-shaped distribution of the non-salient weights, we propose an optimal splitting search to group and binarize them accurately. BiLLM achieving for the first time high-accuracy inference (e.g. 8.41 perplexity on LLaMA2-70B) with only 1.08-bit weights across various LLMs families and evaluation metrics, outperforms SOTA quantization methods of LLM by significant margins. Moreover, BiLLM enables the binarization process of the LLM with 7 billion weights within 0.5 hours on a single GPU, demonstrating satisfactory time efficiency. Our code is available at https://github.com/Aaronhuang-778/BiLLM.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-06T09:26:34Z</published>
+    <arxiv:comment>19 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Wei Huang</name>
+    </author>
+    <author>
+      <name>Yangdong Liu</name>
+    </author>
+    <author>
+      <name>Haotong Qin</name>
+    </author>
+    <author>
+      <name>Ying Li</name>
+    </author>
+    <author>
+      <name>Shiming Zhang</name>
+    </author>
+    <author>
+      <name>Xianglong Liu</name>
+    </author>
+    <author>
+      <name>Michele Magno</name>
+    </author>
+    <author>
+      <name>Xiaojuan Qi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.15025v2</id>
+    <title>OAC: Output-adaptive Calibration for Accurate Post-training Quantization</title>
+    <updated>2025-05-05T23:38:59Z</updated>
+    <link href="https://arxiv.org/abs/2405.15025v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.15025v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deployment of Large Language Models (LLMs) has major computational costs, due to their rapidly expanding size. Compression of LLMs reduces the memory footprint, latency, and energy required for their inference. Post-training Quantization (PTQ) techniques have been developed to compress LLMs while avoiding expensive re-training. Most PTQ approaches formulate the quantization error based on a layer-wise Euclidean loss, ignoring the model output. Then, each layer is calibrated using its layer-wise Hessian to update the weights towards minimizing the quantization error. The Hessian is also used for detecting the most salient weights to quantization. Such PTQ approaches are prone to accuracy drop in low-precision quantization. We propose Output-adaptive Calibration (OAC) to incorporate the model output in the calibration process. We formulate the quantization error based on the distortion of the output cross-entropy loss. OAC approximates the output-adaptive Hessian for each layer under reasonable assumptions to reduce the computational complexity. The output-adaptive Hessians are used to update the weight matrices and detect the salient weights towards maintaining the model output. Our proposed method outperforms the state-of-the-art baselines such as SpQR and BiLLM, especially, at extreme low-precision (2-bit and binary) quantization.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-23T20:01:17Z</published>
+    <arxiv:comment>22 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>Proceedings of the AAAI Conference on Artificial Intelligence 2025</arxiv:journal_ref>
+    <author>
+      <name>Ali Edalati</name>
+    </author>
+    <author>
+      <name>Alireza Ghaffari</name>
+    </author>
+    <author>
+      <name>Mahsa Ghazvini Nejad</name>
+    </author>
+    <author>
+      <name>Lu Hou</name>
+    </author>
+    <author>
+      <name>Boxing Chen</name>
+    </author>
+    <author>
+      <name>Masoud Asgharian</name>
+    </author>
+    <author>
+      <name>Vahid Partovi Nia</name>
+    </author>
+    <arxiv:doi>10.1609/aaai.v39i16.33807</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1609/aaai.v39i16.33807" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.01027v2</id>
+    <title>DBellQuant: Breaking the Bell with Double-Bell Transformation for LLMs Post Training Binarization</title>
+    <updated>2026-01-29T09:03:27Z</updated>
+    <link href="https://arxiv.org/abs/2507.01027v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.01027v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) demonstrate remarkable performance but face substantial computational and memory challenges that limit their practical deployment. Quantization has emerged as a promising solution; however, its effectiveness is often limited by quantization errors arising from weight distributions that are not quantization-friendly and the presence of activation outliers. To address these challenges, we introduce DBellQuant, an innovative post-training quantization (PTQ) framework that achieves nearly 1-bit weight compression and 6-bit activation quantization with minimal performance degradation. DBellQuant uses Learnable Transformation for Dual-Bell (LTDB) algorithm, which transforms single-bell weight distributions into dual-bell forms to reduce binarization errors and applies inverse transformations to smooth activations. DBellQuant sets a new state-of-the-art by preserving superior model performance under aggressive weight and activation quantization. For example, on the Wikitext2 dataset, DBellQuant achieves a perplexity of 14.39 on LLaMA2-13B with 6-bit activation quantization, significantly outperforming BiLLM's 21.35 without activation quantization, underscoring its potential in compressing LLMs for real-world applications.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-18T06:41:03Z</published>
+    <arxiv:comment>19 pages; Appendix added</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zijian Ye</name>
+    </author>
+    <author>
+      <name>Wei Huang</name>
+    </author>
+    <author>
+      <name>Yifei Yu</name>
+    </author>
+    <author>
+      <name>Tianhe Ren</name>
+    </author>
+    <author>
+      <name>Zhongrui Wang</name>
+    </author>
+    <author>
+      <name>Xiaojuan Qi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.05429v1</id>
+    <title>Minimizing the Hidden Cost of Scales: Graph-Guided Ultra-Low-Bit Quantization for Large Language Models</title>
+    <updated>2026-06-03T20:51:52Z</updated>
+    <link href="https://arxiv.org/abs/2606.05429v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.05429v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Post-training quantization (PTQ) is critical for the efficient deployment of large language models (LLMs). Recent ultra-low-bit PTQ methods rely on rigid weight-saliency assumptions or position heuristics, introducing substantial hidden scaling overhead. We propose SAGE-PTQ (Saliency-Aware Graph-guided Efficient PTQ), a novel ultra-low-bit quantization framework for LLMs that minimizes hidden scaling cost. SAGE-PTQ separates salient and unsalient weights using distributional statistics, then models subsampled unsalient weights as a sparse graph to estimate the optimal number of groups per layer. SAGE-PTQ applies dual-mode quantization, assigning multi-bit precision to salient weights and binarizing unsalient weights. To reduce scaling overhead, SAGE-PTQ uses one per-channel scale for salient weights and one scalar per unsalient group. Finally, SAGE-PTQ implements adaptive saliency thresholding to select the optimal saliency ratio per matrix. SAGE-PTQ achieves 1.03 weight bits and only 0.004 scaling bits per matrix on average, outperforming state-of-the-art methods such as BiLLM and PB-LLM. On LLaMA-3-8B, SAGE-PTQ achieves 6.74 WikiText2 perplexity, compared to 55.8 for BiLLM, while using less than 50% of BiLLM's GPU memory. On LLaMA-2-70B, SAGE-PTQ provides 1.5x faster decoding on one NVIDIA L40 GPU, demonstrating practical inference efficiency.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-03T20:51:52Z</published>
+    <arxiv:comment>Preprint. 18 pages, 10 figures, 7 tables, including appendix</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Rayyan Abdalla</name>
+    </author>
+    <author>
+      <name>Amir Hussein</name>
+    </author>
+    <author>
+      <name>Min Wu</name>
+    </author>
+    <author>
+      <name>Dinesh Manocha</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.21257v4</id>
+    <title>An Empirical Study of openPangu Quantization on Ascend NPUs</title>
+    <updated>2026-08-07T07:07:59Z</updated>
+    <link href="https://arxiv.org/abs/2606.21257v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.21257v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>openPangu models are attractive targets for private and domestic large-language-model deployment, yet their robustness under aggressive post-training quantization on Ascend NPUs has not been systematically characterized. This paper conducts a controlled empirical study of openPangu 1B and 7B models on Huawei Ascend 910B1 NPUs. We evaluate representative weight-only and weight-activation post-training quantization methods, including RTN, GPTQ, AWQ, SmoothQuant, GPTAQ, BiLLM, and SliM-LLM, under a unified calibration and evaluation protocol. Across 18 evaluation tasks, we find that 8-bit weight-only quantization is effectively lossless for both models, while 4-bit quantization remains practical for the 7B model but is visibly more harmful for the 1B model on reasoning, math, and code tasks. Ultra-low precision remains challenging: most 2-bit and binary settings collapse to near-random behavior, and W4A4 SmoothQuant produces non-finite perplexity in our evaluation. These results provide an NPU-oriented accuracy map for selecting openPangu quantization settings and highlight the persistent difficulty of extreme low-bit compression.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-19T09:33:11Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Tong Shi</name>
+    </author>
+    <author>
+      <name>Jiacheng Wang</name>
+    </author>
+    <author>
+      <name>Hui Xie</name>
+    </author>
+    <author>
+      <name>Ying Li</name>
+    </author>
+    <author>
+      <name>Aishan Liu</name>
+    </author>
+    <author>
+      <name>Jinyang Guo</name>
+    </author>
+    <author>
+      <name>Xianglong Liu</name>
+    </author>
+  </entry>
+</feed>

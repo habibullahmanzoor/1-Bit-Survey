@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/4lBjlPxTDZDXcKg+jZcqZ3naxVs</id>
+  <title>arXiv Query: search_query=abs:"PB-LLM" AND (cat:cs.CL OR cat:cs.LG OR cat:cs.AI OR cat:cs.AR) AND submittedDate:"202301010000 TO 202606302359"&amp;id_list=&amp;start=0&amp;max_results=200</title>
+  <updated>2026-09-05T10:56:25Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22PB-LLM%22+AND+((cat:cs.CL+OR+(cat:cs.LG+OR+(cat:cs.AI+OR+cat:cs.AR)))+AND+submittedDate:%22202301010000+TO+202606302359%22)&amp;start=0&amp;max_results=200&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>200</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2310.00034v2</id>
+    <title>PB-LLM: Partially Binarized Large Language Models</title>
+    <updated>2023-11-07T20:41:22Z</updated>
+    <link href="https://arxiv.org/abs/2310.00034v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.00034v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper explores network binarization, a radical form of quantization, compressing model weights to a single bit, specifically for Large Language Models (LLMs) compression. Due to previous binarization methods collapsing LLMs, we propose a novel approach, Partially-Binarized LLM (PB-LLM), which can achieve extreme low-bit quantization while maintaining the linguistic reasoning capacity of quantized LLMs. Specifically, our exploration first uncovers the ineffectiveness of naive applications of existing binarization algorithms and highlights the imperative role of salient weights in achieving low-bit quantization. Thus, PB-LLM filters a small ratio of salient weights during binarization, allocating them to higher-bit storage, i.e., partially-binarization. PB-LLM is extended to recover the capacities of quantized LMMs, by analyzing from the perspective of post-training quantization (PTQ) and quantization-aware training (QAT). Under PTQ, combining the concepts from GPTQ, we reconstruct the binarized weight matrix guided by the Hessian matrix and successfully recover the reasoning capacity of PB-LLM in low-bit. Under QAT, we freeze the salient weights during training, explore the derivation of optimal scaling factors crucial for minimizing the quantization error, and propose a scaling mechanism based on this derived scaling strategy for residual binarized weights. Those explorations and the developed methodologies significantly contribute to rejuvenating the performance of low-bit quantized LLMs and present substantial advancements in the field of network binarization for LLMs.The code is available at https://github.com/hahnyuan/BinaryLLM.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-09-29T14:35:27Z</published>
+    <arxiv:comment>Frist work using network binarization for large language model compression</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yuzhang Shang</name>
+    </author>
+    <author>
+      <name>Zhihang Yuan</name>
+    </author>
+    <author>
+      <name>Qiang Wu</name>
+    </author>
+    <author>
+      <name>Zhen Dong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.04752v3</id>
+    <title>SpikeLLM: Scaling up Spiking Neural Network to Large Language Models via Saliency-based Spiking</title>
+    <updated>2025-04-10T05:50:49Z</updated>
+    <link href="https://arxiv.org/abs/2407.04752v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.04752v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent advancements in large language models (LLMs) with billions of parameters have improved performance in various applications, but their inference processes demand significant energy and computational resources. In contrast, the human brain, with approximately 86 billion neurons, is much more energy-efficient than LLMs with similar parameters. Inspired by this, we redesign 7$\sim$70 billion parameter LLMs using bio-plausible spiking mechanisms, emulating the efficient behavior of the human brain. We propose the first spiking large language model, SpikeLLM. Coupled with the proposed model, two essential approaches are proposed to improve spike training efficiency: Generalized Integrate-and-Fire (GIF) neurons to compress spike length from $T$ to $\frac{T}{L} \log_2 L$ bits, and an Optimal Brain Spiking framework to divide outlier channels and allocate different $T$ for GIF neurons, which further compresses spike length to approximate $log_2T$ bits. The necessity of spike-driven LLM is proved by comparison with quantized LLMs with similar operations. In the OmniQuant pipeline, SpikeLLM reduces 11.01% WikiText2 perplexity and improves 2.55% accuracy of common scene reasoning on a LLAMA-7B W4A4 model. In the GPTQ pipeline, SpikeLLM achieves direct additive in linear layers, significantly exceeding PB-LLMs.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-05T08:37:17Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Xingrun Xing</name>
+    </author>
+    <author>
+      <name>Boyan Gao</name>
+    </author>
+    <author>
+      <name>Zheng Zhang</name>
+    </author>
+    <author>
+      <name>David A. Clifton</name>
+    </author>
+    <author>
+      <name>Shitao Xiao</name>
+    </author>
+    <author>
+      <name>Li Du</name>
+    </author>
+    <author>
+      <name>Guoqi Li</name>
+    </author>
+    <author>
+      <name>Jiajun Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.05429v1</id>
+    <title>Minimizing the Hidden Cost of Scales: Graph-Guided Ultra-Low-Bit Quantization for Large Language Models</title>
+    <updated>2026-06-03T20:51:52Z</updated>
+    <link href="https://arxiv.org/abs/2606.05429v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.05429v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Post-training quantization (PTQ) is critical for the efficient deployment of large language models (LLMs). Recent ultra-low-bit PTQ methods rely on rigid weight-saliency assumptions or position heuristics, introducing substantial hidden scaling overhead. We propose SAGE-PTQ (Saliency-Aware Graph-guided Efficient PTQ), a novel ultra-low-bit quantization framework for LLMs that minimizes hidden scaling cost. SAGE-PTQ separates salient and unsalient weights using distributional statistics, then models subsampled unsalient weights as a sparse graph to estimate the optimal number of groups per layer. SAGE-PTQ applies dual-mode quantization, assigning multi-bit precision to salient weights and binarizing unsalient weights. To reduce scaling overhead, SAGE-PTQ uses one per-channel scale for salient weights and one scalar per unsalient group. Finally, SAGE-PTQ implements adaptive saliency thresholding to select the optimal saliency ratio per matrix. SAGE-PTQ achieves 1.03 weight bits and only 0.004 scaling bits per matrix on average, outperforming state-of-the-art methods such as BiLLM and PB-LLM. On LLaMA-3-8B, SAGE-PTQ achieves 6.74 WikiText2 perplexity, compared to 55.8 for BiLLM, while using less than 50% of BiLLM's GPU memory. On LLaMA-2-70B, SAGE-PTQ provides 1.5x faster decoding on one NVIDIA L40 GPU, demonstrating practical inference efficiency.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-03T20:51:52Z</published>
+    <arxiv:comment>Preprint. 18 pages, 10 figures, 7 tables, including appendix</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Rayyan Abdalla</name>
+    </author>
+    <author>
+      <name>Amir Hussein</name>
+    </author>
+    <author>
+      <name>Min Wu</name>
+    </author>
+    <author>
+      <name>Dinesh Manocha</name>
+    </author>
+  </entry>
+</feed>

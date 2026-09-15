@@ -1,0 +1,547 @@
+{
+  "results": {
+    "arc_easy": {
+      "name": "arc_easy",
+      "alias": "arc_easy",
+      "sample_len": 2376,
+      "acc,none": 0.6367845117845118,
+      "acc_stderr,none": 0.009868397136118798,
+      "acc_norm,none": 0.57996632996633,
+      "acc_norm_stderr,none": 0.010127718838529321
+    },
+    "arc_challenge": {
+      "name": "arc_challenge",
+      "alias": "arc_challenge",
+      "sample_len": 1172,
+      "acc,none": 0.295221843003413,
+      "acc_stderr,none": 0.013329750293382316,
+      "acc_norm,none": 0.3003412969283277,
+      "acc_norm_stderr,none": 0.013395909309957014
+    },
+    "hellaswag": {
+      "name": "hellaswag",
+      "alias": "hellaswag",
+      "sample_len": 10042,
+      "acc,none": 0.4529974108743278,
+      "acc_stderr,none": 0.004967685204073108,
+      "acc_norm,none": 0.5903206532563234,
+      "acc_norm_stderr,none": 0.004907694727935677
+    },
+    "winogrande": {
+      "name": "winogrande",
+      "alias": "winogrande",
+      "sample_len": 1267,
+      "acc,none": 0.5974743488555643,
+      "acc_stderr,none": 0.013782866831703044
+    },
+    "piqa": {
+      "name": "piqa",
+      "alias": "piqa",
+      "sample_len": 1838,
+      "acc,none": 0.7165397170837867,
+      "acc_stderr,none": 0.010515057791152072,
+      "acc_norm,none": 0.7225244831338411,
+      "acc_norm_stderr,none": 0.010446818281039955
+    },
+    "openbookqa": {
+      "name": "openbookqa",
+      "alias": "openbookqa",
+      "sample_len": 500,
+      "acc,none": 0.264,
+      "acc_stderr,none": 0.019732885585922108,
+      "acc_norm,none": 0.348,
+      "acc_norm_stderr,none": 0.0213237286328075
+    },
+    "boolq": {
+      "name": "boolq",
+      "alias": "boolq",
+      "sample_len": 3270,
+      "acc,none": 0.6409785932721712,
+      "acc_stderr,none": 0.008390241754319903
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "arc_challenge": {
+      "task": "arc_challenge",
+      "dataset_path": "allenai/ai2_arc",
+      "dataset_name": "ARC-Challenge",
+      "training_split": "train",
+      "validation_split": "validation",
+      "test_split": "test",
+      "doc_to_text": "Question: {{question}}\nAnswer:",
+      "doc_to_target": "{{choices.label.index(answerKey)}}",
+      "unsafe_code": false,
+      "doc_to_choice": "{{choices.text}}",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "Question: {{question}}\nAnswer:",
+        "doc_to_choice": "{{choices.text}}",
+        "doc_to_target": "{{choices.label.index(answerKey)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "Question: {{question}}\nAnswer:",
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "SpectraSuite/TriLM_2.4B_Unpacked",
+        "dtype": "bfloat16",
+        "config_source": "C:\\python experiments\\survy papers\\1 bit\\repro\\lm-evaluation-harness\\lm_eval\\tasks\\arc\\arc_challenge.yaml"
+      }
+    },
+    "arc_easy": {
+      "task": "arc_easy",
+      "dataset_path": "allenai/ai2_arc",
+      "dataset_name": "ARC-Easy",
+      "training_split": "train",
+      "validation_split": "validation",
+      "test_split": "test",
+      "doc_to_text": "Question: {{question}}\nAnswer:",
+      "doc_to_target": "{{choices.label.index(answerKey)}}",
+      "unsafe_code": false,
+      "doc_to_choice": "{{choices.text}}",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "Question: {{question}}\nAnswer:",
+        "doc_to_choice": "{{choices.text}}",
+        "doc_to_target": "{{choices.label.index(answerKey)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "Question: {{question}}\nAnswer:",
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "SpectraSuite/TriLM_2.4B_Unpacked",
+        "dtype": "bfloat16",
+        "config_source": "C:\\python experiments\\survy papers\\1 bit\\repro\\lm-evaluation-harness\\lm_eval\\tasks\\arc\\arc_easy.yaml"
+      }
+    },
+    "boolq": {
+      "task": "boolq",
+      "dataset_path": "aps/super_glue",
+      "dataset_name": "boolq",
+      "training_split": "train",
+      "validation_split": "validation",
+      "doc_to_text": "{{passage}}\nQuestion: {{question}}?\nAnswer:",
+      "doc_to_target": "label",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "no",
+        "yes"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{passage}}\nQuestion: {{question}}?\nAnswer:",
+        "doc_to_choice": [
+          "no",
+          "yes"
+        ],
+        "doc_to_target": "label",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc"
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "passage",
+      "metadata": {
+        "version": 2.0,
+        "pretrained": "SpectraSuite/TriLM_2.4B_Unpacked",
+        "dtype": "bfloat16",
+        "config_source": "C:\\python experiments\\survy papers\\1 bit\\repro\\lm-evaluation-harness\\lm_eval\\tasks\\super_glue\\boolq\\default.yaml"
+      }
+    },
+    "hellaswag": {
+      "task": "hellaswag",
+      "dataset_path": "Rowan/hellaswag",
+      "training_split": "train",
+      "validation_split": "validation",
+      "process_docs": "def process_docs(dataset: datasets.Dataset) -> datasets.Dataset:\n    def _process_doc(doc):\n        ctx = doc[\"ctx_a\"] + \" \" + doc[\"ctx_b\"].capitalize()\n        out_doc = {\n            \"query\": preprocess(doc[\"activity_label\"] + \": \" + ctx),\n            \"choices\": [preprocess(ending) for ending in doc[\"endings\"]],\n            \"gold\": int(doc[\"label\"]),\n        }\n        return out_doc\n\n    return dataset.map(_process_doc)\n",
+      "doc_to_text": "{{query}}",
+      "doc_to_target": "{{label}}",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": "<function process_docs at 0x000001BF006A6DE0>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{query}}",
+        "doc_to_choice": "choices",
+        "doc_to_target": "{{label}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "SpectraSuite/TriLM_2.4B_Unpacked",
+        "dtype": "bfloat16",
+        "config_source": "C:\\python experiments\\survy papers\\1 bit\\repro\\lm-evaluation-harness\\lm_eval\\tasks\\hellaswag\\hellaswag.yaml"
+      }
+    },
+    "openbookqa": {
+      "task": "openbookqa",
+      "dataset_path": "allenai/openbookqa",
+      "dataset_name": "main",
+      "training_split": "train",
+      "validation_split": "validation",
+      "test_split": "test",
+      "doc_to_text": "question_stem",
+      "doc_to_target": "{{choices.label.index(answerKey.lstrip())}}",
+      "unsafe_code": false,
+      "doc_to_choice": "{{choices.text}}",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "question_stem",
+        "doc_to_choice": "{{choices.text}}",
+        "doc_to_target": "{{choices.label.index(answerKey.lstrip())}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "question_stem",
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "SpectraSuite/TriLM_2.4B_Unpacked",
+        "dtype": "bfloat16",
+        "config_source": "C:\\python experiments\\survy papers\\1 bit\\repro\\lm-evaluation-harness\\lm_eval\\tasks\\openbookqa\\openbookqa.yaml"
+      }
+    },
+    "piqa": {
+      "task": "piqa",
+      "dataset_path": "baber/piqa",
+      "training_split": "train",
+      "validation_split": "validation",
+      "doc_to_text": "Question: {{goal}}\nAnswer:",
+      "doc_to_target": "label",
+      "unsafe_code": false,
+      "doc_to_choice": "{{[sol1, sol2]}}",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "Question: {{goal}}\nAnswer:",
+        "doc_to_choice": "{{[sol1, sol2]}}",
+        "doc_to_target": "label",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "goal",
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "SpectraSuite/TriLM_2.4B_Unpacked",
+        "dtype": "bfloat16",
+        "config_source": "C:\\python experiments\\survy papers\\1 bit\\repro\\lm-evaluation-harness\\lm_eval\\tasks\\piqa\\piqa.yaml"
+      }
+    },
+    "winogrande": {
+      "task": "winogrande",
+      "dataset_path": "allenai/winogrande",
+      "dataset_name": "winogrande_xl",
+      "training_split": "train",
+      "validation_split": "validation",
+      "doc_to_text": "def doc_to_text(doc):\n    answer_to_num = {\"1\": 0, \"2\": 1}\n    return answer_to_num[doc[\"answer\"]]\n",
+      "doc_to_target": "def doc_to_target(doc):\n    idx = doc[\"sentence\"].index(\"_\") + 1\n    return doc[\"sentence\"][idx:].strip()\n",
+      "unsafe_code": false,
+      "doc_to_choice": "def doc_to_choice(doc):\n    idx = doc[\"sentence\"].index(\"_\")\n    options = [doc[\"option1\"], doc[\"option2\"]]\n    return [doc[\"sentence\"][:idx] + opt for opt in options]\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function doc_to_text at 0x000001BF10C7F9C0>",
+        "doc_to_choice": "<function doc_to_choice at 0x000001BF10C7FCE0>",
+        "doc_to_target": "<function doc_to_target at 0x000001BF10C7FC40>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "sentence",
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "SpectraSuite/TriLM_2.4B_Unpacked",
+        "dtype": "bfloat16",
+        "config_source": "C:\\python experiments\\survy papers\\1 bit\\repro\\lm-evaluation-harness\\lm_eval\\tasks\\winogrande\\default.yaml"
+      }
+    }
+  },
+  "versions": {
+    "arc_challenge": 1.0,
+    "arc_easy": 1.0,
+    "boolq": 2.0,
+    "hellaswag": 1.0,
+    "openbookqa": 1.0,
+    "piqa": 1.0,
+    "winogrande": 1.0
+  },
+  "n-shot": {
+    "arc_challenge": 0,
+    "arc_easy": 0,
+    "boolq": 0,
+    "hellaswag": 0,
+    "openbookqa": 0,
+    "piqa": 0,
+    "winogrande": 0
+  },
+  "higher_is_better": {
+    "arc_challenge": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "arc_easy": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "boolq": {
+      "acc": true
+    },
+    "hellaswag": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "openbookqa": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "piqa": {
+      "acc": true,
+      "acc_norm": true
+    },
+    "winogrande": {
+      "acc": true
+    }
+  },
+  "n-samples": {
+    "arc_easy": {
+      "original": 2376,
+      "effective": 2376
+    },
+    "arc_challenge": {
+      "original": 1172,
+      "effective": 1172
+    },
+    "hellaswag": {
+      "original": 10042,
+      "effective": 10042
+    },
+    "winogrande": {
+      "original": 1267,
+      "effective": 1267
+    },
+    "piqa": {
+      "original": 1838,
+      "effective": 1838
+    },
+    "openbookqa": {
+      "original": 500,
+      "effective": 500
+    },
+    "boolq": {
+      "original": 3270,
+      "effective": 3270
+    }
+  },
+  "config": {
+    "model": "hf",
+    "model_args": {
+      "pretrained": "SpectraSuite/TriLM_2.4B_Unpacked",
+      "dtype": "bfloat16"
+    },
+    "model_num_parameters": 2461476096,
+    "model_dtype": "torch.bfloat16",
+    "model_revision": "main",
+    "model_sha": "",
+    "batch_size": "2",
+    "batch_sizes": [],
+    "device": "cuda:0",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": {},
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": 1788872509.3622198,
+  "pretty_env_info": "PyTorch version: 2.5.1+cu121\nIs debug build: False\nCUDA used to build PyTorch: 12.1\nROCM used to build PyTorch: N/A\n\nOS: Microsoft Windows 11 Pro\nGCC version: Could not collect\nClang version: Could not collect\nCMake version: Could not collect\nLibc version: N/A\n\nPython version: 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)] (64-bit runtime)\nPython platform: Windows-10-10.0.26200-SP0\nIs CUDA available: True\nCUDA runtime version: 11.2.67\r\nCUDA_MODULE_LOADING set to: LAZY\nGPU models and configuration: GPU 0: NVIDIA GeForce RTX 4080 Laptop GPU\nNvidia driver version: 595.79\ncuDNN version: C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.2\\bin\\cudnn_ops_train64_8.dll\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\n\nCPU:\nArchitecture=9\r\r\nCurrentClockSpeed=2200\r\r\nDeviceID=CPU0\r\r\nFamily=207\r\r\nL2CacheSize=32768\r\r\nL2CacheSpeed=\r\r\nManufacturer=GenuineIntel\r\r\nMaxClockSpeed=2200\r\r\nName=Intel(R) Core(TM) i9-14900HX\r\r\nProcessorType=3\r\r\nRevision=\n\nVersions of relevant libraries:\n[pip3] numpy==2.4.6\n[pip3] torch==2.5.1+cu121\n[pip3] triton-windows==3.1.0.post17\n[conda] Could not collect",
+  "transformers_version": "5.16.1",
+  "lm_eval_version": "0.4.14.dev0",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<|endoftext|>",
+    "0"
+  ],
+  "tokenizer_eos_token": [
+    "<|endoftext|>",
+    "0"
+  ],
+  "tokenizer_bos_token": [
+    "<|endoftext|>",
+    "0"
+  ],
+  "eot_token_id": 0,
+  "max_length": 2048,
+  "task_hashes": {
+    "arc_easy": "dce0d9b0f0cecd55bf2ac264042c5e45487df708d13123af3ae9e67bbbefdeb1",
+    "arc_challenge": "09f9ae87a0905d63512cffc4aa91a55e44258fc35160e40fa1eb66fb75473e34",
+    "hellaswag": "edcc7edd27a555d3f7cbca0641152b2c5e4eb6eb79c5e62d7fe5887f47814323",
+    "winogrande": "a5ea73eb24ab46d111fe5d21eed85b1e779c0b309d80d080c3caa21a851b6feb",
+    "piqa": "74d5a816572c396ad46edbd386954abe5ddb3db2d7195088387d1d5c1b32fd8b",
+    "openbookqa": "7c9a5e0d494e1f9e38d97d190af553ac918cbe82690fcf1ba6eac52639d37109",
+    "boolq": "0abd88c61f70a77bfdb30fd7d99f24103ad30fc32780e5f959018dca63482434"
+  },
+  "model_source": "hf",
+  "model_name": "SpectraSuite/TriLM_2.4B_Unpacked",
+  "model_name_sanitized": "SpectraSuite__TriLM_2.4B_Unpacked",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": null,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "total_evaluation_time_seconds": "1739.455945499999"
+}

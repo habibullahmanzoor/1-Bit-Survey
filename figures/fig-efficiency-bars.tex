@@ -1,0 +1,47 @@
+\documentclass[11pt,tikz,border={14pt 14pt 14pt 14pt}]{standalone}
+\usepackage[a4paper,margin=0.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\usepgfplotslibrary{groupplots}
+\begin{document}
+
+\definecolor{bnAccent}{HTML}{D95F0E}
+\definecolor{q4Blue}{HTML}{2166AC}
+\definecolor{q8Blue}{HTML}{6BAED6}
+\definecolor{f16Blue}{HTML}{C6DBEF}
+\begin{tikzpicture}
+\begin{groupplot}[
+  group style={group size=2 by 2, horizontal sep=1.5cm, vertical sep=1.4cm},
+  width=0.42\textwidth, height=4.6cm,
+  ybar=0pt, enlarge x limits=0.28,
+  symbolic x coords={BN,Q4,Q8,F16}, xtick={BN,Q4,Q8,F16},
+  xticklabel style={font=\scriptsize}, yticklabel style={font=\scriptsize},
+  title style={font=\small}, ymin=0, ymajorgrids, tick align=inside,
+  every axis plot/.append style={draw=black!45, bar width=11pt},
+]
+\nextgroupplot[title={decode tok/s}, ymax=40]
+  \addplot[fill=bnAccent] coordinates {(BN,28.6)};
+  \addplot[fill=q4Blue]   coordinates {(Q4,33.8)};
+  \addplot[fill=q8Blue]   coordinates {(Q8,24.1)};
+  \addplot[fill=f16Blue]  coordinates {(F16,14.4)};
+\nextgroupplot[title={prefill tok/s}, ymax=130]
+  \addplot[fill=bnAccent] coordinates {(BN,108.9)};
+  \addplot[fill=q4Blue]   coordinates {(Q4,107.6)};
+  \addplot[fill=q8Blue]   coordinates {(Q8,72.4)};
+  \addplot[fill=f16Blue]  coordinates {(F16,70.9)};
+\nextgroupplot[title={disk (GiB)}, ymax=3.6]
+  \addplot[fill=bnAccent] coordinates {(BN,1.10)};
+  \addplot[fill=q4Blue]   coordinates {(Q4,1.04)};
+  \addplot[fill=q8Blue]   coordinates {(Q8,1.76)};
+  \addplot[fill=f16Blue]  coordinates {(F16,3.31)};
+\nextgroupplot[title={peak RAM (GB)}, ymax=3.6]
+  \addplot[fill=bnAccent] coordinates {(BN,1.22)};
+  \addplot[fill=q4Blue]   coordinates {(Q4,1.60)};
+  \addplot[fill=q8Blue]   coordinates {(Q8,1.64)};
+  \addplot[fill=f16Blue]  coordinates {(F16,3.02)};
+\end{groupplot}
+\end{tikzpicture}
+\end{document}

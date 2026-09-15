@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/NCYi8acK4KCHqjLbDgx0w6NEn98</id>
+  <title>arXiv Query: search_query=abs:"1-bit LLM" AND (cat:cs.CL OR cat:cs.LG OR cat:cs.AI OR cat:cs.AR) AND submittedDate:"202301010000 TO 202606302359"&amp;id_list=&amp;start=0&amp;max_results=200</title>
+  <updated>2026-09-05T10:56:59Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%221-bit+LLM%22+AND+((cat:cs.CL+OR+(cat:cs.LG+OR+(cat:cs.AI+OR+cat:cs.AR)))+AND+submittedDate:%22202301010000+TO+202606302359%22)&amp;start=0&amp;max_results=200&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>200</opensearch:itemsPerPage>
+  <opensearch:totalResults>13</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2402.17764v1</id>
+    <title>The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits</title>
+    <updated>2024-02-27T18:56:19Z</updated>
+    <link href="https://arxiv.org/abs/2402.17764v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.17764v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent research, such as BitNet, is paving the way for a new era of 1-bit Large Language Models (LLMs). In this work, we introduce a 1-bit LLM variant, namely BitNet b1.58, in which every single parameter (or weight) of the LLM is ternary {-1, 0, 1}. It matches the full-precision (i.e., FP16 or BF16) Transformer LLM with the same model size and training tokens in terms of both perplexity and end-task performance, while being significantly more cost-effective in terms of latency, memory, throughput, and energy consumption. More profoundly, the 1.58-bit LLM defines a new scaling law and recipe for training new generations of LLMs that are both high-performance and cost-effective. Furthermore, it enables a new computation paradigm and opens the door for designing specific hardware optimized for 1-bit LLMs.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-27T18:56:19Z</published>
+    <arxiv:comment>Work in progress</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Lingxiao Ma</name>
+    </author>
+    <author>
+      <name>Lei Wang</name>
+    </author>
+    <author>
+      <name>Wenhui Wang</name>
+    </author>
+    <author>
+      <name>Shaohan Huang</name>
+    </author>
+    <author>
+      <name>Li Dong</name>
+    </author>
+    <author>
+      <name>Ruiping Wang</name>
+    </author>
+    <author>
+      <name>Jilong Xue</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.07093v1</id>
+    <title>FBI-LLM: Scaling Up Fully Binarized LLMs from Scratch via Autoregressive Distillation</title>
+    <updated>2024-07-09T17:59:48Z</updated>
+    <link href="https://arxiv.org/abs/2407.07093v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.07093v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work presents a Fully BInarized Large Language Model (FBI-LLM), demonstrating for the first time how to train a large-scale binary language model from scratch (not the partial binary or ternary LLM like BitNet b1.58) to match the performance of its full-precision counterparts (e.g., FP16 or BF16) in transformer-based LLMs. It achieves this by employing an autoregressive distillation (AD) loss with maintaining equivalent model dimensions (130M, 1.3B, 7B) and training data volume as regular LLM pretraining, while delivering competitive results in terms of perplexity and task-specific effectiveness. Intriguingly, by analyzing the training trajectory, we find that the pretrained weight is not necessary for training binarized LLMs from scratch. This research encourages a new computational framework and may facilitate the future design of specialized hardware tailored for fully 1-bit LLMs. We make all models, code, and training dataset fully accessible and transparent to support further research (Code: https://github.com/LiqunMa/FBI-LLM. Model: https://huggingface.co/LiqunMa/).</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-09T17:59:48Z</published>
+    <arxiv:comment>Github at https://github.com/LiqunMa/FBI-LLM</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Liqun Ma</name>
+    </author>
+    <author>
+      <name>Mingjie Sun</name>
+    </author>
+    <author>
+      <name>Zhiqiang Shen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.10969v3</id>
+    <title>Q-Sparse: All Large Language Models can be Fully Sparsely-Activated</title>
+    <updated>2024-07-24T14:57:48Z</updated>
+    <link href="https://arxiv.org/abs/2407.10969v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.10969v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce, Q-Sparse, a simple yet effective approach to training sparsely-activated large language models (LLMs). Q-Sparse enables full sparsity of activations in LLMs which can bring significant efficiency gains in inference. This is achieved by applying top-K sparsification to the activations and the straight-through-estimator to the training. We also introduce Block Q-Sparse for batch training and inference. The key results from this work are, (1) Q-Sparse can achieve results comparable to those of baseline LLMs while being much more efficient at inference time; (2) We present an inference-optimal scaling law for sparsely-activated LLMs; (3) Q-Sparse is effective in different settings, including training-from-scratch, continue-training of off-the-shelf LLMs, and finetuning; (4) Q-Sparse works for both full-precision and 1-bit LLMs (e.g., BitNet b1.58). Particularly, the synergy of BitNet b1.58 and Q-Sparse (can be equipped with MoE) provides the cornerstone and a clear path to revolutionize the efficiency, including cost and energy consumption, of future LLMs.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-15T17:59:29Z</published>
+    <arxiv:comment>Work in progress</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Ruiping Wang</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.11939v2</id>
+    <title>Matmul or No Matmul in the Era of 1-bit LLMs</title>
+    <updated>2024-08-28T19:51:04Z</updated>
+    <link href="https://arxiv.org/abs/2408.11939v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.11939v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The advent of 1-bit large language models (LLMs) has attracted considerable attention and opened up new research opportunities. However, 1-bit LLMs only improve a fraction of models by applying extreme quantization to the projection layers while leaving attention heads unchanged. Therefore, to avoid fundamentally wrong choices of goals in future research, it is crucial to understand the actual improvements in computation and memory usage that 1-bit LLMs can deliver. In this work, we present an adaptation of Amdahl's Law tailored for the 1-bit LLM context, which illustrates how partial improvements in 1-bit LLMs impact overall model performance. Through extensive experiments, we uncover key nuances across different model architectures and hardware configurations, offering a roadmap for future research in the era of 1-bit LLMs.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-21T18:44:21Z</published>
+    <arxiv:comment>Fixed Typo in title, Fixed typo in author name, fixed typo in amdhal's law para</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Jinendra Malekar</name>
+    </author>
+    <author>
+      <name>Mohammed E. Elbtity</name>
+    </author>
+    <author>
+      <name>Ramtin Zand</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.16144v2</id>
+    <title>1-bit AI Infra: Part 1.1, Fast and Lossless BitNet b1.58 Inference on CPUs</title>
+    <updated>2024-10-23T11:17:42Z</updated>
+    <link href="https://arxiv.org/abs/2410.16144v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.16144v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent advances in 1-bit Large Language Models (LLMs), such as BitNet and BitNet b1.58, present a promising approach to enhancing the efficiency of LLMs in terms of speed and energy consumption. These developments also enable local LLM deployment across a broad range of devices. In this work, we introduce bitnet.cpp, a tailored software stack designed to unlock the full potential of 1-bit LLMs. Specifically, we develop a set of kernels to support fast and lossless inference of ternary BitNet b1.58 LLMs on CPUs. Extensive experiments demonstrate that bitnet.cpp achieves significant speedups, ranging from 2.37x to 6.17x on x86 CPUs and from 1.37x to 5.07x on ARM CPUs, across various model sizes. The code is available at https://github.com/microsoft/BitNet.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-21T16:14:57Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Jinheng Wang</name>
+    </author>
+    <author>
+      <name>Hansong Zhou</name>
+    </author>
+    <author>
+      <name>Ting Song</name>
+    </author>
+    <author>
+      <name>Shaoguang Mao</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Yan Xia</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.01663v1</id>
+    <title>Unlocking the Theory Behind Scaling 1-Bit Neural Networks</title>
+    <updated>2024-11-03T19:18:57Z</updated>
+    <link href="https://arxiv.org/abs/2411.01663v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.01663v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, 1-bit Large Language Models (LLMs) have emerged, showcasing an impressive combination of efficiency and performance that rivals traditional LLMs. Research by Wang et al. (2023); Ma et al. (2024) indicates that the performance of these 1-bit LLMs progressively improves as the number of parameters increases, hinting at the potential existence of a Scaling Law for 1-bit Neural Networks. In this paper, we present the first theoretical result that rigorously establishes this scaling law for 1-bit models. We prove that, despite the constraint of weights restricted to $\{-1, +1\}$, the dynamics of model training inevitably align with kernel behavior as the network width grows. This theoretical breakthrough guarantees convergence of the 1-bit model to an arbitrarily small loss as width increases. Furthermore, we introduce the concept of the generalization difference, defined as the gap between the outputs of 1-bit networks and their full-precision counterparts, and demonstrate that this difference maintains a negligible level as network width scales. Building on the work of Kaplan et al. (2020), we conclude by examining how the training loss scales as a power-law function of the model size, dataset size, and computational resources utilized for training. Our findings underscore the promising potential of scaling 1-bit neural networks, suggesting that int1 could become the standard in future neural network precision.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-03T19:18:57Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Majid Daliri</name>
+    </author>
+    <author>
+      <name>Zhao Song</name>
+    </author>
+    <author>
+      <name>Chiwun Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.04965v1</id>
+    <title>BitNet a4.8: 4-bit Activations for 1-bit LLMs</title>
+    <updated>2024-11-07T18:41:50Z</updated>
+    <link href="https://arxiv.org/abs/2411.04965v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.04965v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent research on the 1-bit Large Language Models (LLMs), such as BitNet b1.58, presents a promising direction for reducing the inference cost of LLMs while maintaining their performance. In this work, we introduce BitNet a4.8, enabling 4-bit activations for 1-bit LLMs. BitNet a4.8 employs a hybrid quantization and sparsification strategy to mitigate the quantization errors introduced by the outlier channels. Specifically, we utilize 4-bit activations for inputs to the attention and feed-forward network layers, while sparsifying intermediate states followed with 8-bit quantization. Extensive experiments demonstrate that BitNet a4.8 achieves performance comparable to BitNet b1.58 with equivalent training costs, while being faster in inference with enabling 4-bit (INT4/FP4) kernels. Additionally, BitNet a4.8 activates only 55% of parameters and supports 3-bit KV cache, further enhancing the efficiency of large-scale LLM deployment and inference.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-07T18:41:50Z</published>
+    <arxiv:comment>Work in progress</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.01994v1</id>
+    <title>PIM-LLM: A High-Throughput Hybrid PIM Architecture for 1-bit LLMs</title>
+    <updated>2025-03-31T21:42:43Z</updated>
+    <link href="https://arxiv.org/abs/2504.01994v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.01994v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we propose PIM-LLM, a hybrid architecture developed to accelerate 1-bit large language models (LLMs). PIM-LLM leverages analog processing-in-memory (PIM) architectures and digital systolic arrays to accelerate low-precision matrix multiplication (MatMul) operations in projection layers and high-precision MatMul operations in attention heads of 1-bit LLMs, respectively. Our design achieves up to roughly 80x improvement in tokens per second and a 70% increase in tokens per joule compared to conventional hardware accelerators. Additionally, PIM-LLM outperforms previous PIM-based LLM accelerators, setting a new benchmark with at least 2x and 5x improvement in GOPS and GOPS/W, respectively.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-31T21:42:43Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Jinendra Malekar</name>
+    </author>
+    <author>
+      <name>Peyton Chandarana</name>
+    </author>
+    <author>
+      <name>Md Hasibul Amin</name>
+    </author>
+    <author>
+      <name>Mohammed E. Elbtity</name>
+    </author>
+    <author>
+      <name>Ramtin Zand</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.18415v2</id>
+    <title>BitNet v2: Native 4-bit Activations with Hadamard Transformation for 1-bit LLMs</title>
+    <updated>2025-06-13T05:55:26Z</updated>
+    <link href="https://arxiv.org/abs/2504.18415v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.18415v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Efficient deployment of 1-bit Large Language Models (LLMs) is hindered by activation outliers, which complicate quantization to low bit-widths. We introduce BitNet v2, a novel framework enabling native 4-bit activation quantization for 1-bit LLMs. To tackle outliers in attention and feed-forward network activations, we propose H-BitLinear, a module applying an online Hadamard transformation prior to activation quantization. This transformation smooths sharp activation distributions into more Gaussian-like forms, suitable for low-bit representation. Experiments show BitNet v2 trained from scratch with 8-bit activations matches BitNet b1.58 performance. Crucially, BitNet v2 achieves minimal performance degradation when trained with native 4-bit activations, significantly reducing memory footprint and computational cost for batched inference.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-25T15:17:52Z</published>
+    <arxiv:comment>Work in progress</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.12040v2</id>
+    <title>BTC-LLM: Efficient Sub-1-Bit LLM Quantization via Learnable Transformation and Binary Codebook</title>
+    <updated>2026-04-09T06:22:06Z</updated>
+    <link href="https://arxiv.org/abs/2506.12040v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.12040v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Binary quantization represents the most extreme form of compression, reducing weights to +/-1 for maximal memory and computational efficiency. While recent sparsity-aware binarization achieves sub-1-bit compression via weight pruning, it faces critical challenges: performance degradation, mask-management overhead, and limited hardware compatibility. In this paper, we present BTC-LLM, a novel sub-1-bit LLM quantization framework that leverages binary pattern clustering and weight transformation to overcome these limitations. Our approach incorporates two key innovations: (1) a Binary Codebook that clusters recurring vectors into compact indices using custom distance metrics and sign-based updates; (2) a Learnable Transformation that reduces outliers and promotes shared sign patterns among binary weights. This eliminates sparse masks, enabling efficient inference on standard hardware. Extensive evaluations across LLaMA, Qwen, and FBI-LLM families demonstrate that BTC-LLM achieves state-of-the-art results in extreme compression (1.11-0.7 bits). Notably, BTC-LLM compressed to 0.8 bits on LLaMA-2-13B maintains high performance, with only a 3.1 percent accuracy drop in zero-shot benchmarks, while delivering a 1.6x speedup over FP16.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-24T03:57:19Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hao Gu</name>
+    </author>
+    <author>
+      <name>Lujun Li</name>
+    </author>
+    <author>
+      <name>Hao Wang</name>
+    </author>
+    <author>
+      <name>Lei Wang</name>
+    </author>
+    <author>
+      <name>Zheyu Wang</name>
+    </author>
+    <author>
+      <name>Bei Liu</name>
+    </author>
+    <author>
+      <name>Jiacheng Liu</name>
+    </author>
+    <author>
+      <name>Qiyuan Zhu</name>
+    </author>
+    <author>
+      <name>Sirui Han</name>
+    </author>
+    <author>
+      <name>Yike Guo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.06974v2</id>
+    <title>Rethinking 1-bit Optimization Leveraging Pre-trained Large Language Models</title>
+    <updated>2026-05-18T12:47:40Z</updated>
+    <link href="https://arxiv.org/abs/2508.06974v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.06974v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>1-bit LLM quantization offers significant advantages in reducing storage and computational costs. However, existing methods typically train 1-bit LLMs from scratch, failing to fully leverage pre-trained models. This results in high training costs and notable accuracy degradation. We identify that the large gap between full precision and 1-bit representations makes naive adaptation difficult. In this paper, we introduce a consistent progressive training for both forward and backward, smoothly converting the full-precision weights into the binarized ones. Additionally, we incorporate binary-aware initialization and dual-scaling compensation to reduce the difficulty of progressive training and improve the performance. Experimental results on LLMs of various sizes demonstrate that our method outperforms existing approaches. Our results show that high-performance 1-bit LLMs can be achieved using pre-trained models, eliminating the need for expensive training from scratch.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-09T13:00:16Z</published>
+    <arxiv:comment>15 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Zhijun Tu</name>
+    </author>
+    <author>
+      <name>Jian Li</name>
+    </author>
+    <author>
+      <name>Yuanyuan Xi</name>
+    </author>
+    <author>
+      <name>Siqi Liu</name>
+    </author>
+    <author>
+      <name>Chuanjian Liu</name>
+    </author>
+    <author>
+      <name>Hanting Chen</name>
+    </author>
+    <author>
+      <name>Jie Hu</name>
+    </author>
+    <author>
+      <name>Yunhe Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.03275v1</id>
+    <title>SDQ-LLM: Sigma-Delta Quantization for 1-bit LLMs of any size</title>
+    <updated>2025-09-27T14:49:58Z</updated>
+    <link href="https://arxiv.org/abs/2510.03275v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.03275v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) face significant computational and memory challenges, making extremely low-bit quantization crucial for their efficient deployment. In this work, we introduce SDQ-LLM: Sigma-Delta Quantization for 1-bit LLMs of any size, a novel framework that enables extremely low-bit quantization of LLMs while preserving their linguistic reasoning capabilities. A distinctive feature of SDQ-LLM is the continuous adjustability of the Over-Sampling Ratio (OSR), enabling dynamic adaptation to memory or VRAM constraints by selecting fractional OSR (e.g. 2.5 times) for an optimal trade-off between model size and accuracy. SDQ-LLM uses upsampling combined with Sigma-Delta Quantizer to binarize or ternarize LLMs weights, encoding high-precision parameters into 1-bit or 1.58-bit representations, replacing the multiplication operations within linear layers with addition. This approach significantly enhances inference efficiency under extremely low-bit quantization. To further reduce the loss of quantization precision, we incorporate Hadamard-based weight smoothing prior to quantization, improving the stability and robustness of the weight representations. Furthermore, to fully leverage the continuity of the OSR and reduce precision loss, recognizing the correlation between quantization sensitivity and weight variance, we propose a fine-grained, layer- and linear-wise OSR allocation strategy, MultiOSR. This strategy distributes OSR both across layers and within each layer, based on weight variance and parameter scale. Finally, extensive experiments on OPT and LLaMA model families demonstrate that SDQ-LLM achieves a more efficient and high-precision performance even under highly aggressive low-OSR settings. Our code is available at https://github.com/Dreamlittlecat/LLM-Quant-Factory.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-27T14:49:58Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Junhao Xia</name>
+    </author>
+    <author>
+      <name>Ming Zhao</name>
+    </author>
+    <author>
+      <name>Limin Xiao</name>
+    </author>
+    <author>
+      <name>Xiujun Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.21651v3</id>
+    <title>Rethinking Output Alignment For 1-bit Post-Training Quantization of Large Language Models</title>
+    <updated>2026-05-15T03:51:16Z</updated>
+    <link href="https://arxiv.org/abs/2512.21651v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.21651v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) deliver strong performance across a wide range of NLP tasks, but their massive sizes hinder deployment on resource-constrained devices. To reduce their computational and memory burden, various compression techniques have been proposed, including quantization, pruning, and knowledge distillation. Among these, post-training quantization (PTQ) is widely adopted for its efficiency, as it requires no retraining and only a small dataset for calibration, enabling low-cost deployment. Recent advances for post-training quantization have demonstrated that even near 4-bit methods can maintain most of the original model performance. However, 1-bit quantization remains particularly challenging. A common strategy in 1-bit quantization is to determine binary weights by matching full-precision parameters, following a weight-driven criterion. However, this objective is not directly aligned with the quantized model's objective, which is to preserve the model's output behavior under the impact of quantization. A natural alternative is to adopt output-driven criteria that minimize discrepancies in model outputs using calibration data. Surprisingly, naive output-driven approaches often perform even worse in the 1-bit regime.
+  In this paper, we show that this failure arises from two fundamental issues: error accumulation across layers and, more critically, \emph{anisotropic distortion} of the representation space. Based on these insights, we propose a novel PTQ method for 1-bit LLMs that explicitly addresses these issues while maintaining computational efficiency. Extensive experiments demonstrate that our approach consistently outperforms existing 1-bit PTQ methods.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-25T12:39:36Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Dung Anh Hoang</name>
+    </author>
+    <author>
+      <name>Cuong Pham</name>
+    </author>
+    <author>
+      <name>Cuong Nguyen</name>
+    </author>
+    <author>
+      <name>Trung le</name>
+    </author>
+    <author>
+      <name>Jianfei Cai</name>
+    </author>
+    <author>
+      <name>Thanh-Toan Do</name>
+    </author>
+  </entry>
+</feed>

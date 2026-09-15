@@ -1,0 +1,31 @@
+\documentclass[11pt,tikz,border={14pt 14pt 14pt 14pt}]{standalone}
+\usepackage[a4paper,margin=0.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\begin{document}
+
+\definecolor{growthCorrob}{HTML}{2166AC}
+\definecolor{growthPreprint}{HTML}{C6DBEF}
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.6\textwidth, height=5.2cm,
+  ybar stacked, bar width=28pt,
+  symbolic x coords={2023,2024,2025,2026},
+  xtick=data, xticklabel style={font=\small},
+  yticklabel style={font=\small},
+  ylabel={works included}, ylabel style={font=\small},
+  ymin=0, ymax=74, ymajorgrids, tick align=inside,
+  enlarge x limits=0.2, axis line style={draw=black!45}, grid style={draw=black!10},
+  legend style={font=\scriptsize, at={(0.02,0.97)}, anchor=north west, draw=black!30},
+  legend cell align=left,
+]
+\addplot[fill=growthCorrob, draw=black!45] coordinates {(2023,3) (2024,16) (2025,24) (2026,1)};
+\addlegendentry{corroborated}
+\addplot[fill=growthPreprint, draw=black!45] coordinates {(2023,1) (2024,20) (2025,38) (2026,32)};
+\addlegendentry{single preprint}
+\end{axis}
+\end{tikzpicture}
+\end{document}

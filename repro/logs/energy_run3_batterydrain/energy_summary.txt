@@ -1,0 +1,11 @@
+idle baseline: leading  48.88 W (n=63), trailing  46.39 W (n=62), combined  47.65 W used for net
+
+model        decode t/s   mean W    net W  J/tok (sys)  J/tok (net)
+-------------------------------------------------------------------
+bitnet_i2s        17.76    50.08     2.43        2.819        0.137
+qwen_fp16          7.41    48.74     1.10        6.580        0.148
+qwen_q4_k_m       14.27    45.57    -2.08        3.192       -0.146
+qwen_q8_0          9.37    44.75    -2.89        4.777       -0.309
+
+bitnet vs qwen_q8_0: J/tok(sys) 0.59x   J/tok(net) -0.44x
+bitnet vs qwen_fp16: J/tok(sys) 0.43x   J/tok(net) 0.93x

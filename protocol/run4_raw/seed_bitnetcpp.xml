@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/+D2sUuA7wwQyTOaxuTKYk7/2+7A</id>
+  <title>arXiv Query: search_query=abs:"bitnet.cpp" AND (cat:cs.CL OR cat:cs.LG OR cat:cs.AI OR cat:cs.AR) AND submittedDate:"202301010000 TO 202606302359"&amp;id_list=&amp;start=0&amp;max_results=200</title>
+  <updated>2026-09-05T10:56:29Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22bitnet.cpp%22+AND+((cat:cs.CL+OR+(cat:cs.LG+OR+(cat:cs.AI+OR+cat:cs.AR)))+AND+submittedDate:%22202301010000+TO+202606302359%22)&amp;start=0&amp;max_results=200&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>200</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2410.16144v2</id>
+    <title>1-bit AI Infra: Part 1.1, Fast and Lossless BitNet b1.58 Inference on CPUs</title>
+    <updated>2024-10-23T11:17:42Z</updated>
+    <link href="https://arxiv.org/abs/2410.16144v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.16144v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent advances in 1-bit Large Language Models (LLMs), such as BitNet and BitNet b1.58, present a promising approach to enhancing the efficiency of LLMs in terms of speed and energy consumption. These developments also enable local LLM deployment across a broad range of devices. In this work, we introduce bitnet.cpp, a tailored software stack designed to unlock the full potential of 1-bit LLMs. Specifically, we develop a set of kernels to support fast and lossless inference of ternary BitNet b1.58 LLMs on CPUs. Extensive experiments demonstrate that bitnet.cpp achieves significant speedups, ranging from 2.37x to 6.17x on x86 CPUs and from 1.37x to 5.07x on ARM CPUs, across various model sizes. The code is available at https://github.com/microsoft/BitNet.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-21T16:14:57Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Jinheng Wang</name>
+    </author>
+    <author>
+      <name>Hansong Zhou</name>
+    </author>
+    <author>
+      <name>Ting Song</name>
+    </author>
+    <author>
+      <name>Shaoguang Mao</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Yan Xia</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.11880v1</id>
+    <title>Bitnet.cpp: Efficient Edge Inference for Ternary LLMs</title>
+    <updated>2025-02-17T15:06:28Z</updated>
+    <link href="https://arxiv.org/abs/2502.11880v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.11880v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The advent of 1-bit large language models (LLMs), led by BitNet b1.58, has spurred interest in ternary LLMs. Despite this, research and practical applications focusing on efficient edge inference for ternary LLMs remain scarce. To bridge this gap, we introduce Bitnet.cpp, an inference system optimized for BitNet b1.58 and ternary LLMs. Given that mixed-precision matrix multiplication (mpGEMM) constitutes the bulk of inference time in ternary LLMs, Bitnet.cpp incorporates a novel mpGEMM library to facilitate sub-2-bits-per-weight, efficient and lossless inference. The library features two core solutions: Ternary Lookup Table (TL), which addresses spatial inefficiencies of previous bit-wise methods, and Int2 with a Scale (I2_S), which ensures lossless edge inference, both enabling high-speed inference. Our experiments show that Bitnet.cpp achieves up to a 6.25x increase in speed over full-precision baselines and up to 2.32x over low-bit baselines, setting new benchmarks in the field. Additionally, we expand TL to element-wise lookup table (ELUT) for low-bit LLMs in the appendix, presenting both theoretical and empirical evidence of its considerable potential. Bitnet.cpp is publicly available at https://github.com/microsoft/BitNet/tree/paper , offering a sophisticated solution for the efficient and practical deployment of edge LLMs.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-17T15:06:28Z</published>
+    <arxiv:comment>18 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jinheng Wang</name>
+    </author>
+    <author>
+      <name>Hansong Zhou</name>
+    </author>
+    <author>
+      <name>Ting Song</name>
+    </author>
+    <author>
+      <name>Shijie Cao</name>
+    </author>
+    <author>
+      <name>Yan Xia</name>
+    </author>
+    <author>
+      <name>Ting Cao</name>
+    </author>
+    <author>
+      <name>Jianyu Wei</name>
+    </author>
+    <author>
+      <name>Shuming Ma</name>
+    </author>
+    <author>
+      <name>Hongyu Wang</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.06753v3</id>
+    <title>Pushing the Envelope of LLM Inference with Ultra-Low-Bit Quantized Models</title>
+    <updated>2026-08-27T04:29:21Z</updated>
+    <link href="https://arxiv.org/abs/2508.06753v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.06753v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The advent of ultra-low-bit LLM models, approaching the perplexity and task accuracy of their full precision counterparts, is ushering in a new era of LLM inference. While these advances promise models that are cost-effective regarding latency, memory, throughput, and energy consumption, the efficiency of runtimes for deploying ultra-low-bit models remains under-explored. In this work, we take a bottom-up approach: we first implement 2-bit microkernels for modern CPUs, achieving close-to-roofline performance. We integrate these microkernels into LLM inference pipelines and present end-to-end results with 2-bit models, outperforming the state-of-the-art (SOTA) bitnet.cpp runtime by 2.2$\times$, and deliver up to 7$\times$ speedup compared to 16-bit inference. We extend this work to Intel Xe2 GPUs where we implement mixed-precision, 2-bit kernels, and show their performance to be close-to-optimal. We integrated the GPU kernels in the vLLM framework and evaluated end-to-end inference for a range of models and Xe2 GPUs. We obtain up to 6.7$\times$ speedup compared to the 16-bit pipeline, pushing the envelope of LLM inference.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-08T23:33:38Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Evangelos Georganas</name>
+    </author>
+    <author>
+      <name>Dhiraj Kalamkar</name>
+    </author>
+    <author>
+      <name>Alexander Heinecke</name>
+    </author>
+    <author>
+      <name>Pradeep Dubey</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.25813v1</id>
+    <title>MAGNET: Autonomous Expert Model Generation via Decentralized Autoresearch and BitNet Training</title>
+    <updated>2026-03-26T18:21:57Z</updated>
+    <link href="https://arxiv.org/abs/2603.25813v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.25813v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present MAGNET (Model Autonomously Growing Network), a decentralized system for autonomous generation, training, and serving of domain-expert language models across commodity hardware. MAGNET integrates four components: (1) autoresearch, an autonomous ML research pipeline that automates dataset generation, hyperparameter exploration, evaluation, and error-driven iteration; (2) BitNet b1.58 ternary training, enabling CPU-native inference via bitnet.cpp without GPU hardware; (3) DiLoCo-based distributed merging for communication-efficient aggregation of domain specialists; and (4) on-chain contribution tracking on the HOOTi EVM chain. We validate autoresearch through three case studies: video safety classification (balanced accuracy 0.9287 to 0.9851), cryptocurrency directional prediction (41% to 54.9% hit rate), and BitNet hyperparameter optimization (10-phase sweep, -16.7% validation loss).</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-26T18:21:57Z</published>
+    <arxiv:comment>20 pages, 4 figures, 8 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yongwan Kim</name>
+    </author>
+    <author>
+      <name>Sungchul Park</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,169 @@
+# -*- coding: utf-8 -*-
+"""DEPRECATED (2026-09-11): figures/fig-datapath.drawio is now hand-maintained directly
+in draw.io, redesigned with a clearer color scheme (blue = activation quantizer, orange =
+weight quantizer, purple = shared ternary matmul, green/red = each variant's unique step).
+Do NOT run this script -- it would regenerate the old design and overwrite those edits.
+Kept only for reference. Renamed to .py.deprecated (not valid as a runnable module) so it
+can't be run by habit; the file it used to write is also renamed, fig4-datapath.drawio ->
+figures/fig-datapath.drawio.
+
+Original docstring: Generate figures/fig4-datapath.drawio (diagrams.net, uncompressed
+XML). Three BitLinear datapath variants on a common template: (a) BitLinear / BitNet
+b1.58, (b) H-BitLinear / BitNet v2, (c) BitNet a4.8. Source: figures/fig4-datapath.md
+(now figures/fig-datapath.md, itself stale against the hand-edited .drawio).
+"""
+import os, html
+
+os.chdir(os.path.join(os.path.dirname(__file__), ".."))
+
+# ---- styles: rectangle = tensor op, rounded = quantiser, dashed = only in that variant.
+# Colour-coded: weight path green, activation path blue, per-variant extras amber,
+# the shared ternary matmul in the accent orange.
+S_IO = "ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#334155;fontColor=#0f172a;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;strokeWidth=2;"
+S_TENSOR = "rounded=0;whiteSpace=wrap;html=1;fillColor=#eef2ff;strokeColor=#6366f1;fontColor=#312e81;fontSize=10;align=center;verticalAlign=middle;strokeWidth=2;"
+S_WEIGHT = "rounded=0;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontColor=#14532d;fontSize=10;align=center;verticalAlign=middle;strokeWidth=2;"
+S_QUANT = "rounded=1;arcSize=50;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontColor=#1e3a8a;fontSize=10;align=center;verticalAlign=middle;strokeWidth=2;"
+S_MATMUL = "rounded=0;whiteSpace=wrap;html=1;fillColor=#fed7aa;strokeColor=#ea580c;fontColor=#7c2d12;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;strokeWidth=2;"
+S_VARIANT = "rounded=1;arcSize=50;dashed=1;whiteSpace=wrap;html=1;fillColor=#fef9c3;strokeColor=#ca8a04;fontColor=#78350f;fontSize=10;align=center;verticalAlign=middle;strokeWidth=2;"
+S_PANEL_BG = "rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#94a3b8;fontColor=#f8fafc;fontSize=1;verticalAlign=top;strokeWidth=2;"
+S_TITLE = "text;html=1;align=left;verticalAlign=middle;fontSize=13;fontColor=#0f172a;fontStyle=1;"
+S_SUBNOTE = "text;html=1;align=left;verticalAlign=top;fontSize=9;fontColor=#78350f;fontStyle=2;"
+S_EDGE = "edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;endSize=7;strokeColor=#334155;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;"
+S_EDGE_UP = "edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;endSize=7;strokeColor=#334155;strokeWidth=2;exitX=0.5;exitY=0;entryX=0.5;entryY=1;"
+
+cells = []
+
+
+def node(cid, val, style, x, y, w, h):
+    cells.append(
+        f'        <mxCell id="{cid}" value="{html.escape(val)}" style="{style}" vertex="1" parent="1">\n'
+        f'          <mxGeometry x="{x}" y="{y}" width="{w}" height="{h}" as="geometry" />\n'
+        f'        </mxCell>'
+    )
+
+
+def edge(cid, src, tgt, style=S_EDGE):
+    cells.append(
+        f'        <mxCell id="{cid}" style="{style}" edge="1" parent="1" source="{src}" target="{tgt}">\n'
+        f'          <mxGeometry relative="1" as="geometry" />\n'
+        f'        </mxCell>'
+    )
+
+
+W, H, PITCH = 140, 50, 180  # standard node width / height / column pitch
+IOW = 90
+
+# ============================================================ panel (a) BitLinear
+def panel_bitlinear(px, py):
+    x = lambda col: px + 40 + col * PITCH
+    y0 = py + 40
+    node("a_bg", "", S_PANEL_BG, px, py, 6 * PITCH + 100, 260)
+    node("a_ttl", "(a)  BitLinear  —  BitNet b1.58   (W1.58, A8)", S_TITLE, px + 10, py + 8, 700, 24)
+    node("a_x", "X", S_IO, x(0), y0, IOW, H)
+    node("a_n", "SubLN /\nRMSNorm", S_TENSOR, x(1) - 20, y0, W, H)
+    node("a_aq", "absmax quant\nINT8 per-token", S_QUANT, x(2) - 20, y0, W, H)
+    node("a_mm", "ternary matmul\n(add / sub only)", S_MATMUL, x(3) - 20, y0, W, H)
+    node("a_dq", "dequant\n(restore weight, activation scale)", S_TENSOR, x(4) - 20, y0, W, H)
+    node("a_y", "Y", S_IO, x(5) - 20 + (W - IOW) / 2, y0, IOW, H)
+    yw = y0 + H + 60
+    node("a_w", "W  latent FP32\n(STE on backward)", S_WEIGHT, x(1) - 20, yw, W, H)
+    node("a_wq", "absmean quant\ntern. {-1,0,+1}", S_QUANT, x(2) - 20, yw, W, H)
+    for a, b in [("a_x", "a_n"), ("a_n", "a_aq"), ("a_aq", "a_mm"), ("a_mm", "a_dq"), ("a_dq", "a_y"), ("a_w", "a_wq")]:
+        edge(f"e-{a}-{b}", a, b)
+    edge("e-a_wq-a_mm", "a_wq", "a_mm", S_EDGE_UP)
+    return py + 260 + 30
+
+
+# ============================================================ panel (b) H-BitLinear
+def panel_hbitlinear(px, py):
+    x = lambda col: px + 40 + col * PITCH
+    y0 = py + 40
+    node("b_bg", "", S_PANEL_BG, px, py, 7 * PITCH + 100, 260)
+    node("b_ttl", "(b)  H-BitLinear  —  BitNet v2   (W1.58, A4 native)", S_TITLE, px + 10, py + 8, 700, 24)
+    node("b_x", "X", S_IO, x(0), y0, IOW, H)
+    node("b_n", "SubLN", S_TENSOR, x(1) - 20, y0, W, H)
+    node("b_h", "online Hadamard\nH·x", S_VARIANT, x(2) - 20, y0, W, H)
+    node("b_aq", "absmax quant\nINT4 per-token", S_QUANT, x(3) - 20, y0, W, H)
+    node("b_mm", "ternary matmul\n(add / sub only)", S_MATMUL, x(4) - 20, y0, W, H)
+    node("b_dq", "dequant\n(restore weight, activation scale)", S_TENSOR, x(5) - 20, y0, W, H)
+    node("b_y", "Y", S_IO, x(6) - 20 + (W - IOW) / 2, y0, IOW, H)
+    node("b_note", "Hadamard rotation spreads outlier energy across\ncoordinates, so a plain INT4 quantizer suffices\n(vs. INT8 in panel a). Weights unchanged.",
+         S_SUBNOTE, x(2) - 20, y0 + H + 6, 2 * PITCH, 56)
+    yw = y0 + H + 90
+    node("b_w", "W  latent FP32\n(STE on backward)", S_WEIGHT, x(1) - 20, yw, W, H)
+    node("b_wq", "absmean quant\ntern. {-1,0,+1}", S_QUANT, x(2) - 20, yw, W, H)
+    for a, b in [("b_x", "b_n"), ("b_n", "b_h"), ("b_h", "b_aq"), ("b_aq", "b_mm"), ("b_mm", "b_dq"), ("b_dq", "b_y"), ("b_w", "b_wq")]:
+        edge(f"e-{a}-{b}", a, b)
+    edge("e-b_wq-b_mm", "b_wq", "b_mm", S_EDGE_UP)
+    return py + 260 + 30
+
+
+# ============================================================ panel (c) BitNet a4.8
+def panel_a48(px, py):
+    x = lambda col: px + 40 + col * PITCH
+    y1 = py + 66            # lane 1: attention / FFN inputs (extra headroom clears the panel title)
+    y2 = y1 + H + 140       # lane 2: attn-output / FFN-down inputs (outlier-heavy)
+    panel_h = (y2 + H + 50) - py  # +50 clears c_w2, which sits H+6..H+46 below the lane-2 row
+    node("c_bg", "", S_PANEL_BG, px, py, 6 * PITCH + 100, panel_h)
+    node("c_ttl", "(c)  BitNet a4.8  —  hybrid quantization + sparsify   (effective W1.58 A4)", S_TITLE, px + 10, py + 8, 800, 24)
+    node("c_lane1", "attention / FFN inputs  (well-behaved)", S_SUBNOTE.replace("fontStyle=2", "fontStyle=1").replace("#78350f", "#1e3a8a"), x(0), y1 - 26, 3 * PITCH, 18)
+    node("c_x1", "X", S_IO, x(0), y1, IOW, H)
+    node("c_n1", "SubLN", S_TENSOR, x(1) - 20, y1, W, H)
+    node("c_q4", "absmean quant\nINT4", S_QUANT, x(2) - 20, y1, W, H)
+    node("c_mm1", "ternary matmul", S_MATMUL, x(3) - 20, y1, W, H)
+    node("c_y1", "Y", S_IO, x(4) - 20 + (W - IOW) / 2, y1, IOW, H)
+    node("c_w1", "W₁  ternary", S_WEIGHT, x(2) - 20, y1 + H + 46, W, H - 10)
+
+    node("c_lane2", "attention-output / FFN-down inputs  (outlier-heavy)", S_SUBNOTE.replace("fontStyle=2", "fontStyle=1").replace("#78350f", "#1e3a8a"), x(0), y2 - 26, 3 * PITCH, 18)
+    node("c_x2", "X", S_IO, x(0), y2, IOW, H)
+    node("c_tk", "Top-K sparsify\n(keep ~50%)", S_VARIANT, x(1) - 20, y2, W, H)
+    node("c_q8", "absmax quant\nINT8", S_QUANT, x(2) - 20, y2, W, H)
+    node("c_mm2", "ternary matmul", S_MATMUL, x(3) - 20, y2, W, H)
+    node("c_y2", "Y", S_IO, x(4) - 20 + (W - IOW) / 2, y2, IOW, H)
+    node("c_w2", "W₂  ternary", S_WEIGHT, x(2) - 20, y2 + H + 6, W, H - 10)
+
+    node("c_note", "Squared-ReLU FFN gate → ~80% activation sparsity. KV cache quantized to\n3 bits (not shown). Two different projections, drawn as two lanes; not summed.",
+         S_SUBNOTE, x(4) - 20, y1 + H + 10, 2 * PITCH, 50)
+
+    for a, b in [("c_x1", "c_n1"), ("c_n1", "c_q4"), ("c_q4", "c_mm1"), ("c_mm1", "c_y1"),
+                 ("c_x2", "c_tk"), ("c_tk", "c_q8"), ("c_q8", "c_mm2"), ("c_mm2", "c_y2")]:
+        edge(f"e-{a}-{b}", a, b)
+    edge("e-c_w1-c_mm1", "c_w1", "c_mm1", S_EDGE_UP)
+    edge("e-c_w2-c_mm2", "c_w2", "c_mm2", S_EDGE_UP)
+    return py + panel_h + 30
+
+
+# ---- lay out the three panels top to bottom, then a shared legend ----------------
+PX = 20
+y = 20
+y = panel_bitlinear(PX, y)
+y = panel_hbitlinear(PX, y)
+y = panel_a48(PX, y)
+
+lg_y = y
+node("lg1", "activation op", S_TENSOR, PX, lg_y, 130, 26)
+node("lg2", "weights", S_WEIGHT, PX + 145, lg_y, 100, 26)
+node("lg3", "quantizer / transform", S_QUANT, PX + 260, lg_y, 185, 26)
+node("lg4", "ternary matmul", S_MATMUL, PX + 460, lg_y, 145, 26)
+node("lg5", "variant-specific step", S_VARIANT, PX + 620, lg_y, 175, 26)
+node("lg6", "W = weights, X = activations. absmean/absmax = scale by mean/max(|·|).\nSTE (straight-through estimator) on every quantizer's backward pass.",
+     "text;html=1;align=left;verticalAlign=middle;fontSize=9;fontColor=#475569;", PX + 810, lg_y, 640, 30)
+
+page_w = 7 * PITCH + 160
+page_h = lg_y + 50
+
+xml = f'''<mxfile host="app.diagrams.net" agent="claude" version="24.7.0" type="device">
+  <diagram id="fig4-datapath" name="Figure 4 - BitLinear datapaths">
+    <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="{page_w}" pageHeight="{page_h}" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+{chr(10).join(cells)}
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+'''
+
+open("figures/fig4-datapath.drawio", "w", encoding="utf-8").write(xml)
+print("wrote figures/fig4-datapath.drawio", len(xml), "bytes,", len(cells), "cells, page", page_w, "x", page_h)

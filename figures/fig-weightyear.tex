@@ -1,0 +1,36 @@
+\documentclass[11pt,tikz,border={14pt 14pt 14pt 14pt}]{standalone}
+\usepackage[a4paper,margin=0.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\begin{document}
+
+\definecolor{wyTernary}{HTML}{2166AC}
+\definecolor{wyBinary}{HTML}{D95F0E}
+\definecolor{wyMixed}{HTML}{6BAED6}
+\definecolor{wyNA}{HTML}{C6DBEF}
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.6\textwidth, height=5.2cm,
+  ybar stacked, bar width=28pt,
+  symbolic x coords={2023,2024,2025,2026},
+  xtick=data, xticklabel style={font=\small},
+  yticklabel style={font=\small}, ylabel={share of works (\%)}, ylabel style={font=\small},
+  ymin=0, ymax=115, ytick={0,20,40,60,80,100}, ymajorgrids, tick align=inside,
+  enlarge x limits=0.25, axis line style={draw=black!45}, grid style={draw=black!10},
+  legend style={font=\scriptsize, at={(0.5,1.12)}, anchor=south, legend columns=4, draw=black!30},
+  legend cell align=left,
+]
+\addplot[fill=wyTernary, draw=black!45] coordinates {(2023,50.0) (2024,33.3) (2025,51.6) (2026,48.5)};
+\addlegendentry{ternary}
+\addplot[fill=wyBinary, draw=black!45] coordinates {(2023,25.0) (2024,33.3) (2025,21.0) (2026,9.1)};
+\addlegendentry{binary}
+\addplot[fill=wyMixed, draw=black!45] coordinates {(2023,25.0) (2024,11.1) (2025,16.1) (2026,18.2)};
+\addlegendentry{mixed-partial}
+\addplot[fill=wyNA, draw=black!45] coordinates {(2023,0.0) (2024,22.2) (2025,11.3) (2026,24.2)};
+\addlegendentry{n/a}
+\end{axis}
+\end{tikzpicture}
+\end{document}
