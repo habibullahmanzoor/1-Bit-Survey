@@ -63,8 +63,8 @@ Fig. [fig:datapath] draws the three datapaths side by side: the plain `BitLinear
 Hadamard-rotated `H-BitLinear` layer, and the hybrid split-and-sparsify path of BitNet
 a4.8. The current practical floor for activations alongside roughly one-bit weights is
 four bits natively; post-training quantization mostly lands at six bits, though TWLA
-reports four through the same Kronecker-rotation family on a single preprint benchmark
-[Zhao2026-TWLA], not yet corroborated elsewhere. Whether A2 is reachable at all is an
+reports four through the same Kronecker-rotation family [Zhao2026-TWLA], a result not
+yet reproduced independently. Whether A2 is reachable at all is an
 open question (Section 11).
 
 ## 5.4 KV cache

@@ -105,11 +105,15 @@ if the only version is on arXiv or under review. The second is whether the **cen
 availability, whether an open model, code, or weights exist, is recorded as a free-text
 note per row where known, since it could not be verified uniformly across all 140 works.
 
-For synthesis we use a single derived split. A source is **corroborated** if it is peer reviewed or has an independent check; otherwise it is a **single unreproduced preprint**. Forty-eight of the 140 works are corroborated. This split is about the
+For synthesis we use a single derived split. A source is **corroborated** if it is peer reviewed or has an independent check; otherwise it is a **single unreproduced preprint**. Venue status reflects each work's
+published record as of September 2026, so a work first posted as a preprint and later
+accepted is counted under the venue that accepted it. Seventy-five of the 140 works are
+corroborated. This split is about the
 reliability of a source and its artifacts, not about whether its headline claim is
 settled: a corroborated source can still make a disputed claim. The parity claim of the
 native line is the clearest example. Its sources are all corroborated, BitNet b1.58,
-BitNet b1.58 2B4T, both Spectra suites, and ParetoQ, which is also at NeurIPS, and they
+BitNet b1.58 2B4T, both Spectra suites, and ParetoQ, the first Spectra study also at ICLR
+and ParetoQ at NeurIPS, and they
 corroborate one another; our re-run of the released BitNet b1.58 2B4T checkpoint in
 Section 10 confirms that it loads, runs, and is competitive on a common suite. None of
 that tests parity at frontier scale, which remains an open problem (Section 11.1). Any
@@ -118,11 +122,12 @@ such.
 
 ## 3.4 Limitations
 
-The corpus is preprint-heavy, because the field publishes faster than journal review
-cycles; this is mitigated by the corroborated-versus-single-preprint split of Section
-3.3, by anchoring to peer-reviewed versions where they exist (BitNet in JMLR; OneBit,
-BinaryMoS, PV-Tuning, ParetoQ, and LittleBit at NeurIPS; ARB-LLM and PT2-LLM at ICLR;
-BiLLM and LC-QAT at ICML; ICQuant at COLM), and by the re-evaluation of Section 10. The search is arXiv-primary rather than exhaustive, so
+Nearly half the corpus, 68 of the 140 works, has no peer-reviewed version, because the
+field publishes faster than review cycles; this is mitigated by the
+corroborated-versus-single-preprint split of Section 3.3, by anchoring to peer-reviewed
+versions where they exist (BitNet in JMLR; OneBit, BinaryMoS, PV-Tuning, ParetoQ, and
+LittleBit at NeurIPS; Spectra, ARB-LLM, and PT2-LLM at ICLR; BiLLM, QuEST, and LC-QAT at
+ICML; ICQuant at COLM), and by the re-evaluation of Section 10. The search is arXiv-primary rather than exhaustive, so
 open-access work in society and publisher venues with no preprint may be missed.
 Screening was done by one reviewer; a re-screen of a random 20% sample (28
 studies) confirmed 26 of the 28 inclusion decisions (93% raw intra-rater agreement), and

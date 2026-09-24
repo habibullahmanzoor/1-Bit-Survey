@@ -9,9 +9,9 @@ side they differ in hardware, thread count, kernel, and baseline, whether FP16 a
 INT8 or a general framework against a custom kernel. The reported number of bits per
 weight also varies in what it includes (Section 2.1). We therefore report each claim in
 the terms the source used, group claims by what is actually comparable, and flag cases
-in which a direct comparison is not sound. Table 1 collects the headline figures; the
-common-axis re-tabulation is Table 2; and our own independent measurements are in
-Section 10.
+in which a direct comparison is not sound. Table 1 classifies every work on the taxonomy;
+Table 2 collects the headline figures on common axes; and our own independent
+measurements are in Section 10.
 
 ## 8.2 Perplexity and the parity claim
 
@@ -127,18 +127,19 @@ the data [Wang2026-LCQAT], concern closing the cost gap at roughly fixed accurac
 than pushing accuracy itself.
 
 Splitting Table 2 by evidence basis (Section 3.3) shows that the central claims do not
-rest on the least reliable sources. Twenty-eight of the 57 rows are corroborated, that
+rest on the least reliable sources. Thirty-nine of the 57 rows are corroborated, that
 is peer reviewed or with an independent check, and every source behind the parity claim,
 namely BitNet b1.58, BitNet b1.58 2B4T, both Spectra suites, and ParetoQ, is in that
-set: Spectra, ParetoQ, and the original BitNet b1.58 corroborate one another, ParetoQ is
-also at NeurIPS, and Section 10 re-runs the released BitNet b1.58 2B4T checkpoint and
+set: Spectra, ParetoQ, and the original BitNet b1.58 corroborate one another, the first
+Spectra study is also at ICLR and ParetoQ at NeurIPS, and Section 10 re-runs the released BitNet b1.58 2B4T checkpoint and
 adds a controlled test of the parity claim on Spectra's matched TriLM and FloatLM pair,
 which lands within 0.6 points on a seven-task mean at 2.4B parameters with a higher
 perplexity. That bears on the claim at this scale; whether it holds at the frontier is a
-separate question that Section 11.1 lists as open. The other 29 rows are single unreproduced preprints, most of
-them post-training-quantization results claiming the lowest bit counts (BTC-LLM at 0.8,
-HBLLM at 1.08, DBellQuant and BWLA at 1.0), together with the bitnet.cpp infrastructure
-report, which moved into this group once we found that its reference runtime does not
+separate question that Section 11.1 lists as open. The other 18 rows are single
+unreproduced preprints: six follow-on works built directly on BitNet (BitNet a4.8, BitNet
+v2, Q-Sparse, Sparse-BitNet, BitNet Distillation, and BitVLA), eleven other method and
+analysis results (among them PTQTP, Tequila, HESTIA, and DBellQuant), and the bitnet.cpp
+infrastructure report, which moved into this group once we found that its reference runtime does not
 compute this model correctly as built (Section 10). Any statement in this section that
 rests only on single unreproduced preprints is marked as such, following the convention
 set in Section 3.3.

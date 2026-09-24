@@ -48,7 +48,7 @@ alongside roughly one-bit weights, or whether rotation together with sparsificat
 reach two-bit activations. Native A4 is solved by hybrid quantization and sparsification
 [Wang2024-BitNetA48] and by an online Hadamard transform [Wang2025-BitNetV2];
 post-training quantization mostly reaches A6 [Zhao2026-BWLA], [Ye2025-DBellQuant], with
-one single-preprint report of A4 through rotation [Zhao2026-TWLA] not yet corroborated;
+one report of A4 through rotation [Zhao2026-TWLA] not yet reproduced independently;
 and QuEST
 demonstrates one-bit weights and activations but only below 1B parameters
 [Panferov2025-QuEST]. Nobody has demonstrated W1.58A2 at multi-billion scale with

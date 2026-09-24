@@ -63,14 +63,16 @@ has moved toward four-bit and lower activations and toward three-bit KV caches
 The literature has grown from a handful of papers in 2023 to a steady stream through
 2026, spanning native pre-training recipes, post-training routes toward one bit,
 optimization theory, inference kernels, and a first wave of custom accelerators
-(Fig. [fig:timeline]). Three existing surveys touch this area. Gong et al.
+(Fig. [fig:timeline]). Four existing surveys touch this area. Gong et al.
 [Gong2024-SurveyLowbit] review low-bit LLMs broadly, from eight-bit integer down to
 binary, with a systems-and-algorithms structure and a mid-2024 horizon. Liu et al.
 [Liu2025-SurveyBNNLLM] survey the binarization of LLMs; this framing under-weights
 ternary representations, even though ternary is where native training has succeeded.
 Hao et al. [Hao2025-LowPrecTrainingSurvey] survey low-precision training across all
 numerical formats in IEEE TPAMI, treating 1-bit models as one subsection and not
-covering inference systems or hardware. None is scoped to the native 1-bit and 1.58-bit
+covering inference systems or hardware. Jørgensen [Jorgensen2025-ResourceEfficientLMs]
+reviews quantization for fast and accessible inference in general and mentions 1-bit
+models only in passing. None is scoped to the native 1-bit and 1.58-bit
 paradigm as a coherent object of study. And none covers the 2025 and 2026 wave: BitNet
 b1.58 2B4T, BitNet a4.8, and BitNet v2; GPU and CPU inference kernels; 1-bit embedding,
 speech, and vision-language-action models; ternary mixture-of-experts; and the first

@@ -48,8 +48,12 @@ VJ = {'JMLR': 'Journal of Machine Learning Research', 'Neural-Networks': 'Neural
       'TMLR': 'Transactions on Machine Learning Research',
       'IEEE-TPAMI': 'IEEE Transactions on Pattern Analysis and Machine Intelligence',
       'IEEE-RAL': 'IEEE Robotics and Automation Letters',
-      'IEEE-TSUSC': 'IEEE Transactions on Sustainable Computing'}
-VC = {'NeurIPS': 'Advances in Neural Information Processing Systems (NeurIPS)',
+      'IEEE-TSUSC': 'IEEE Transactions on Sustainable Computing',
+      'IEEE-TVLSI': 'IEEE Transactions on Very Large Scale Integration (VLSI) Systems',
+      'TACL': 'Transactions of the Association for Computational Linguistics'}
+# Matched by substring in dict order, so 'ACL-Findings' must precede 'ACL'.
+VC = {'ACL-Findings': 'Findings of the Association for Computational Linguistics (ACL)',
+      'NeurIPS': 'Advances in Neural Information Processing Systems (NeurIPS)',
       'ICLR': 'International Conference on Learning Representations (ICLR)',
       'ICML': 'International Conference on Machine Learning (ICML)',
       'ACL': 'Annual Meeting of the Association for Computational Linguistics (ACL)',
@@ -60,11 +64,17 @@ VC = {'NeurIPS': 'Advances in Neural Information Processing Systems (NeurIPS)',
       'DATE': 'Design, Automation and Test in Europe (DATE)',
       'ASP-DAC': 'Asia and South Pacific Design Automation Conference (ASP-DAC)',
       'CVPRW': 'IEEE/CVF CVPR Workshops', 'MobiSys': 'ACM MobiSys',
-      'ECAI': 'European Conference on Artificial Intelligence (ECAI)'}
+      'ECAI': 'European Conference on Artificial Intelligence (ECAI)',
+      'ECCV': 'European Conference on Computer Vision (ECCV)',
+      'ICCAD': 'IEEE/ACM International Conference on Computer-Aided Design (ICCAD)',
+      'AAAI': 'AAAI Conference on Artificial Intelligence',
+      'ISPASS': 'IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS)',
+      'DeLTA': 'Deep Learning Theory and Applications (DeLTA)',
+      'BabyLM': 'Proceedings of the First BabyLM Workshop',
+      'AICCC': 'Artificial Intelligence and Cloud Computing Conference (AICCC)',
+      'FET': 'International Conference on Frontiers of Engineering and Emerging Technologies (FET)'}
 
-# Full author lists confirmed against the venue's own record (rather than the
-# "first-author and others" placeholder every other entry still carries pending the
-# camera-ready full-author pass), keyed by inventory id.
+# Full author lists confirmed against the venue's own record, keyed by inventory id.
 AUTHOR_FIX = {
  'Bengio2013-STE': 'Yoshua Bengio and Nicholas Léonard and Aaron Courville',
  'Courbariaux2015-BinaryConnect': 'Matthieu Courbariaux and Yoshua Bengio and Jean-Pierre David',
@@ -283,6 +293,88 @@ EXTRA_FIELDS = {
                           ('url', '{http://jmlr.org/papers/v26/24-2050.html}')],
 }
 
+# Published-version identifier for every venue record, so a venue entry never points at
+# its arXiv preprint: a DOI where the venue registers one (Crossref-verified, exact title
+# match), otherwise the venue's own page (PMLR, NeurIPS proceedings, OpenReview).
+VENUE_LINK = {
+ 'Aman2025-BitMar': ('doi', '10.18653/v1/2025.babylm-main.11'),
+ 'Anon2025-BinaryWA-PTQ': ('doi', '10.18653/v1/2025.findings-acl.459'),
+ 'Anon2025-DoubleBinaryFactorization': ('url', 'https://openreview.net/forum?id=k5kUKoewdQ'),
+ 'Anon2025-MultiBoolean': ('url', 'https://openreview.net/forum?id=r0CH5dF3Se'),
+ 'Anon2025-OneBitASR': ('doi', '10.21437/interspeech.2025-18'),
+ 'Anon2025-STE-ZerothOrder': ('doi', '10.52202/085713-5579'),
+ 'Ansar2024-BEExformer': ('doi', '10.1109/tsusc.2026.3666456'),
+ 'Ardakani2025-LLMPi': ('doi', '10.1109/cvprw67362.2025.00634'),
+ 'Bai2021-BinaryBERT': ('doi', '10.18653/v1/2021.acl-long.334'),
+ 'Chen2024-DBLLM': ('doi', '10.18653/v1/2024.findings-acl.516'),
+ 'Chen2024-EfficientQAT': ('doi', '10.18653/v1/2025.acl-long.498'),
+ 'Chen2025-HBLLM': ('doi', '10.52202/085713-5137'),
+ 'Chen2025-LoTAQAF': ('doi', '10.52202/085713-3574'),
+ 'Chong2026-NanoQuant': ('url', 'https://openreview.net/forum?id=qiZDlnvWTR'),
+ 'Courbariaux2015-BinaryConnect': ('url', 'https://papers.nips.cc/paper_files/paper/2015/hash/3e15cc11f979ed25912dff5b0669f2cd-Abstract.html'),
+ 'Dehghankar2024-EfficientMatmul': ('url', 'https://proceedings.mlr.press/v267/dehghankar25a.html'),
+ 'Dong2024-STBLLM': ('url', 'https://openreview.net/forum?id=6XUSDvBFkV'),
+ 'Du2024-BitDistiller': ('doi', '10.18653/v1/2024.acl-long.7'),
+ 'Edalati2024-OAC': ('doi', '10.1609/aaai.v39i16.33807'),
+ 'Fan2024-ResilientEfficient': ('doi', '10.1145/3719384.3719447'),
+ 'Geens2026-LUTAccelDesign': ('doi', '10.1109/ispass69572.2026.00048'),
+ 'Gong2024-SurveyLowbit': ('doi', '10.1016/j.neunet.2025.107856'),
+ 'Grainge2025-TeTRAVPR': ('doi', '10.1109/lra.2025.3585715'),
+ 'Gu2025-BTCLLM': ('doi', '10.18653/v1/2026.acl-long.1066'),
+ 'Hao2025-LowPrecTrainingSurvey': ('doi', '10.1109/tpami.2026.3718968'),
+ 'Huang2024-BiLLM': ('url', 'https://proceedings.mlr.press/v235/huang24q.html'),
+ 'Huang2026-Sherry': ('doi', '10.18653/v1/2026.acl-long.513'),
+ 'Ji2024-BMTBAT': ('doi', '10.1145/3676536.3676733'),
+ 'Jo2024-BinaryMoS': ('url', 'https://papers.nips.cc/paper_files/paper/2024/hash/f89221edad5a6a4a54fcf247cb37cd62-Abstract-Conference.html'),
+ 'Kaushal2024-Spectra': ('url', 'https://openreview.net/forum?id=TJo6aQb7mK'),
+ 'Kawamura2025-BitTTS': ('doi', '10.21437/interspeech.2025-1122'),
+ 'Kim2023-TSLD': ('url', 'https://papers.nips.cc/paper_files/paper/2023/hash/8342218a4ec08b8c19661725e9cd6c0b-Abstract-Conference.html'),
+ 'Kumar2024-ScalingLawsPrecision': ('url', 'https://openreview.net/forum?id=wg1PCg3CUP'),
+ 'Lee2025-LittleBit': ('url', 'https://openreview.net/forum?id=zJzu9evD5K'),
+ 'Li2024-ARBLLM': ('url', 'https://openreview.net/forum?id=ZU8OdDLTts'),
+ 'Li2025-ICQuant': ('url', 'https://openreview.net/forum?id=m6nBgFSMTL'),
+ 'Li2025-VecLUT': ('doi', '10.1145/3745756.3809200'),
+ 'Liu2023-BinTernNLG': ('doi', '10.18653/v1/2023.acl-long.5'),
+ 'Liu2025-ParetoQ': ('doi', '10.52202/085713-3055'),
+ 'Malhotra2025-ReTern': ('doi', '10.1109/tvlsi.2025.3585043'),
+ 'Malinovskii2024-PVTuning': ('url', 'https://papers.nips.cc/paper_files/paper/2024/hash/091166620a04a289c555f411d8899049-Abstract-Conference.html'),
+ 'Nielsen2024-Reloaded': ('doi', '10.1007/978-3-031-66705-3_20'),
+ 'Nielsen2025-ContinualQAT': ('doi', '10.18653/v1/2025.findings-acl.694'),
+ 'Oh2025-TSAR': ('doi', '10.23919/date69613.2026.11539096'),
+ 'Panferov2025-QuEST': ('url', 'https://proceedings.mlr.press/v267/panferov25a.html'),
+ 'Qin2022-BiBERT': ('url', 'https://openreview.net/forum?id=5xEgrl_5FAJ'),
+ 'Rastegari2016-XNORNet': ('doi', '10.1007/978-3-319-46493-0_32'),
+ 'Sajid2026-BitRL': ('doi', '10.1109/fet68771.2026.11601600'),
+ 'Shan2025-Platinum': ('doi', '10.1109/asp-dac66049.2026.11420289'),
+ 'Shang2023-PBLLM': ('url', 'https://openreview.net/forum?id=BifeBRhikU'),
+ 'Song2026-LBLLM': ('doi', '10.18653/v1/2026.acl-long.1640'),
+ 'Tabesh2025-CAGE': ('url', 'https://openreview.net/forum?id=Fubm1TtWeo'),
+ 'Tang2024-BiMamba': ('url', 'https://openreview.net/forum?id=CKQ4AgoRQm'),
+ 'Tu2025-Rethink1bitOpt': ('url', 'https://openreview.net/forum?id=xdS18gI4e8'),
+ 'Wang2025-BitNetCPP': ('doi', '10.18653/v1/2025.acl-long.457'),
+ 'Wang2025-TZLLM': ('doi', '10.1145/3767295.3769334'),
+ 'Wang2026-CATQ': ('url', 'https://openreview.net/forum?id=9uZJLXt7fq'),
+ 'Wang2026-LCQAT': ('url', 'https://openreview.net/forum?id=CYNip2SNsg'),
+ 'Wei2024-TMAC': ('doi', '10.1145/3689031.3696099'),
+ 'Xia2025-SDQLLM': ('doi', '10.3233/faia251342'),
+ 'Xiao2025-LieQ': ('doi', '10.18653/v1/2026.findings-acl.771'),
+ 'Xu2024-CRVQ': ('doi', '10.1162/tacl.a.45'),
+ 'Xu2024-OneBit': ('url', 'https://papers.nips.cc/paper_files/paper/2024/hash/7a7a3f53faafc0161be0fcb57e5fa078-Abstract-Conference.html'),
+ 'Yan2025-PT2LLM': ('url', 'https://openreview.net/forum?id=7QZanjCD6M'),
+ 'You2026-RaBiT': ('url', 'https://openreview.net/forum?id=BypcZOrSUV'),
+ 'Zhang2025-BitROM': ('doi', '10.1109/asp-dac66049.2026.11420813'),
+ 'Zhao2024-DQT': ('url', 'https://proceedings.mlr.press/v304/zhao26b.html'),
+ 'Zhao2025-PTQ161': ('doi', '10.18653/v1/2025.acl-long.225'),
+ 'Zhao2026-BWLA': ('doi', '10.18653/v1/2026.acl-long.880'),
+ 'Zhao2026-TWLA': ('url', 'https://openreview.net/forum?id=s1WSLFmnr8'),
+}
+# Published title where it differs from the arXiv title.
+VENUE_TITLE = {
+ 'Kaushal2024-Spectra': 'Surprising Effectiveness of Pretraining Ternary Language Model at Scale',
+ 'Tang2024-BiMamba': 'Bi-Mamba: Towards Accurate 1-Bit State Space Model',
+ 'You2026-RaBiT': 'RaBiT: Residual Aware Binarization Training for Accurate and Efficient LLMs',
+}
+
 def clean_title(t):
     t = re.sub(r'\s+', ' ', t).strip().strip('.')
     if t.isupper() and len(t) > 8:
@@ -301,7 +393,7 @@ def bib_entry(rid):
     fa = r['first_author']
     author = AUTHOR_FIX.get(rid) or ((fa + ' and others') if fa and fa not in ('NR', 'Anon', '') else '{Author list --- fill from PDF}')
     ven = r['venue']
-    fld = [('title', '{%s}' % title), ('author', '{%s}' % author), ('year', '{%s}' % yr)]
+    fld = [('title', '{{%s}}' % title), ('author', '{%s}' % author), ('year', '{%s}' % yr)]
     etype = 'misc'
     for k, j in VJ.items():
         if k in ven:
@@ -310,19 +402,31 @@ def bib_entry(rid):
         for k, bt in VC.items():
             if k in ven:
                 etype = 'inproceedings'; fld.append(('booktitle', '{%s}' % bt)); break
+    # The year field of a venue record is the venue's year (e.g. an arXiv 2024 paper at ICLR
+    # 2025 prints as 2025); Table 1 keeps the first-public year from the inventory instead.
+    if etype != 'misc':
+        vy = re.search(r'(20\d\d)', ven) or re.search(r'[A-Za-z](\d\d)(?!\d)', ven)
+        if vy:
+            vyr = vy.group(1) if len(vy.group(1)) == 4 else '20' + vy.group(1)
+            fld[2] = ('year', '{%s}' % vyr)
     if etype == 'misc':
         if aid:
             fld += [('eprint', '{%s}' % aid), ('archivePrefix', '{arXiv}'),
                     ('primaryClass', '{cs.LG}'), ('note', '{arXiv:%s}' % aid)]
+            # every arXiv record has a registered DataCite DOI of this exact form
+            fld.append(('doi', '{10.48550/arXiv.%s}' % aid))
+            fld.append(('url', '{https://arxiv.org/abs/%s}' % aid))
         else:
             fld.append(('howpublished', '{%s}' % (ven or 'preprint')))
-    elif aid:
-        fld.append(('note', '{Also arXiv:%s}' % aid))
-    # every arXiv record has a registered DataCite DOI of this exact form; add it and the
-    # canonical abstract URL so the bibliography carries a resolvable identifier.
-    if aid:
-        fld.append(('doi', '{10.48550/arXiv.%s}' % aid))
-        fld.append(('url', '{https://arxiv.org/abs/%s}' % aid))
+    else:
+        if rid in VENUE_TITLE:
+            fld[0] = ('title', '{{%s}}' % VENUE_TITLE[rid])
+        kind, val = VENUE_LINK.get(rid, (None, None))
+        if kind == 'doi':
+            fld.append(('doi', '{%s}' % val))
+            fld.append(('url', '{https://doi.org/%s}' % val))
+        elif kind == 'url':
+            fld.append(('url', '{%s}' % val))
     fld += EXTRA_FIELDS.get(rid, [])
     out = ['@%s{%s,' % (etype, rid)] + ['  %-14s = %s,' % kv for kv in fld]
     out[-1] = out[-1].rstrip(',')
@@ -351,9 +455,8 @@ with open('references.bib', 'w', encoding='utf-8') as f:
     f.write('%% Auto-generated, grouped by year (newest first; alphabetical by key within a\n'
             '%% year). This ordering is for human navigation only -- unsrtnat numbers the\n'
             '%% printed bibliography by first-citation order in the text, not by file order.\n'
-            '%% Author fields are "first-author and others" pending a manual full-author pass\n'
-            '%% for camera-ready. Every arXiv record carries its registered 10.48550/arXiv.*\n'
-            '%% DOI and abstract URL; venue records also name the venue.\n\n')
+            '%% Every entry carries its full author list. Preprint records carry their arXiv DOI and\n'
+            '%% abstract URL; venue records carry the published version\'s DOI or venue page instead.\n\n')
     all_ids = sorted(list(inv) + list(WEB), key=lambda rid: (-entry_year(rid), rid))
     cur_year = None
     for rid in all_ids:
@@ -1173,6 +1276,7 @@ PREAMBLE = r"""\documentclass[11pt]{article}
 \usepackage{pdflscape}
 \usepackage{graphicx}
 \usepackage[numbers,sort&compress]{natbib}
+\usepackage{xurl}
 \usepackage{hyperref}
 \hypersetup{
   colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue,
